@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial scale 1.0">
+	<title>Remember5</title>
+    
+	<link rel="stylesheet" type="text/css" href="homepage.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="header">
+        <div class = "inner_header">
+            <div class = "logo">
+                
+                <img class = "MoonText" src="MoonText.png" alt="moon">
+            </div>
+            
+
+            <ul class="navigation" >
+                <a href =ActuallyHomePage.html><li><button class="btn btn-home"> Home</button></li></a>
+                <a href =About.html><li><button class="btn btn-about"> About</button></li></a>
+            <a href="Contact.html"><li><button class="btn btn-contact"> Contact</button></li></a>
+            </ul>
+
+        </div>
+
+        
+
+    </div> 
+
+    <img class = "Moon" src="Moon2.png" alt="moonTuring">
+
+	<div class="CreateAccount">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+                <label for="chk" aria-hidden="true">Create Your Account</label>
+
+				<form  method="post" action="createAccount.php">
+					<input type="text" name="name" placeholder="Name" required="">
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="password" placeholder="Password" required="">
+					<button>Create Your Account</button>
+                    
+				</form>
+                <a href ="Login.html"> 
+                    <button> Login</button>
+                </a>
+			</div>
+
+		
+	</div>
+</body>
+</html>
