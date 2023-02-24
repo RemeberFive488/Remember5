@@ -26,7 +26,7 @@ function ShowNotification(Fajr,Sunrise,Dhuhr,Asr,Maghrib,Isha) {
                 if(perm === "granted"){
                     new Notification("Notification from Remember5",{
                         body: "Time for Prayer: Fajr",
-                        icon: "Moon.png",
+                        icon: "\\WorkingCode\\Images\\Moon.png",
                         tag: "Time for Prayer: Fajr",
                     
                     });
@@ -40,7 +40,7 @@ function ShowNotification(Fajr,Sunrise,Dhuhr,Asr,Maghrib,Isha) {
                 if(perm === "granted"){
                     new Notification("Notification from Remember5",{
                         body: "Time for Prayer: Dhuhr",
-                        icon: "Moon.png",
+                        icon: "\\WorkingCode\\Images\\Moon.png",
                         tag: "Time for Prayer: Dhuhr",
                     
                     });
@@ -55,7 +55,7 @@ function ShowNotification(Fajr,Sunrise,Dhuhr,Asr,Maghrib,Isha) {
                 if(perm === "granted"){
                     new Notification("Notification from Remember5",{
                         body: "Time for Prayer: Asr",
-                        icon: "Moon.png",
+                        icon: "\\WorkingCode\\Images\\Moon.png",
                         tag: "Time for Prayer: Asr",
                     
                     });
@@ -72,7 +72,7 @@ function ShowNotification(Fajr,Sunrise,Dhuhr,Asr,Maghrib,Isha) {
                 if(perm === "granted"){
                     new Notification("Notification from Remember5",{
                         body: "Time for Prayer: Maghrib",
-                        icon: "Moon.png",
+                        icon: "\\WorkingCode\\Images\\Moon.png",
                         tag: "Time for Prayer: Maghrib",
                     
                     });
@@ -88,7 +88,7 @@ function ShowNotification(Fajr,Sunrise,Dhuhr,Asr,Maghrib,Isha) {
                 if(perm === "granted"){
                     new Notification("Notification from Remember5",{
                         body: "Time for Prayer: Isha",
-                        icon: "Moon.png",
+                        icon: "\\WorkingCode\\Images\\Moon.png",
                         tag: "Time for Prayer: Isha",
                     
                     });
