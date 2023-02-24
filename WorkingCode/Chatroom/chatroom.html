@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chatroom</title>
+  <link rel="stylesheet" type="text/css" href="chatroom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body class="red lighten-5"> 
+  <div class="red">
+    <header class="white-text red">---------------------------------------menu bar here-----------------------------------------------</header>
+  </div>
+<script src="chatroom.js"></script>
+<div class="black lighten-5 no-pad-top no-padding no-pad-bot">
+
+  <div class="container">
+    <div class="card-panel grey lighten-4 chatroom-perimiter">
+      <div>
+      <h4 class="header center blue-text">Remember5 Chatroom</h4>
+      </div>
+      <div class="divider blue"></div>
+      <div class="section">
+        <div class="row">
+          <div class="col s12 chatroom" id="theChatroom">
+              <div class="message">
+                <img style="display: none;" src="https://www.nj.com/resizer/zovGSasCaR41h_yUGYHXbVTQW2A=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/SJGKVE5UNVESVCW7BBOHKQCZVE.jpg" alt="img" class="circle responsive-img avatar">
+                <p class="newMsg blue center white-text" style="display: none;">Hello World!</p>
+                <div class="likeSystem">
+                  <a href="#" class="badge green-text text-lighten-2 material-icons waves-effect waves-light thumbup" style="display: none;" id="thumbsUp">thumb_up</a>
+                  <a href="#" class="badge red-text text-lighten-2 material-icons waves-effect waves-light thumbdown" style="display: none;" id="thumbDown">thumb_down</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        <form id="messagingArea" class="row">
+          <div id="userMessageInputField" class="input-field col s10">
+            <i class="material-icons prefix blue-text">mode_edit</i>
+            <input id="userInput" type="text" class="validate" maxlength="150">
+            <label for="userInput">Enter your message</label>
+          </div>
+          <div class="col s2">
+            <button class="btn waves-effect waves-light right blue" type="submit" name="action">Send
+              <i class="material-icons right">send</i>
+            </button>
+            <input type="file" id="file-attach-input" style="display: none;">
+            <a class="btn-floating btn-small waves-effect waves-light orange lighten-2 right" id="emoji-picker-button"><i class="material-icons">insert_emoticon</i></a>
+            <a class="btn-floating btn-small waves-effect waves-light green right" id="file-attach-button"><i class="material-icons">attach_file</i></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id="emoji-picker" class="modal">
+    <div class="modal-content">
+      <h5 class="center white-text">Select an emoji</h5>
+      <div id="emoji-list"></div>
+    </div>
+    <div class="modalCloseButton">
+      <a href="#!" class="modal-close waves-effect waves-orange btn-flat right white-text">Close</a>
+    </div>
+  </div>
+  <footer class="white-text red">---------------------------------------footer here-----------------------------------------------</footer>
+
+</body>
+</html>

@@ -1,0 +1,690 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+	padding: 0;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+    background-image: url('420895_NEW.png');
+    background-size: cover;
+}
+.form-container {
+    justify-content: right;
+    align-self: right;
+    overflow: hidden;
+    height: 700px;
+    width: 700px;
+    margin-top: 195px;
+    margin-bottom: 0px;
+    margin-left:815px;
+    margin-right:0px;
+}
+.form-container form {
+    height: 500px;
+    width: 479px;
+    margin: auto;
+    display: flex;
+    flex-direction:column;
+    background-image: conic-gradient(from 3.1416rad at 10% 50%, #f0f340d5, #636bb1);
+    padding: 30px;
+    text-transform: capitalize;
+    border-radius: 30px;
+}
+.form-container form h3 {
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(28, 5, 83);
+}
+.form-container form h4 {
+    font: 27.2px "times new roman";
+    padding-top: 20px;
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 1.7rem;
+    color: rgb(28, 5, 83);
+}
+.form-container form label {
+    font-size: 1.7rem;
+    padding: 3px 0;
+    color: rgb(28, 5, 83);
+}
+.form-container form input, textarea {
+    padding: 8px;
+    border-radius: 20px;
+    margin: 5px 0 5px 0;
+    border: none;
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.3);
+    text-transform: capitalize;
+    font-size: 1rem;
+    padding-bottom: 10px;
+}
+.Button {
+    margin-top: 30px;
+    justify-content: center;
+    align-self: center;
+    height: 60px;
+    width: 110px;
+    font-size: 130%;
+    cursor: pointer;
+    border-radius: 20px;
+    border-color: rgb(238, 241, 58, 0.856);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+  .form-container form div {
+    height: 40px;
+    width: 400px;
+    text-align: center;
+    padding-left: 39px;
+    padding-bottom: 45px;
+    direction: rtl;
+  }
+  .form-container form  div input {
+    display: none;   
+  }
+  .form-container form  div label {
+    height: 20px;
+    width: 20px;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+    margin: 0 5px;
+  }
+  .form-container form div label:before {
+    content: '★';
+    font-size: 3.5vw;
+  }
+  .form-container form div input:checked ~ label {
+    color: gold;
+    text-shadow: 1px 1px #c60;
+  }
+  .form-container form div :not(:checked) > label:hover,
+  .form-container form  div :not(:checked) > label:hover ~ label {
+    color: gold;
+  }
+  .form-container form  div input:checked > label:hover,
+  .form-container form  div input:checked > label:hover ~ label {
+    color: gold;
+    text-shadow: 1px 1px goldenrod;
+  }
+  .form-container form  div span:before {
+    font-size: 25px;
+    font-weight: 500;
+    color: gold;
+    font-family: 'Poppins', sans-serif;
+    display: none;
+  }
+  .form-container form  div input:checked ~ .result:before {
+    display: block;
+  }
+  .form-container form  div  #five:checked ~ .result:before {
+    content: "I love it ";
+  }
+  .form-container form div  #four:checked ~ .result:before {
+    content: "I like it ";
+  }
+  .form-container form  div  #three:checked ~ .result:before {
+    content: "It's good ";
+  }
+  .form-container form div #two:checked ~ .result:before {
+    content: "I don't like it ";
+  }
+  .form-container form  div #one:checked ~ .result:before {
+    content: "I hate it ";
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header{
+    justify-content: top;
+    align-items: top;
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+	height: 112px;
+    display: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+
+}
+
+
+
+.logo{
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+
+
+.MoonText{
+
+    width: 355px;
+    display: table-cell;
+    vertical-align: middle;
+    left: 0;
+
+}
+
+.Moon{
+    width: 150px;
+    height:130px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(50%,-50%); 
+    animation: myfirst 15s infinite linear;
+}
+
+
+@keyframes myfirst {
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    vertical-align: middle;
+    padding-top: 25px;
+
+}
+
+.navigation a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+    
+
+}
+
+.navigation a li
+{
+    display: table-cell;
+    vertical-align: middle;
+    height:100%;
+    color: white;
+    font-size:20px;
+}
+
+.btn
+{
+    position: relative;
+    background:black;
+    color: #fff;
+    width: 110%;
+   margin-bottom: 2rem;
+    padding: 1rem 0;
+    border:none;
+    outline:none;
+	font-size: 1em;
+	font-weight: bold;
+    cursor: pointer;
+	
+}
+
+.btn::after
+{
+    content:'';
+    position: absolute;
+    width:100%;
+    height:0.175rem;
+    left:0;
+    bottom:0;
+    background-color: red;
+}
+
+.btn-home::after
+{
+    transform: scale(0,1);
+    transition: transform 0.3s ease;
+    
+}
+
+.btn-home:hover::after
+{
+    transform: scale(1,1);
+}
+
+.btn-about::after
+{
+    transform: scale(0,1);
+    transition: transform 0.3s ease;
+    
+}
+
+.btn-about:hover::after
+{
+    transform: scale(1,1);
+}
+
+
+.btn-contact::after
+{
+    transform: scale(0,1);
+    transition: transform 0.3s ease;
+    
+}
+
+.btn-contact:hover::after
+{
+    transform: scale(1,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1000px){
+
+    .form-container {
+        justify-content: right;
+        align-self: right;
+        overflow: hidden;
+        height: 700px;
+        width: 700px;
+        margin-top: 166px;
+        margin-bottom: 0px;
+        margin-left:354px;
+        margin-right:0px;
+    }
+    .form-container form {
+        height: 500px;
+        width: 479px;
+        margin: auto;
+        display: flex;
+        flex-direction:column;
+        background-image: conic-gradient(from 3.1416rad at 10% 50%, #f0f340d5, #636bb1);
+        padding: 30px;
+        text-transform: capitalize;
+        border-radius: 30px;
+        
+    }
+}
+
+
+@media (max-width:750px){
+
+    .form-container form div {
+        height: 40px;
+        width: 400px;
+        text-align: center;
+        padding-left: 0px;
+        padding-bottom: 9px;
+        padding-right: 75px;
+        padding-top:4px;
+        direction: rtl;
+      }
+
+    .form-container form h4 {
+        font: 27.2px "times new roman";
+        padding-top: 20px;
+        padding-bottom: 0;
+        text-align: center;
+        font-size: 1.5rem;
+        color: rgb(28, 5, 83);
+    }
+
+    .form-container form input, textarea {
+        padding: 8px;
+        border-radius: 20px;
+        margin: 5px 0 5px 0;
+        border: none;
+        box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.3);
+        text-transform: capitalize;
+        font-size: 1rem;
+        padding-bottom: 22px;
+    }
+
+    .form-container form label {
+        font-size: 1.5rem;
+        padding: 5px 0;
+        color: rgb(28, 5, 83);
+    }
+
+    .form-container form h3 {
+        text-align: center;
+        font-size: 2rem;
+        color: rgb(28, 5, 83);
+    }
+
+    .form-container {
+        justify-content: right;
+        align-self: right;
+        overflow: hidden;
+        height: 700px;
+        width: 700px;
+        margin-top: 195px;
+        margin-bottom: 0px;
+        margin-right:0px;
+        margin-left:0px;
+        display: inline;
+    }
+    .form-container form {
+        
+        height: 329px;
+        width: 247px;
+        margin: auto;
+        display: flex;
+        flex-direction:column;
+        background-image: conic-gradient(from 3.1416rad at 10% 50%, #f0f340d5, #636bb1);
+        padding: 30px;
+        text-transform: capitalize;
+        border-radius: 30px;
+        margin-top: 181px;
+        margin-bottom: 0px;
+        margin-right:0px;
+        margin-left:220px;
+    }
+}
+
+
+/*Phones mode*********************************/
+@media (max-width:500px){
+
+    .form-container form div {
+        height: 40px;
+        width: 400px;
+        text-align: center;
+        padding-left: 0px;
+        padding-bottom: 9px;
+        padding-right: 75px;
+        padding-top:4px;
+        direction: rtl;
+      }
+
+    .form-container form h4 {
+        font: 27.2px "times new roman";
+        padding-top: 20px;
+        padding-bottom: 0;
+        text-align: center;
+        font-size: 1.5rem;
+        color: rgb(28, 5, 83);
+    }
+
+    .form-container form input, textarea {
+        padding: 8px;
+        border-radius: 20px;
+        margin: 5px 0 5px 0;
+        border: none;
+        box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.3);
+        text-transform: capitalize;
+        font-size: 1rem;
+        padding-bottom: 22px;
+    }
+
+    .form-container form label {
+        font-size: 1.5rem;
+        padding: 5px 0;
+        color: rgb(28, 5, 83);
+    }
+
+    .form-container form h3 {
+        text-align: center;
+        font-size: 2rem;
+        color: rgb(28, 5, 83);
+    }
+
+    .form-container {
+        justify-content: right;
+        align-self: right;
+        overflow: hidden;
+        height: 700px;
+        width: 700px;
+        margin-top: 195px;
+        margin-bottom: 0px;
+        margin-right:0px;
+        margin-left:0px;
+        display: inline;
+    }
+    .form-container form {
+        
+        height: 329px;
+        width: 247px;
+        margin: auto;
+        display: flex;
+        flex-direction:column;
+        background-image: conic-gradient(from 3.1416rad at 10% 50%, #f0f340d5, #636bb1);
+        padding: 30px;
+        text-transform: capitalize;
+        border-radius: 30px;
+        margin-top: 134px;
+        margin-bottom: 0px;
+        margin-right:0px;
+        margin-left:44px;
+    }
+
+    
+
+
+}
+
+
+/*Moon*********************************/
+@media (max-width:750px){
+
+   
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    .header{
+        justify-content: top;
+        align-items: top;
+        margin:0;
+        padding:0;
+        list-style: none;
+        text-decoration: none;
+        width: 100%;
+        height: 70px;
+        display: rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0);
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+    
+    }
+  
+    
+    
+    .logo{
+        size: 100%;
+        display: table;
+        vertical-align: middle;
+        margin-top: 2%;
+        height:100%;
+        float: left;
+    }
+    
+    
+    
+    .MoonText{
+    
+        width: 155px;
+        display: table-cell;
+        vertical-align: middle;
+        left: 0;
+    
+    }
+    
+    .Moon{
+        width: 75px;
+        height:60px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(50%,-50%); 
+        animation: myfirst 15s infinite linear;
+    }
+    
+    
+    @keyframes myfirst {
+        0%{
+            transform: translate(-50%,-50%) rotate(0deg);
+        }
+        100%{
+            transform: translate(-50%,-50%) rotate(360deg);
+        }
+    }
+    
+    
+    .navigation{
+        
+        display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    vertical-align: middle;
+    padding-top: 11px;
+        
+    
+    }
+    
+    .navigation a{
+        height: 0%;
+        display: table;
+        
+        padding: 0px 5px;
+        
+        
+    
+    }
+    
+    .navigation a li
+    {
+        display: table-cell;
+        vertical-align: middle;
+        height:0%;
+        color: white;
+        font-size:20px;
+        margin-right: 9rem;
+    }
+    
+    .btn
+    {
+        
+        align-items: left;
+        justify-content: left;
+        vertical-align: middle;
+        position: relative;
+        background:black;
+        color: #fff;
+        width: 110%;
+        margin-bottom: 4.3rem;
+        padding: 1rem 0;
+        border:none;
+        outline:none;
+        font-size: 0.6em;
+        font-weight: bold;
+        cursor: pointer;
+        
+    }
+    
+    .btn::after
+    {
+        content:'';
+        position: absolute;
+        width:100%;
+        height:0.175rem;
+        left:0;
+        bottom:0;
+        background-color: red;
+    }
+    
+    .btn-home::after
+    {
+        transform: scale(0,1);
+        transition: transform 0.3s ease;
+        
+    }
+    
+    .btn-home:hover::after
+    {
+        transform: scale(1,1);
+    }
+    
+    .btn-about::after
+    {
+        transform: scale(0,1);
+        transition: transform 0.3s ease;
+        
+    }
+    
+    .btn-about:hover::after
+    {
+        transform: scale(1,1);
+    }
+    
+    
+    .btn-contact::after
+    {
+        transform: scale(0,1);
+        transition: transform 0.3s ease;
+        
+    }
+    
+    .btn-contact:hover::after
+    {
+        transform: scale(1,1);
+    }
+    
+
+
+
+}
+
+
+
+
+

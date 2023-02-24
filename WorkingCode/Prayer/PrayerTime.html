@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="PrayerTime.css">
+    <title>Prayer Schedule</title>
+
+</head>
+
+<div class="header">
+    <title>Remember5</title>
+    <div class="inner_header">
+  
+        <div class="logo">
+            
+            <img class="MoonText" src="MoonText.png" alt="moon">
+        </div>
+  
+        <img class = "Moon" src="Moon2.png" alt="moonTuring">
+  
+        <ul class="navigation">
+            <a href="ActuallyHomePage.html"><li><button class="btn btn-home"> Home</button></li></a>
+            <a href="About.html"><li><button class="btn btn-about"> About</button></li></a>
+            <a href="Contact.html"><li><button class="btn btn-contact"> Contact</button></li></a>
+        </ul>
+  
+    </div>
+  </div>
+
+<body style="background-color:slategrey">
+
+   
+
+
+    <!--<iframe style="width: 550px; height: 460px; border: 1px solid #ddd;" scrolling="no" src="https://en.islamery.com/us/pennsylvania/chester-county/borough-of-west-grove"> </iframe>-->
+  
+    
+   
+    
+  
+    <div class="topDesign">
+        <div class="input">
+            <h4>City: </h4> 
+            <input id="city" value="West Grove">
+            <br/>
+            <h4>Country: </h4> 
+            <input id="country" value="United States">
+            <br/>
+            <button onclick="myFunction()">Submit</button>
+            <h1 id="message"> </h1> 
+        </div>
+    
+        <h1 id="current-time"></h1>
+         
+        <h1>Upcoming Prayer: <div id="Upcoming"; style = "color: rgb(169, 4, 235);"></div></h1> 
+    </div>
+    
+
+    <table class="myTable">
+       
+        <script src="PrayerTime.js"></script>
+       
+        <script src="Time.js"></script>
+        
+        <tr>
+            <th>Prayer</th>
+            <th>Time</th>
+            <th>End Time</th>
+        </tr>
+        <tr>
+            <td>Fajr</td>
+            <td><div id="Fajr"></div></td>
+            <td><div id="Sunrise2"></div></td>
+        </tr>
+
+        <tr>
+            <td>Sunrise</td>
+            <td><div id="Sunrise"></div></td>
+            <td><div id="Sunrise3"></div></td>
+        </tr>
+
+        <tr>
+            <td>Duhr</td>
+            <td><div id="Dhuhr"></div></td>
+            <td><div id="Asr2"></div></td>
+        </tr>
+
+        <tr>
+            <td>Asr</td>
+            <td><div id="Asr"></div></td>
+            <td><div id="Maghrib2"></div></td>
+        </tr>
+
+        <tr>
+            <td>Maghrib</td>
+            <td><div id="Maghrib"></div></td>
+            <td><div id="Isha2"></div></td>
+        </tr>
+
+        <tr>
+            <td>Isha</td>
+            <td><div id="Isha"></div></td>
+            <td><div id="Midnight"></div></td>
+        </tr>
+        
+    </table>
+
+
+</body>
+</html>
