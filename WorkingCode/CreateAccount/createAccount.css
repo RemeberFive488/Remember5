@@ -31,7 +31,7 @@ body{
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
     background: linear-gradient(to top, #0c290e, #427256, #243e2e);
-    background-image: url("7.jpg");
+    background-image: url("\\WorkingCode\\Images\\7.jpg");
     background-size: cover;
     
 }
@@ -477,7 +477,7 @@ input{
         min-height: 100vh;
         font-family: 'Jost', sans-serif;
         background: linear-gradient(to top, #0c290e, #427256, #243e2e);
-        background-image: url("7.jpg");
+        background-image: url("\\WorkingCode\\Images\\7.jpg");
         background-size: cover;
         
     }

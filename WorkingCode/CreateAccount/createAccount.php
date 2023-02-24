@@ -6,7 +6,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" type="text/css" href="createAccount.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="\WorkingCode\CreateAccount\createAccount.css" media="screen" />
 </head>
 
 <div class="header">
@@ -15,15 +15,15 @@
 
         <div class="logo">
             
-            <img class="MoonText" src="MoonText.png" alt="moon">
+            <img class="MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
         </div>
 
-        <img class = "Moon" src="Moon2.png" alt="moonTuring">
+        <img class = "Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
 
         <ul class="navigation">
-            <a href="ActuallyHomePage.html"><li><button class="btn btn-home"> Home</button></li></a>
-            <a href="About.html"><li><button class="btn btn-about"> About</button></li></a>
-            <a href="Contact.html"><li><button class="btn btn-contact"> Contact</button></li></a>
+        <a href ="\WorkingCode\Homepage\ActuallyHomePage.html"><li><button class="btn btn-home"> Home</button></li></a>
+                <a href ="\WorkingCode\About\About.html"><li><button class="btn btn-about"> About</button></li></a>
+            <a href="\WorkingCode\Contact\Contact.html"><li><button class="btn btn-contact"> Contact</button></li></a>
         </ul>
 
     </div>
@@ -42,7 +42,7 @@
                 <button>Create Your Account</button>
                 
             </form>
-            <a href ="Login.html"> 
+            <a href ="\WorkingCode\Login\Login.html"> 
                 <button> Login</button>
             </a>
         </div>
