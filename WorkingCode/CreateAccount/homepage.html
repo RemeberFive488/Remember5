@@ -11,11 +11,18 @@
 </head>
 <body>
 
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+
+<script src="app.js" defer></script>
+
     <div class="header">
         <div class = "inner_header">
             <div class = "logo">
                 
                 <img class = "MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
+                <img class = "Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
+
             </div>
             
 
@@ -31,7 +38,6 @@
 
     </div> 
 
-    <img class = "Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
 
 	<div class="CreateAccount">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
@@ -39,11 +45,11 @@
 			<div class="signup">
                 <label for="chk" aria-hidden="true">Create Your Account</label>
 
-				<form  method="post" action="createAccount.php">
-					<input type="text" name="name" placeholder="Name" required="">
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="password" placeholder="Password" required="">
-					<button>Create Your Account</button>
+				<form id="add_landmark_form">
+					<input type="text" id="nameid" name="name" placeholder="Name" required="">
+					<input type="email" id="emailid" name="email" placeholder="Email" required="">
+					<input type="password" id="passwordid" name="password" placeholder="Password" required="">
+					<button type="submit">Create Your Account</button>
                     
 				</form>
                 <a href ="\WorkingCode\Login\Login.html"> 
@@ -51,7 +57,8 @@
                 </a>
 			</div>
 
-		
+            <ul class="collection" id="landmarks_ul">
+            </ul>
 	</div>
 </body>
 </html>
