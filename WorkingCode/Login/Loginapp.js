@@ -32,7 +32,10 @@ const firebaseConfig = {
             })
         })
 
-
+        // db.collection("lt64Zd3xdrTtRr9r5KYN").add({
+        //   //ICmUSgLz0XO72g9CMdPU51ZtKWk1
+        //         new: "ICmUSgLz0XO72g9CMdPU51ZtKWk1"
+        //     });
 
  function Login(){
 

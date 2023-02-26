@@ -64,6 +64,7 @@ form.addEventListener("submit", e => {
     console.log("FORM SUBMITTED")
 
     const user_name = form.nameid.value
+
     db.collection("CreateAccount").add({
         nameid: form.nameid.value,
         emailid: form.emailid.value,
@@ -87,6 +88,16 @@ form.addEventListener("submit", e => {
            console.log("Error in updating Name")
         });  
         
+        // console.log("User ID:")
+        // console.log(userc.uid)
+        // console.log("END User ID:")
+
+      db.collection(userc.uid).add({
+         
+          });
+
+
+
       
       } else {
           // User is not signed in

@@ -1,3 +1,70 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyBxoV0Qji0j8GjG2N4jqYWWUtmUnN1Qyec",
+    authDomain: "remember5-321e2.firebaseapp.com",
+    projectId: "remember5-321e2",
+    storageBucket: "remember5-321e2.appspot.com",
+    messagingSenderId: "363183328287",
+    appId: "1:363183328287:web:3f597b880859c5eb18192a",
+    measurementId: "G-XPX3Y2K184"
+  };
+       
+  firebase.initializeApp(firebaseConfig)
+  const db = firebase.firestore()
+  db.settings({});
+  
+  const auth = firebase.auth();
+
+  auth.onAuthStateChanged(user => {
+    if (user) 
+
+    {
+      console.log('User logged in: ', user);
+
+    } 
+
+
+    else 
+    {
+      console.log('User logged out');
+    }
+
+  });
+
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ auth.onAuthStateChanged(user => {
+ var collectionRef = db.collection(user.uid);
+  var docRef = collectionRef.doc("Prayer_City_Country");
+
+  docRef.get().then(function(doc) {
+  if (doc.exists) {
+      console.log("Document data:", doc.data());
+
+    //   console.log(doc.data().City)
+    //   console.log(doc.data().Country)
+
+
+      var cityInput = document.getElementById("city");
+    //   cityInput.innerHTML = doc.data().City;
+      cityInput.setAttribute("value", doc.data().City);
+
+
+      var countryInput = document.getElementById("country");
+    //   countryInput.innerHTML = doc.data().Country;
+    countryInput.setAttribute("value", doc.data().Country);
+
+       initial(doc.data().City,doc.data().Country)
+      
+  } else {
+      console.log("Document does not exist");
+      
+  }
+  }).catch(function(error) {
+  console.error("Error getting document:", error);
+  });
+});
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 fetch("https://api.aladhan.com/v1/timingsByCity?city=West%20Grove&country=United%20States&method=2").then((data)=>{
     //console.log(data); json formatr
     return data.json(); //Convert to object
@@ -90,11 +157,42 @@ fetch("https://api.aladhan.com/v1/timingsByCity?city=West%20Grove&country=United
 
 
 function myFunction(){
-    
+
+
 let city = document.querySelector("#city");
 let country = document.querySelector("#country");
 let message = document.querySelector("#message");
 //console.log(city.value);
+
+auth.onAuthStateChanged(user => {
+    if (user) 
+    {
+  
+      var uid = user.uid;
+      var docRef = db.collection(uid).doc("Prayer_City_Country");
+
+      docRef.set({
+        City: city.value,
+        Country: country.value
+      }).then(function() 
+      {
+        console.log("Data written to collection");
+      }).catch(function(error) 
+      {
+        console.error("Error writing to collection: ", error);
+      });
+    } 
+
+
+
+
+    else 
+    {
+      console.log('User logged out');
+    }
+
+  });
+
 
 fetch("https://api.aladhan.com/v1/timingsByCity?city="+city.value+"&country="+country.value+"&method=2").then((data)=>{
     //console.log(data); json formatr
@@ -305,4 +403,95 @@ var date = new Date("February 04, 2011 "+ time);
     };
 var timeString = date.toLocaleString('en-US', options);
 return timeString;
+}
+
+
+function initial(city,country){
+    fetch("https://api.aladhan.com/v1/timingsByCity?city="+city+"&country="+country+"&method=2").then((data)=>{
+    //console.log(data); json formatr
+    return data.json(); //Convert to object
+}).then((objectData)=>{
+    //console.log(objectData.data.timings);
+
+    
+     
+    Fajr=`<p>${Twelve_hour_format(objectData.data.timings.Fajr)}</p>`;
+    document.getElementById("Fajr").innerHTML= Fajr;
+
+    
+    Sunrise=`<p>${Twelve_hour_format(objectData.data.timings.Sunrise)}</p>`;
+    document.getElementById("Sunrise").innerHTML= Sunrise;
+
+    Sunrise2=`<p>${Twelve_hour_format(objectData.data.timings.Sunrise)}</p>`;
+    document.getElementById("Sunrise2").innerHTML= Sunrise2;
+
+    Sunrise3=`<p>${Twelve_hour_format(objectData.data.timings.Sunrise)}</p>`;
+    document.getElementById("Sunrise3").innerHTML= Sunrise3;
+
+
+    Dhuhr=`<p>${Twelve_hour_format(objectData.data.timings.Dhuhr)}</p>`;
+    document.getElementById("Dhuhr").innerHTML= Dhuhr;
+
+   
+    Asr=`<p>${Twelve_hour_format(objectData.data.timings.Asr)}</p>`;
+    document.getElementById("Asr").innerHTML= Asr;
+
+    Asr2=`<p>${Twelve_hour_format(objectData.data.timings.Asr)}</p>`;
+    document.getElementById("Asr2").innerHTML= Asr2;
+
+    
+    Maghrib=`<p>${Twelve_hour_format(objectData.data.timings.Maghrib)}</p>`;
+    document.getElementById("Maghrib").innerHTML= Maghrib;
+
+    Maghrib2=`<p>${Twelve_hour_format(objectData.data.timings.Maghrib)}</p>`;
+    document.getElementById("Maghrib2").innerHTML= Maghrib2;
+
+    Isha=`<p>${Twelve_hour_format(objectData.data.timings.Isha)}</p>`;
+    document.getElementById("Isha").innerHTML= Isha;
+    
+    Isha2=`<p>${Twelve_hour_format(objectData.data.timings.Isha)}</p>`;
+    document.getElementById("Isha2").innerHTML= Isha2;
+
+    document.getElementById("Midnight").innerHTML= '11:59 PM';
+
+    let time = document.getElementById("Upcoming");
+    setInterval(() =>{
+
+        const d = new Date();
+        
+        var a = (d.getHours());
+        var b = (getHours(objectData.data.timings.Fajr));
+        
+        //console.log((d.getHours())-(b));
+        //console.log(a);
+        //console.log(b);
+        //console.log(a-b);
+
+        if (getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Fajr && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Dhuhr ) {
+            time.innerHTML = "Dhuhr";   
+        } 
+        else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Dhuhr && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Asr) {
+            time.innerHTML = "Asr"; 
+        }
+        else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Asr && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Maghrib) {
+            time.innerHTML = "Maghrib"; 
+        }
+        else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Maghrib && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Isha) {
+            time.innerHTML = "Isha"; 
+        }
+        else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Isha) {
+            time.innerHTML = "Fajr";
+
+           
+        }
+        else{
+            time.innerHTML = "Fajr"; 
+        }
+
+    },1000);
+    
+    ShowNotification(objectData.data.timings.Fajr,objectData.data.timings.Sunrise,objectData.data.timings.Dhuhr,objectData.data.timings.Asr,objectData.data.timings.Maghrib,objectData.data.timings.Isha);
+
+ 
+});
 }
