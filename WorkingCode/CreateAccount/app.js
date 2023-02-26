@@ -20,27 +20,28 @@ const form = document.getElementById('add_landmark_form')
 
 auth.onAuthStateChanged(user => {
     if (user) {
-      console.log('user logged in: ', user);
+
+      console.log('User logged in: ', user);
     } else {
-      console.log('user logged out');
+      console.log('User logged out');
     }
   })
 
 const renderLandmark = (doc) => {
 
     
-    console.log("Nigga we made it")
+    //console.log("we made it")
 }
 
 db.collection("CreateAccount").onSnapshot(
     snapshot => {
-         console.log(snapshot)
+         //console.log(snapshot)
         let changes = snapshot.docChanges()
-         console.log(changes)
+         //console.log(changes)
         changes.forEach(
             change => {
-                console.log(change.type)
-                console.log(change.doc.data())
+                //console.log(change.type)
+                //console.log(change.doc.data())
                 switch (change.type) {
                     case "added":
                         renderLandmark(change.doc)
@@ -62,6 +63,7 @@ form.addEventListener("submit", e => {
 
     console.log("FORM SUBMITTED")
 
+    const user_name = form.nameid.value
     db.collection("CreateAccount").add({
         nameid: form.nameid.value,
         emailid: form.emailid.value,
@@ -70,10 +72,37 @@ form.addEventListener("submit", e => {
 
     // sign up the user
   auth.createUserWithEmailAndPassword(form.emailid.value, form.passwordid.value).then(cred => {
-    console.log(cred.user);
-    // close the signup modal & reset form
+   
+    var userc = firebase.auth().currentUser;
+    if (userc) {
+        userc.updateProfile({
+          displayName: user_name
+        }).then(() => {
+          // Update successful
+          // ...
+          console.log("Name is updated")
+        }).catch((error) => {
+          // An error occurred
+          // ...
+           console.log("Error in updating Name")
+        });  
+        
+      
+      } else {
+          // User is not signed in
+          console.log("User is not signed in again")
+        }
 
+  }).catch(function(error) {
+    //Error could be something like EMAIL already in use
+    //TODO: add something for user to see the error message
+    console.log(error);
   });
+
+//   const upuser = firebase.auth().currentUser;
+
+
+
 
     form.nameid.value = ''
     form.emailid.value = ''
