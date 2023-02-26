@@ -18,6 +18,14 @@ const firebaseConfig = {
 const ul = document.getElementById('landmarks_ul')
 const form = document.getElementById('add_landmark_form')
 
+auth.onAuthStateChanged(user => {
+    if (user) {
+      console.log('user logged in: ', user);
+    } else {
+      console.log('user logged out');
+    }
+  })
+
 const renderLandmark = (doc) => {
 
     

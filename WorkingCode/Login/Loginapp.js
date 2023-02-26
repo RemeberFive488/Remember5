@@ -13,7 +13,14 @@ const firebaseConfig = {
         db.settings({});
   
         const auth = firebase.auth();
-  
+
+        auth.onAuthStateChanged(user => {
+            if (user) {
+              console.log('User logged in: ', user);
+            } else {
+              console.log('User logged out');
+            }
+          })
 
 
         const logout = document.getElementById("logout");
