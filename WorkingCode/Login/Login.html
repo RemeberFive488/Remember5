@@ -7,8 +7,18 @@
   <meta name="viewport" content="width=device-width">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 
+
 </head>
 <body>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    
+    
+    <script src="Loginapp.js" defer></script>
+
     <div class="header">
         <title>Remember5</title>
         <div class="inner_header">
@@ -24,23 +34,27 @@
                 <a href ="\WorkingCode\Homepage\ActuallyHomePage.html"><li><button class="btn btn-home"> Home</button></li></a>
                 <a href ="\WorkingCode\About\About.html"><li><button class="btn btn-about"> About</button></li></a>
                 <a href="\WorkingCode\Contact\Contact.html"><li><button class="btn btn-contact"> Contact</button></li></a>
+                <a href ="Loginapp.js"><li><button id ="logout" class="btn btn-home"> Logout</button></li></a>
+
             </ul>
     
         </div>
     </div>
 	<div class="login">
         
-        <form>
+        <form id="Login_form">
            
             <label for="chk" aria-hidden="true">Login</label>
-            <input type="text" name="name" placeholder="Name">
-            <input type="password" name="pswd" placeholder="Password">
+            <input type="email" id="nameidl" name="email" placeholder="Email" required="">
+            <input type="password" id="passwordidl" name="pswd" placeholder="Password" required="">
            
-        </form>
-        <a href ="\WorkingCode\Homepage\ActuallyHomePage.html">
-            <button> Login</button>
-            
-        </a>
+        
+        <!-- <a href ="\WorkingCode\Homepage\ActuallyHomePage.html"> -->
+            <button type="submit" onclick="Login()"> Login</button>
+        </form> 
+        <!-- </a> -->
+        <ul class="collection" id="Login_ul">
+        </ul>
         
 
     </div>

@@ -12,6 +12,7 @@ const firebaseConfig = {
       const db = firebase.firestore()
       db.settings({});
 
+      const auth = firebase.auth();
 
 
 const ul = document.getElementById('landmarks_ul')
@@ -59,7 +60,28 @@ form.addEventListener("submit", e => {
         passwordid: form.passwordid.value
     });
 
+    // sign up the user
+  auth.createUserWithEmailAndPassword(form.emailid.value, form.passwordid.value).then(cred => {
+    console.log(cred.user);
+    // close the signup modal & reset form
+
+  });
+
     form.nameid.value = ''
     form.emailid.value = ''
     form.passwordid.value = ''
+
+
+   
+  
+
+})
+
+const logout = document.getElementById("logout");
+logout.addEventListener('click',(e)=>{
+    e.preventDefault();
+    auth.signOut().then(()=>{
+
+        console.log("Signed Out")
+    })
 })
