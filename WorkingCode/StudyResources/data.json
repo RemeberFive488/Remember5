@@ -1,0 +1,568 @@
+{
+
+"modules":
+[
+    {
+        "mod_id": "1",
+        "mod_header": "The Beginner's Guide to Understanding Islam",
+        "mod_img": "https://www.mymasjid.ca/wp-content/uploads/2017/12/What-is-Islam_.jpg",
+
+        "lessons": [
+        {
+            "id": "L1",   
+            "title": "Introduction to Islam",
+            "header_1": "What Does 'Islam' Mean?",
+            "header_2": "What is a Muslim?",
+            "header_3": "Who is Allah?",
+            "header_4": "The Holy Quran",
+            "header_5": "Who is Prophet Muhammad?",
+            "description": "What is the religion that is practiced by 1.6 billion people around the world? What are their beliefs? Who do they worship? Find out in this first chapter.",
+            "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/what-is-islam.png",
+            "text_1": "'Islam' is an Arabic term which means to submit one's will to the will of God. Islam is a monotheistic religion that teaches that there is only one divine being, one supreme Creator of the universe. Muslims believe that Islam is the true religion of God revealed to humanity. It is a universal religion that can be practiced by anyone at any time and in every place. The central concept of this way of life is total submission to God. Islam is a complete, holistic way of living that covers every aspect of life. Islam leaves no stone unturned as it teaches mankind on how to behave in every area of life: individual, social, material, moral, ethical, legal, cultural, political, economical, and global.",
+            "text_2": "A Muslim is anyone who submits their will to the one and only true God who is worthy of worship, 'Allah' (God). A Muslim also believes in the Prophet Muhammad (peace be upon him) as the last and final prophet of God. By submitting oneself and worshiping Allah (God), a Muslim attains peace through obedience to his commandments. Peace is a natural result of submitting to the will of Allah. For a person to become a Muslim and accept Islam as their faith, they must say and believe in the following phrase: 'La ilaha illa Allah. Muhammad rasool Allah'. This sentence literally means “There is no God but Allah and Muhammad is His messenger.” The sentence also means “There is none worthy of worship except Allah, and Muhammad is His messenger.” The moment a person says this phrase and begins to act upon it they become a Muslim.", 
+            "text_3": "Allah is the name God Almighty has given Himself as is mentioned many times in the Holy Quran. ",
+            "text_4": "A core belief taught in Islam is that human beings are unique from among God’s creation. We have the ability to think freely and choose to behave in any way we wish. In order to communicate and guide mankind, Allah sends Prophets and Messengers with scriptures to teach mankind about the true message. Muslims believe that many scriptures have been revealed to mankind in the past. They include the Torah sent to Moses, the Psalms sent to David, and the Gospel sent to Jesus Christ (peace be upon them all). The Holy Qur’an is the last revelation from Allah sent to all of mankind and it was revealed to his final messenger, Prophet Muhammad (peace be upon him). Muslims believe that Islam is not a new religion, but rather a continuation and completion of the message revealed to the Prophets of the past. The Holy Qur’an contains 114 chapters and it was revealed over 1,400 years ago to Prophet Muhammad (peace be upon him). Muslims believe that it is the verbatim word of Allah; it has not been tampered, edited, or changed in any way throughout those years. The Qur’an we have today is the same Qur’an that was originally revealed to Muhammad (peace be upon him). This scripture covers the major themes of life such as piety, worship, belief, morals, good deeds, sins, death, the afterlife, and much more.",    
+            "text_5": "From the beginning of mankind until the present day Allah has sent a Prophet to every nation to guide them to the truth. They were sent to teach their people to worship God alone and not to ascribe any divine partners to Him. The names of these Prophets may sound familiar to you. They include Adam, Nuh (Noah), Ibrahim (Abraham), Ismail, Ishaq (Isaac), Yaqub (Jacob), Jesus, Muhammad, and many others (peace be upon them all). Muslims believe Jesus to be a Prophet of God rather than a divine being or son. We will cover this difference in faith between the Muslims and Christians in a future guide. This chain of prophethood began with Adam and ended with Muhammad (peace be upon him), the final Prophet of Allah. He was born in Makkah in the year 570, about six centuries after Jesus. He grew up to be known as an honest and truthful person throughout the city. When he reached the age of 40 he was chosen to be a Prophet of Allah. He was chosen at a time when mankind had turned away from the original message of Islam that the previous Prophets had come with. Muslims believe the Gospel, Torah, and other scriptures were distorted by people after their Prophets had passed away. Allah sent the archangel Gabriel to reveal the Qur’an to Muhammad (peace be upon him) to spread the correct, unadulterated teachings of Islam to the four corners of the globe. Allah gave Muhammad (peace be upon him) the ability to carry on the message successfully and today 1.6 billion believe in this faith. They are grateful for the blessing of calling themselves Muslim."
+
+
+        },
+    
+        {
+            "id": "L2",
+            "title": "The 5 Pillars to Islam",
+            "header_1": "",
+            "header_2": "",
+            "header_3": "",
+            "header_4": "",
+            "header_5": "",
+            "description": "Islam is built upon 5 pillars, and practicing these pillars is important for all Muslims which include belief in one God, prayer, zakat, fasting, and pilgrimage.",
+            "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/5-pillars-of-islam.png",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "text_4": "",
+            "text_5": ""
+        },
+
+        {
+            "id": "L3",
+            "title": "The 6 Pillars of Faith",
+            "header_1": "",
+            "header_2": "",
+            "header_3": "",
+            "header_4": "",
+            "header_5": "",
+            "description": "What makes up faith for a Muslim? Do they believe in the existence of Angels? What about scriptures such as the Torah and Gospel? Do they believe in other Prophets besides Muhammad?",
+            "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/6-pillars-of-iman-faith.png",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "text_4": "",
+            "text_5": ""
+        },
+
+        {
+            "id": "L4",
+            "title": "Story of Prophet Muhammad",
+            "header_1": "",
+            "header_2": "",
+            "header_3": "",
+            "header_4": "",
+            "header_5": "",
+            "description": "Learn about the man who the Holy Qur’an was revealed to, and the man who Muslims believe is the last Prophet sent to mankind.",
+            "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/prophet-muhammad.png",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "text_4": "",
+            "text_5": ""
+        },
+
+        {  
+            "id": "L5",
+            "title": "The Afterlife",
+            "header_1": "",
+            "header_2": "",
+            "header_3": "",
+            "header_4": "",
+            "header_5": "",
+            "description": "The moment of death, life in the grave, the Day of Judgement, Heaven and Hell. How do Muslims view the next life?",
+            "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/the-afterlife-in-islam.png",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "text_4": "",
+            "text_5": ""
+        }
+    ]
+},
+
+
+
+    {   
+        "mod_id": "2",
+        "mod_header": "The Beginner's Guide to Learning How To Pray Salah",
+        "mod_img": "https://www.mymasjid.ca/wp-content/uploads/2017/12/How-to-Pray-Salah.jpg",
+
+        "lessons": [
+        {
+            "id": "1",
+            "title": "What is Islam?",
+            "header_1": "",
+            "header_2": "",
+            "header_3": "",
+            "header_4": "",
+            "header_5": "",
+            "description": "What is the religion that is practiced by 1.6 billion people around the world? What are their beliefs? Who do they worship? Find out in this first chapter.",
+            "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/what-is-islam.png",
+            "text_1": "'Islam' is an Arabic term which means to submit one's will to the will of God. Islam is a monotheistic religion that teaches that there is only one divine being, one supreme Creator of the universe. Muslims believe that Islam is the true religion of God revealed to humanity. It is a universal religion that can be practiced by anyone at any time and in every place. The central concept of this way of life is total submission to God. Islam is a complete, holistic way of living that covers every aspect of life. Islam leaves no stone unturned as it teaches mankind on how to behave in every area of life: individual, social, material, moral, ethical, legal, cultural, political, economical, and global.",
+            "text_2": "A Muslim is anyone who submits their will to the one and only true God who is worthy of worship, 'Allah' (God). A Muslim also believes in the Prophet Muhammad (peace be upon him) as the last and final prophet of God. By submitting oneself and worshiping Allah (God), a Muslim attains peace through obedience to his commandments. Peace is a natural result of submitting to the will of Allah. For a person to become a Muslim and accept Islam as their faith, they must say and believe in the following phrase: 'La ilaha illa Allah. Muhammad rasool Allah'. This sentence literally means “There is no God but Allah and Muhammad is His messenger.” The sentence also means “There is none worthy of worship except Allah, and Muhammad is His messenger.” The moment a person says this phrase and begins to act upon it they become a Muslim.", 
+            "text_3": "",
+            "text_4": "",
+            "text_5": ""
+        },
+
+        {
+            "id": "2",
+            "title": "The 5 Pillars to Islam",
+            "header_1": "",
+            "header_2": "",
+            "header_3": "",
+            "header_4": "",
+            "header_5": "",
+            "description": "Islam is built upon 5 pillars, and practicing these pillars is important for all Muslims which include belief in one God, prayer, zakat, fasting, and pilgrimage.",
+            "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/5-pillars-of-islam.png",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "text_4": "",
+            "text_5": ""
+        },
+
+        {
+            "id": "3",
+            "title": "The 6 Pillars of Faith",
+            "header_1": "",
+            "header_2": "",
+            "header_3": "",
+            "header_4": "",
+            "header_5": "",
+            "description": "What makes up faith for a Muslim? Do they believe in the existence of Angels? What about scriptures such as the Torah and Gospel? Do they believe in other Prophets besides Muhammad?",
+            "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/6-pillars-of-iman-faith.png",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "text_4": "",
+            "text_5": ""
+        },
+
+        {
+            "id": "4",
+            "title": "Story of Prophet Muhammad",
+            "header_1": "",
+            "header_2": "",
+            "header_3": "",
+            "header_4": "",
+            "header_5": "",
+            "description": "Learn about the man who the Holy Qur’an was revealed to, and the man who Muslims believe is the last Prophet sent to mankind.",
+            "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/prophet-muhammad.png",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "text_4": "",
+            "text_5": ""
+        },
+
+        {  
+            "id": "5",
+            "title": "The Afterlife",
+            "header_1": "",
+            "header_2": "",
+            "header_3": "",
+            "header_4": "",
+            "header_5": "",
+            "description": "The moment of death, life in the grave, the Day of Judgement, Heaven and Hell. How do Muslims view the next life?",
+            "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/the-afterlife-in-islam.png",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "text_4": "",
+            "text_5": ""
+        }
+    ]
+    },
+
+
+
+{   
+    "mod_id": "3",
+    "mod_header": "The Beginner's Guide to Fasting in Islam",
+    "mod_img": "https://www.mymasjid.ca/wp-content/uploads/2021/04/eating-dates-ramadan-iftar.jpg",
+
+    "lessons":  [
+    {
+        "id": "1",
+        "title": "What is Islam?",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "What is the religion that is practiced by 1.6 billion people around the world? What are their beliefs? Who do they worship? Find out in this first chapter.",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/what-is-islam.png",
+        "text_1": "'Islam' is an Arabic term which means to submit one's will to the will of God. Islam is a monotheistic religion that teaches that there is only one divine being, one supreme Creator of the universe. Muslims believe that Islam is the true religion of God revealed to humanity. It is a universal religion that can be practiced by anyone at any time and in every place. The central concept of this way of life is total submission to God. Islam is a complete, holistic way of living that covers every aspect of life. Islam leaves no stone unturned as it teaches mankind on how to behave in every area of life: individual, social, material, moral, ethical, legal, cultural, political, economical, and global.",
+        "text_2": "A Muslim is anyone who submits their will to the one and only true God who is worthy of worship, 'Allah' (God). A Muslim also believes in the Prophet Muhammad (peace be upon him) as the last and final prophet of God. By submitting oneself and worshiping Allah (God), a Muslim attains peace through obedience to his commandments. Peace is a natural result of submitting to the will of Allah. For a person to become a Muslim and accept Islam as their faith, they must say and believe in the following phrase: 'La ilaha illa Allah. Muhammad rasool Allah'. This sentence literally means “There is no God but Allah and Muhammad is His messenger.” The sentence also means “There is none worthy of worship except Allah, and Muhammad is His messenger.” The moment a person says this phrase and begins to act upon it they become a Muslim." ,
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {
+        "id": "2",
+        "title": "The 5 Pillars to Islam",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "Islam is built upon 5 pillars, and practicing these pillars is important for all Muslims which include belief in one God, prayer, zakat, fasting, and pilgrimage.",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/5-pillars-of-islam.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {
+        "id": "3",
+        "title": "The 6 Pillars of Faith",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "What makes up faith for a Muslim? Do they believe in the existence of Angels? What about scriptures such as the Torah and Gospel? Do they believe in other Prophets besides Muhammad?",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/6-pillars-of-iman-faith.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {
+        "id": "4",
+        "title": "Story of Prophet Muhammad",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "Learn about the man who the Holy Qur'an was revealed to, and the man who Muslims believe is the last Prophet sent to mankind.",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/prophet-muhammad.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {  
+        "id": "5",
+        "title": "The Afterlife",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "The moment of death, life in the grave, the Day of Judgement, Heaven and Hell. How do Muslims view the next life?",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/the-afterlife-in-islam.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    }
+    ]
+},
+
+
+
+
+
+{   
+    "mod_id": "4",
+    "mod_header": "",
+    "mod_img": "https://www.mymasjid.ca/wp-content/uploads/2017/10/masjid-nabawi-prophet-mosque.jpg",
+
+    "lessons":  [
+    {
+        "id": "1",
+        "title": "What is Islam?",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "What is the religion that is practiced by 1.6 billion people around the world? What are their beliefs? Who do they worship? Find out in this first chapter.",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/what-is-islam.png",
+        "text_1": "'Islam' is an Arabic term which means to submit one's will to the will of God. Islam is a monotheistic religion that teaches that there is only one divine being, one supreme Creator of the universe. Muslims believe that Islam is the true religion of God revealed to humanity. It is a universal religion that can be practiced by anyone at any time and in every place. The central concept of this way of life is total submission to God. Islam is a complete, holistic way of living that covers every aspect of life. Islam leaves no stone unturned as it teaches mankind on how to behave in every area of life: individual, social, material, moral, ethical, legal, cultural, political, economical, and global.",
+        "text_2": "A Muslim is anyone who submits their will to the one and only true God who is worthy of worship, 'Allah' (God). A Muslim also believes in the Prophet Muhammad (peace be upon him) as the last and final prophet of God. By submitting oneself and worshiping Allah (God), a Muslim attains peace through obedience to his commandments. Peace is a natural result of submitting to the will of Allah. For a person to become a Muslim and accept Islam as their faith, they must say and believe in the following phrase: 'La ilaha illa Allah. Muhammad rasool Allah'. This sentence literally means “There is no God but Allah and Muhammad is His messenger.” The sentence also means “There is none worthy of worship except Allah, and Muhammad is His messenger.” The moment a person says this phrase and begins to act upon it they become a Muslim." ,
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {
+        "id": "2",
+        "title": "The 5 Pillars to Islam",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "Islam is built upon 5 pillars, and practicing these pillars is important for all Muslims which include belief in one God, prayer, zakat, fasting, and pilgrimage.",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/5-pillars-of-islam.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {
+        "id": "3",
+        "title": "The 6 Pillars of Faith",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "What makes up faith for a Muslim? Do they believe in the existence of Angels? What about scriptures such as the Torah and Gospel? Do they believe in other Prophets besides Muhammad?",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/6-pillars-of-iman-faith.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {
+        "id": "4",
+        "title": "Story of Prophet Muhammad",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "Learn about the man who the Holy Qur’an was revealed to, and the man who Muslims believe is the last Prophet sent to mankind.",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/prophet-muhammad.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {  
+        "id": "5",
+        "title": "The Afterlife",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "The moment of death, life in the grave, the Day of Judgement, Heaven and Hell. How do Muslims view the next life?",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/the-afterlife-in-islam.png"
+    }
+    ]
+},
+
+
+
+{   
+    "mod_id": "5",
+    "mod_header": "",
+    "mod_img": "https://www.newmuslims.com/upload/lessons/images/Friday_Prayer_part_2._001.jpg",
+
+    "lessons":  [
+    {
+        "id":"1",
+        "title": "What is Islam?",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "What is the religion that is practiced by 1.6 billion people around the world? What are their beliefs? Who do they worship? Find out in this first chapter.",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/what-is-islam.png",
+        "text_1": "'Islam' is an Arabic term which means to submit one's will to the will of God. Islam is a monotheistic religion that teaches that there is only one divine being, one supreme Creator of the universe. Muslims believe that Islam is the true religion of God revealed to humanity. It is a universal religion that can be practiced by anyone at any time and in every place. The central concept of this way of life is total submission to God. Islam is a complete, holistic way of living that covers every aspect of life. Islam leaves no stone unturned as it teaches mankind on how to behave in every area of life: individual, social, material, moral, ethical, legal, cultural, political, economical, and global.",
+        "text_2": "A Muslim is anyone who submits their will to the one and only true God who is worthy of worship, 'Allah' (God). A Muslim also believes in the Prophet Muhammad (peace be upon him) as the last and final prophet of God. By submitting oneself and worshiping Allah (God), a Muslim attains peace through obedience to his commandments. Peace is a natural result of submitting to the will of Allah. For a person to become a Muslim and accept Islam as their faith, they must say and believe in the following phrase: 'La ilaha illa Allah. Muhammad rasool Allah'. This sentence literally means “There is no God but Allah and Muhammad is His messenger.” The sentence also means “There is none worthy of worship except Allah, and Muhammad is His messenger.” The moment a person says this phrase and begins to act upon it they become a Muslim." ,
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {
+        "id": "2",
+        "title": "The 5 Pillars to Islam",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "Islam is built upon 5 pillars, and practicing these pillars is important for all Muslims which include belief in one God, prayer, zakat, fasting, and pilgrimage.",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/5-pillars-of-islam.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {
+        "id": "3",
+        "title": "The 6 Pillars of Faith",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "What makes up faith for a Muslim? Do they believe in the existence of Angels? What about scriptures such as the Torah and Gospel? Do they believe in other Prophets besides Muhammad?",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/6-pillars-of-iman-faith.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {
+        "id": "4",
+        "title": "Story of Prophet Muhammad",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "Learn about the man who the Holy Qur’an was revealed to, and the man who Muslims believe is the last Prophet sent to mankind.",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/prophet-muhammad.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {  
+        "id": "5",
+        "title": "The Afterlife",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "The moment of death, life in the grave, the Day of Judgement, Heaven and Hell. How do Muslims view the next life?",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/the-afterlife-in-islam.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    }
+    ]
+},
+
+
+
+{   
+    "mod_id": "6",
+    "mod_header": "",
+    "mod_img": "https://www.newmuslims.com/upload/lessons/images/World_of_Jinn_(Part_1_of_2)._001.jpg",
+
+    "lessons":  [
+    {
+        "id": "1",
+        "title": "What is Islam?",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "What is the religion that is practiced by 1.6 billion people around the world? What are their beliefs? Who do they worship? Find out in this first chapter.",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/what-is-islam.png",
+        "text_1": "'Islam' is an Arabic term which means to submit one's will to the will of God. Islam is a monotheistic religion that teaches that there is only one divine being, one supreme Creator of the universe. Muslims believe that Islam is the true religion of God revealed to humanity. It is a universal religion that can be practiced by anyone at any time and in every place. The central concept of this way of life is total submission to God. Islam is a complete, holistic way of living that covers every aspect of life. Islam leaves no stone unturned as it teaches mankind on how to behave in every area of life: individual, social, material, moral, ethical, legal, cultural, political, economical, and global.",
+        "text_2": "A Muslim is anyone who submits their will to the one and only true God who is worthy of worship, 'Allah' (God). A Muslim also believes in the Prophet Muhammad (peace be upon him) as the last and final prophet of God. By submitting oneself and worshiping Allah (God), a Muslim attains peace through obedience to his commandments. Peace is a natural result of submitting to the will of Allah. For a person to become a Muslim and accept Islam as their faith, they must say and believe in the following phrase: 'La ilaha illa Allah. Muhammad rasool Allah'. This sentence literally means “There is no God but Allah and Muhammad is His messenger.” The sentence also means “There is none worthy of worship except Allah, and Muhammad is His messenger.” The moment a person says this phrase and begins to act upon it they become a Muslim." ,
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {
+        "id": "2",
+        "title": "The 5 Pillars to Islam",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "Islam is built upon 5 pillars, and practicing these pillars is important for all Muslims which include belief in one God, prayer, zakat, fasting, and pilgrimage.",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/5-pillars-of-islam.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {
+        "id": "3",
+        "title": "The 6 Pillars of Faith",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "What makes up faith for a Muslim? Do they believe in the existence of Angels? What about scriptures such as the Torah and Gospel? Do they believe in other Prophets besides Muhammad?",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/6-pillars-of-iman-faith.png"
+    },
+
+    {
+        "id": "4",
+        "title": "Story of Prophet Muhammad",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "Learn about the man who the Holy Qur’an was revealed to, and the man who Muslims believe is the last Prophet sent to mankind.",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/prophet-muhammad.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    },
+
+    {  
+        "id": "5",
+        "title": "The Afterlife",
+        "header_1": "",
+        "header_2": "",
+        "header_3": "",
+        "header_4": "",
+        "header_5": "",
+        "description": "The moment of death, life in the grave, the Day of Judgement, Heaven and Hell. How do Muslims view the next life?",
+        "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/the-afterlife-in-islam.png",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": ""
+    }
+    ]
+}
+
+]
+}

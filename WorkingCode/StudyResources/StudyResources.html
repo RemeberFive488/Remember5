@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="StudyResources.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>"Remember5"</title>
+    <title>Study Resources</title>
+
 
 </head>
 <body>
 
   <div class="header">
     <div class = "inner_header">
+
         <div class = "logo">
-            
             <img class = "MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
         </div>
 
@@ -20,30 +21,55 @@
           <a href ="\WorkingCode\Homepage\ActuallyHomePage.html"><li><button class="btn btn-home"> Home</button></li></a>
           <a href ="\WorkingCode\About\About.html"><li><button class="btn btn-about"> About</button></li></a>
           <a href="\WorkingCode\Contact\Contact.html"><li><button class="btn btn-contact"> Contact</button></li></a>
-      
         </ul>
 
     </div>
 
-
     <img class = "Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
   </div>
+
+
 <div class="sidemenu">
-  <a class="side" href="#homepage">Home</a>
-  <a href="#Readings">Readings</a>
-  <a href="#Lessons">Lessons</a>
+  <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/StudyResources.html">Homepage</a>
+  <a id="modules" href="#Modules">Modules</a>
   <a href="#Quizzes">Quizzes</a>
   <a href="#Grades">Grades</a>
+  
 </div>
 
 
 <div class="content">
   <h1>Remember5: Study Resources</h1>
   <hr>
-  <!-- <p>------------------------------------------------------------------------------------------------------------------------------</p> -->
   <p>Welcome to our study group resources!</p>
+  <p id="modlist"></p>
 </div>
+
+
+
+
+
+<script>		/*		
+    function Func() {
+        fetch("./data.json")
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => document.getElementById("modlist").innerHTML = 
+                (data.results[0].url ));
+      }
+
+      function functionName(){
+window.open("http://127.0.0.1:5500/WorkingCode/StudyResources/Modules.html");
+}*/
+    let mod = document.getElementById('modules');
+
+    mod.addEventListener("click", (event) => {
+      window.location.href = "Modules.html";
+    }); 
+
+  </Script>
+
 
 </body>
 </html>
-

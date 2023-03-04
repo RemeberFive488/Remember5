@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="StudyResources.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Module</title>
+
+
+    <style>
+ #L22{
+        display:none;
+
+
+    }
+    
+    #L32{
+        display:none;
+        
+    }
+    
+    #L42{
+        display:none;
+
+    }
+    
+    #L52{
+        display:none;
+        
+    }
+    </style>
+
+    
+</head>
+
+<body onload ="Func()">
+    <div class="header">
+        <div class = "inner_header">
+    
+            <div class = "logo">
+                <img class = "MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
+            </div>
+    
+            <ul class="navigation" >
+              <a href ="\WorkingCode\Homepage\ActuallyHomePage.html"><li><button class="btn btn-home"> Home</button></li></a>
+              <a href ="\WorkingCode\About\About.html"><li><button class="btn btn-about"> About</button></li></a>
+              <a href="\WorkingCode\Contact\Contact.html"><li><button class="btn btn-contact"> Contact</button></li></a>
+            </ul>
+    
+        </div>
+    
+        <img class = "Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
+      </div>
+
+    
+
+      <div class="sidemenu">
+        <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Modules.html">Modules</a>
+        <div id= "lessons"></div>
+        <a href="#Quizz">Quiz</a> 
+      </div>
+
+ 
+
+      <div class="content">
+   
+        <div id="form"></div>
+  
+      </div>
+
+
+
+
+
+  <!--  <div class="ls">
+        <p>Lesson:</p>
+        <div id="head"></div>
+  </div>
+  
+      <div class="txt">
+          <p>Text:</p>
+          <div id="text"></div>
+      </div>-->
+
+<script>
+
+  const searchString = window.location.search;
+  const params = new URLSearchParams(searchString);
+  const ID = params.get('ID');
+  console.log(ID)
+
+
+ 
+        
+      function Func() {
+        fetch("./data.json")
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+
+            let obj = data.modules.find(p => p.mod_id === ID);
+            console.log(obj)
+            
+            let modInfo = document.createElement('div');
+            modInfo.className = 'module_info';
+            modInfo.innerHTML = 
+                '<h2>' + "Remember5:  Module " + obj.mod_id + " - " + obj.mod_header + '</h2>' + '<hr>' + '<hr>'
+            
+            document.getElementById('form').appendChild(modInfo); 
+            
+            for (let i = 0; i < obj.lessons.length; i++) {
+
+              let id = obj.lessons[i].id;
+
+              console.log("ID:");
+              console.log(id);
+
+
+            let text1 = obj.lessons[i].text_1;
+            let text2 = obj.lessons[i].text_2;
+            let text3 = obj.lessons[i].text_3;
+            let text4 = obj.lessons[i].text_4;
+            let text5 = obj.lessons[i].text_5;
+            let title = obj.lessons[i].title;
+            
+            let hdr1 = obj.lessons[i].header_1;
+            let hdr2 = obj.lessons[i].header_2;
+            let hdr3 = obj.lessons[i].header_3;
+            let hdr4 = obj.lessons[i].header_4;
+            let hdr5 = obj.lessons[i].header_5;
+  
+
+
+            let lessonInfo = document.createElement('div');
+           lessonInfo.setAttribute("id",id+"2");
+            lessonInfo.className = 'lesson_info';
+            lessonInfo.innerHTML = 
+                '<h2>' + "Lesson " + id + " - " + title + '</h2>' +
+                '<hr>' + '<h2>' + hdr1 + '</h2>' + '<hr>' + '<p>' + text1 + '</p>' + 
+                '<hr>' + '<h2>' + hdr2 + '</h2>' + '<hr>' + '<p>' + text2 + '</p>' + 
+                '<hr>' + '<h2>' + hdr3 + '</h2>' + '<hr>' + '<p>' + text3 + '</p>' + 
+                '<hr>' + '<h2>' + hdr4 + '</h2>' + '<hr>' + '<p>' + text4 + '</p>' +
+                '<hr>' + '<h2>' + hdr5 + '</h2>' + '<hr>' + '<p>' + text5 + '</p>';
+            
+
+            document.getElementById('form').appendChild(lessonInfo); 
+
+            let side = document.createElement('div');
+            side.setAttribute("id",id);
+            side.className = 'side_info';
+            side.innerHTML = 
+                '<a href="#lesson" onclick=lessonDisplay(' + id + ')>'+ "Lesson " + id + '</a>'
+            
+           document.getElementById('lessons').appendChild(side); 
+      
+              
+
+        }
+
+
+
+
+
+
+          })}
+
+
+      function lessonDisplay(lessonID){
+
+        //console.log( lessonID )
+        if(lessonID.id=="L1"){
+          //console.log("I work")
+          let l1 = document.getElementById("L12");
+          let l2 = document.getElementById("L22");
+          let l3 = document.getElementById("L32");
+          let l4 = document.getElementById("L42");
+          let l5 = document.getElementById("L52");
+          l1.style.display ="block";
+
+          l2.style.display = "none";
+          l3.style.display = "none";
+          l4.style.display = "none";
+          l5.style.display = "none";
+
+        }
+        else   if(lessonID.id=="L2"){
+          //console.log("I work")
+          let l1 = document.getElementById("L12");
+          let l2 = document.getElementById("L22");
+          let l3 = document.getElementById("L32");
+          let l4 = document.getElementById("L42");
+          let l5 = document.getElementById("L52");
+          l2.style.display ="block";
+          l1.style.display = "none";
+          l3.style.display = "none";
+          l4.style.display = "none";
+          l5.style.display = "none";
+
+        }
+        else   if(lessonID.id=="L3"){
+          //console.log("I work")
+          let l1 = document.getElementById("L12");
+          let l2 = document.getElementById("L22");
+          let l3 = document.getElementById("L32");
+          let l4 = document.getElementById("L42");
+          let l5 = document.getElementById("L52");
+          l1.style.display = "none";
+          l2.style.display ="none";
+          l3.style.display = "block";
+          l4.style.display = "none";
+          l5.style.display = "none";
+
+        }
+        else   if(lessonID.id=="L4"){
+          //console.log("I work")
+          let l1 = document.getElementById("L12");
+          let l2 = document.getElementById("L22");
+          let l3 = document.getElementById("L32");
+          let l4 = document.getElementById("L42");
+          let l5 = document.getElementById("L52");
+          l1.style.display = "none";
+          l2.style.display ="none";
+          l3.style.display = "none";
+          l4.style.display = "block";
+          l5.style.display = "none";
+
+        }
+        else   if(lessonID.id=="L5"){
+          //console.log("I work")
+          let l1 = document.getElementById("L12");
+          let l2 = document.getElementById("L22");
+          let l3 = document.getElementById("L32");
+          let l4 = document.getElementById("L42");
+          let l5 = document.getElementById("L52");
+          l1.style.display = "none";
+          l2.style.display ="none";
+          l3.style.display = "none";
+          l4.style.display = "none";
+          l5.style.display = "block";
+
+        }
+
+
+      }
+
+
+</script>
+
+</body>
+</html>
