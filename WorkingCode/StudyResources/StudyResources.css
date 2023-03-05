@@ -427,30 +427,13 @@ body {
     {
         transform: scale(1,1);
     }
-    
 
 
-    #L22{
+    #L22,#L32,#L42,#L52 
+    {
         display:none;
-
     }
-    
-    #L32{
-        display:none;
-        
-    }
-    
-    #L42{
-        display:none;
-
-    }
-    
-    #L52{
-        display:none;
-        
-    }
-
-
+ 
 }
 
 

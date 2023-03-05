@@ -7,44 +7,54 @@
     <title>Modules</title>
 
 <style>
+
+      #modlist {
+        flex-wrap: wrap;
+        display: flex;
+      }
+
       .badge  {
-      font-family: Garamond, serif;
-      font-size: large;
-      display: inline-block;
-      text-align: center;
-      margin: 10px;
-      width: 350px;
-      height: 400px;
-      border: 7px solid #1d7d74;
-      border-radius: 8px;
-      background: #ffebee;
-    }
+        font-family: Garamond, serif;
+        font-size: large;
+        display: inline-block;
+        text-align: center;
+        margin: 15px;
+        width: 350px;
+        height: 400px;
+        border: 7px solid #1d7d74;
+        border-radius: 8px;
+        background: #ffebee;
+      }
 
     .badge:hover {
-        border: 7px solid #f01919e5;
-        border-radius: 8px;
-}
+      border: 7px solid #f01919e5;
+      border-radius: 8px;
+    }
 
-.p {
-    font-size: large;
- 
-}
+    .p {
+      font-size: large;
+    }
 
-.h2 {
-    font-size: 1.5em;
-   
-}
+    .h2 {
+      font-size: 1.5em;
+    }
 
-.badge img {
+    .badge img {
       width: 170px;
       height: 170px;
       /*border-radius: 25px;*/
       margin-top:6px;
       
     }
-   
 
-</style>
+    hr {
+      width: auto; 
+      background: #c02424; height: 4px; 
+      background: linear-gradient(to right, #c02424 50%, #f3f04bd3 50%);
+      margin: 40px 0 40px 0;
+    }
+   
+   </style>
 
 </head>
 
@@ -69,16 +79,16 @@
       </div>
     
     
-    <div class="sidemenu">
+    <div class="sidemenu" style="font-size: 22px;">
       <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/StudyResources.html">Homepage</a>
-      <a href="#Modules">Modules</a>
-      <a href="#Quizzes">Quizzes</a>
-      <a href="#Grades">Grades</a>   
+      <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Modules.html">Modules</a>
+      <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Quizzes.html">Quizzes</a>
+      <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Grades.html">Grades</a>   
     </div>
     
     
     <div class="content">
-      <h1>Remember5: Modules</h1>
+      <h1 style="color: darkcyan; font-size: 2.5em;">Remember5: Modules</h1>
 
       <hr>
  
@@ -110,10 +120,7 @@
                 badge.innerHTML =
                     '<h1>' + "Module " + mod_id + '</h1>' +
                     '<img src=' + image + '>' + '<hr>' +
-                    '<h2>' + mod_header + '</h2>'; /* +'<hr>' +
-                    '<p>' + descr + '</p>';*/
-
-                
+                    '<h2>' + mod_header + '<h2>'; 
                     
                     badge.addEventListener("click", (event) => {
                      
@@ -123,12 +130,8 @@
                
                 document.getElementById('modlist').appendChild(badge);
 
-               
-
-
           }
-        }
-        )
+        })
             
     } 
           

@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width">
     <title>Study Resources</title>
 
+    <style>
+      hr {
+        width: auto; 
+        background: #1e5799; 
+        height: 4px; 
+        background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);
+        margin: 40px 0 40px 0;
+      }
+  
+      .book {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        margin-top: 40px;
+      }
+    </style>
 
 </head>
 <body>
@@ -29,44 +47,53 @@
   </div>
 
 
-<div class="sidemenu">
+<div class="sidemenu" style="font-size: 22px;">
   <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/StudyResources.html">Homepage</a>
-  <a id="modules" href="#Modules">Modules</a>
-  <a href="#Quizzes">Quizzes</a>
-  <a href="#Grades">Grades</a>
+  <a id="modules" href="http://127.0.0.1:5500/WorkingCode/StudyResources/Modules.html">Modules</a>
+  <a id="quizzes" href="http://127.0.0.1:5500/WorkingCode/StudyResources/Quizzes.html">Quizzes</a>
+  <a id="grades" href="http://127.0.0.1:5500/WorkingCode/StudyResources/Grades.html">Grades</a>
   
 </div>
 
 
 <div class="content">
-  <h1>Remember5: Study Resources</h1>
+  <h1 style="font-size: 2.5em;font-family: 'Georgia'; padding-top: 20px; color: darkcyan">Remember5: Study Resources</h1>
   <hr>
-  <p>Welcome to our study group resources!</p>
-  <p id="modlist"></p>
+  <p style="font-size: 2.8em; font-family: 'Georgia', Courier, monospace;color: coral;">Welcome to our study group resources!</p>
+
+  <img class="book" src="https://www.mymasjid.ca/wp-content/uploads/2016/10/holy-quran-1528446_640.jpg" alt="Quarn">
+ 
 </div>
 
 
 
 
 
-<script>		/*		
-    function Func() {
-        fetch("./data.json")
-          .then((res) => {
-            return res.json();
-          })
-          .then((data) => document.getElementById("modlist").innerHTML = 
-                (data.results[0].url ));
-      }
+<script>		
 
-      function functionName(){
-window.open("http://127.0.0.1:5500/WorkingCode/StudyResources/Modules.html");
-}*/
     let mod = document.getElementById('modules');
 
     mod.addEventListener("click", (event) => {
       window.location.href = "Modules.html";
+      
     }); 
+
+
+    let quizzes = document.getElementById('quizzes');
+
+quizzes.addEventListener("click", (event) => {
+  window.location.href = "Quizzes.html";
+  
+}); 
+
+let grades = document.getElementById('grades');
+
+grades.addEventListener("click", (event) => {
+  window.location.href = "Grades.html";
+  
+}); 
+
+    
 
   </Script>
 
