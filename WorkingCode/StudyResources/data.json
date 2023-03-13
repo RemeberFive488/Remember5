@@ -36,8 +36,8 @@
             "header_5": "",
             "description": "Islam is built upon 5 pillars, and practicing these pillars is important for all Muslims which include belief in one God, prayer, zakat, fasting, and pilgrimage.",
             "image": "https://www.mymasjid.ca/wp-content/uploads/2016/11/5-pillars-of-islam.png",
-            "text_1": "The religion of Islam stands on five pillars. It is recorded that the Prophet Muhammad (peace be upon) said: <blockquote style='font-size: 1.3em;font-weight: 300; text-align:center; box-sizing: border-box; line-height: 31.2px'><q>Islam has been built on five [pillars]: testifying that there is no deity worthy of worship except Allah and that Muhammad is the Messenger of Allah, establishing the salah (prayer), paying the zakat (obligatory charity), making the hajj (pilgrimage) to the House, and fasting in Ramadan.</q><cite>- Prophet Muhammad (peace be upon him)</cite></blockquote>",
-            "text_2": "<img src='https://www.mymasjid.ca/wp-content/uploads/2016/10/5-pillars-of-islam-as-infographic.png'> <p style='color:red; font-size:x-large'>cool image</p></img>",
+            "text_1": "<p>The religion of Islam stands on five pillars. It is recorded that the Prophet Muhammad (peace be upon) said:</p> <blockquote style='font-size: 1.3em;font-weight: 300; text-align:center; box-sizing: border-box; line-height: 31.2px'><q>Islam has been built on five [pillars]: testifying that there is no deity worthy of worship except Allah and that Muhammad is the Messenger of Allah, establishing the salah (prayer), paying the zakat (obligatory charity), making the hajj (pilgrimage) to the House, and fasting in Ramadan. - Prophet Muhammad (peace be upon him)</blockquote>",
+            "text_2": "<img style='width: 70vh; height: 100vh' src='https://www.mymasjid.ca/wp-content/uploads/2016/10/5-pillars-of-islam-as-infographic.png'> <p style='color:red; font-size:x-large'></p></img>",
             "text_3": "",
             "text_4": "",
             "text_5": ""
@@ -196,7 +196,7 @@
 {   
     "mod_id": "3",
     "mod_header": "Islamic Beliefs",
-    "mod_img": "https://www.mymasjid.ca/wp-content/uploads/2021/04/eating-dates-ramadan-iftar.jpg",
+    "mod_img": "https://www.newmuslims.com/upload/lessons/images/World_of_Jinn_(Part_1_of_2)._001.jpg",
 
     "lessons":  [
     {
@@ -478,7 +478,7 @@
 {   
     "mod_id": "6",
     "mod_header": "Sacred Cities and Pilgrimage",
-    "mod_img": "https://www.newmuslims.com/upload/lessons/images/World_of_Jinn_(Part_1_of_2)._001.jpg",
+    "mod_img": "https://www.mymasjid.ca/wp-content/uploads/2016/10/why-do-we-pray.png",
 
     "lessons":  [
     {
