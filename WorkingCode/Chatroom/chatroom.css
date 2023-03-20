@@ -46,7 +46,7 @@
 
 /* Style the text in the messages */
 .chatroom .message p {
-    margin: 10;
+    margin: 0;
     padding: 3px 7px 3px 7px;
 
 }
