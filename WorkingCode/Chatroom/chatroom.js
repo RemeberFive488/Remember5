@@ -28,13 +28,6 @@ $(document).ready(function() {
           }
         })
 
-  const chatroomMessagesRef = db.collection('ChatroomMessages');
-  chatroomMessagesRef.get().then((snapshot) => {
-     highestMessageCount = snapshot.size;
-  }).catch((error) => {
-    console.error('Error getting document count:', error);
-  });
-
   // Init Materialize 
   //
   M.AutoInit();
