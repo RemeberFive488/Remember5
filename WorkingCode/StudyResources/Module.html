@@ -11,6 +11,7 @@
           font-size: 1.37em;
           line-height: 1.6;
           text-indent: 7%;
+          margin-bottom: 30px;
       }
 
        ul li {
@@ -20,6 +21,34 @@
         margin-left: 45px;
         display: list-item;
        }
+
+       ol li {
+        font-size: 1.37em;
+        line-height: 1.6 !important;
+        margin-left: 55px;
+        margin-bottom: 30px;
+        display: list-item;
+       }
+
+       .numbers li {
+        line-height: 1.6 !important;
+        margin-left: 55px;
+        margin-bottom: 30px;
+        list-style-type: decimal;
+       }
+
+       ol.custom-marker {
+        counter-reset: list;
+      }
+
+      ol.custom-marker > li {
+        list-style: none;
+        counter-increment: list;
+      }
+
+      ol.custom-marker.parens-around.lower-roman > li::marker {
+        content: "(" counter(list, lower-roman) ")\a0";
+      } 
       
       h2 {
         color: coral;
@@ -31,7 +60,7 @@
       }
 
       #form {
-        max-width: 130vh;
+        max-width: 150vh;
       }
 
       hr {
@@ -42,7 +71,7 @@
         font-size: 22px;
       }
 
-      #L22,#L32,#L42,#L52 {
+      #L22,#L32,#L42,#L52,#L62,#L72 {
         display:none;
       }
 
@@ -68,12 +97,26 @@
         vertical-align: -0.4em;
       }
 
+      .lesson_info {
+        padding-bottom: 70px;
+      }
+
+      .play {
+        color: blue;
+        text-decoration: underline blue;
+      }
+
+      .play:hover {
+          color: red;
+          text-decoration: underline red;
+      }
+
     </style>
 
     
 </head>
 
-<body onload ="Func()">
+<body onload ="Func()" >
     <div class="header">
         <div class = "inner_header">
     
@@ -160,17 +203,40 @@
 
 
             let lessonInfo = document.createElement('div');
-           lessonInfo.setAttribute("id",id+"2");
+            lessonInfo.setAttribute("id",id+"2");
             lessonInfo.className = 'lesson_info';
-            lessonInfo.innerHTML = 
+
+            if(hdr3=="") {
+              lessonInfo.innerHTML = 
+                '<h1 style="margin: 20px 0 20px 0;">' + "Lesson " + (i+1) + " - " + title + '</h1>' +
+                '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">' + '<h2>' + hdr1 + '</h2>' + '<hr>' + text1 +
+                '<hr>' + '<h2>' + hdr2 + '</h2>' + '<hr>' + text2;
+            }
+            else if(hdr4=="") {
+              lessonInfo.innerHTML = 
+                '<h1 style="margin: 20px 0 20px 0;">' + "Lesson " + (i+1) + " - " + title + '</h1>' +
+                '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">' + '<h2>' + hdr1 + '</h2>' + '<hr>' + text1 +
+                '<hr>' + '<h2>' + hdr2 + '</h2>' + '<hr>' + text2 + 
+                '<hr>' + '<h2>' + hdr3 + '</h2>' + '<hr>' + text3; 
+            }
+            else if(hdr5=="") {
+              lessonInfo.innerHTML = 
+                '<h1 style="margin: 20px 0 20px 0;">' + "Lesson " + (i+1) + " - " + title + '</h1>' +
+                '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">' + '<h2>' + hdr1 + '</h2>' + '<hr>' + text1 +
+                '<hr>' + '<h2>' + hdr2 + '</h2>' + '<hr>' + text2 + 
+                '<hr>' + '<h2>' + hdr3 + '</h2>' + '<hr>' + text3 +
+                '<hr>' + '<h2>' + hdr4 + '</h2>' + '<hr>' + text4; 
+            }
+            else {
+              lessonInfo.innerHTML = 
                 '<h1 style="margin: 20px 0 20px 0;">' + "Lesson " + (i+1) + " - " + title + '</h1>' +
                 '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">' + '<h2>' + hdr1 + '</h2>' + '<hr>' + text1 +
                 '<hr>' + '<h2>' + hdr2 + '</h2>' + '<hr>' + text2 + 
                 '<hr>' + '<h2>' + hdr3 + '</h2>' + '<hr>' + text3 + 
                 '<hr>' + '<h2>' + hdr4 + '</h2>' + '<hr>' + text4 +
-                '<hr>' + '<h2>' + hdr5 + '</h2>' + '<hr>' + text5;
+                '<hr>' + '<h2>' + hdr5 + '</h2>' + '<hr>' + text5; 
+            }
             
-
             document.getElementById('form').appendChild(lessonInfo); 
 
             let side = document.createElement('div');
@@ -198,12 +264,16 @@
           let l3 = document.getElementById("L32");
           let l4 = document.getElementById("L42");
           let l5 = document.getElementById("L52");
-          l1.style.display ="block";
+          let l6 = document.getElementById("L62");
+          let l7 = document.getElementById("L72");
 
+          l1.style.display ="block";
           l2.style.display = "none";
           l3.style.display = "none";
           l4.style.display = "none";
           l5.style.display = "none";
+          l6.style.display = "none";
+          l7.style.display = "none";
 
         }
         else   if(lessonID.id=="L2"){
@@ -213,11 +283,16 @@
           let l3 = document.getElementById("L32");
           let l4 = document.getElementById("L42");
           let l5 = document.getElementById("L52");
+          let l6 = document.getElementById("L62");
+          let l7 = document.getElementById("L72");
+
           l2.style.display ="block";
           l1.style.display = "none";
           l3.style.display = "none";
           l4.style.display = "none";
           l5.style.display = "none";
+          l6.style.display = "none";
+          l7.style.display = "none";
 
         }
         else   if(lessonID.id=="L3"){
@@ -227,11 +302,16 @@
           let l3 = document.getElementById("L32");
           let l4 = document.getElementById("L42");
           let l5 = document.getElementById("L52");
+          let l6 = document.getElementById("L62");
+          let l7 = document.getElementById("L72");
+
           l1.style.display = "none";
           l2.style.display ="none";
           l3.style.display = "block";
           l4.style.display = "none";
           l5.style.display = "none";
+          l6.style.display = "none";
+          l7.style.display = "none";
 
         }
         else   if(lessonID.id=="L4"){
@@ -241,11 +321,16 @@
           let l3 = document.getElementById("L32");
           let l4 = document.getElementById("L42");
           let l5 = document.getElementById("L52");
+          let l6 = document.getElementById("L62");
+          let l7 = document.getElementById("L72");
+
           l1.style.display = "none";
           l2.style.display ="none";
           l3.style.display = "none";
           l4.style.display = "block";
           l5.style.display = "none";
+          l6.style.display = "none";
+          l7.style.display = "none";
 
         }
         else   if(lessonID.id=="L5"){
@@ -255,17 +340,70 @@
           let l3 = document.getElementById("L32");
           let l4 = document.getElementById("L42");
           let l5 = document.getElementById("L52");
+          let l6 = document.getElementById("L62");
+          let l7 = document.getElementById("L72");
+
           l1.style.display = "none";
           l2.style.display ="none";
           l3.style.display = "none";
           l4.style.display = "none";
           l5.style.display = "block";
+          l6.style.display = "none";
+          l7.style.display = "none";
 
         }
 
+        else   if(lessonID.id=="L6"){
+          //console.log("I work")
+          let l1 = document.getElementById("L12");
+          let l2 = document.getElementById("L22");
+          let l3 = document.getElementById("L32");
+          let l4 = document.getElementById("L42");
+          let l5 = document.getElementById("L52");
+          let l6 = document.getElementById("L62");
+          let l7 = document.getElementById("L72");
+          
+          l1.style.display = "none";
+          l2.style.display ="none";
+          l3.style.display = "none";
+          l4.style.display = "none";
+          l5.style.display = "none";
+          l6.style.display = "block";
+          l7.style.display = "none";
+
+        }
+
+        else   if(lessonID.id=="L7"){
+          //console.log("I work")
+          let l1 = document.getElementById("L12");
+          let l2 = document.getElementById("L22");
+          let l3 = document.getElementById("L32");
+          let l4 = document.getElementById("L42");
+          let l5 = document.getElementById("L52");
+          let l6 = document.getElementById("L62");
+          let l7 = document.getElementById("L72");
+          
+          l1.style.display = "none";
+          l2.style.display ="none";
+          l3.style.display = "none";
+          l4.style.display = "none";
+          l5.style.display = "none";
+          l6.style.display = "none";
+          l7.style.display = "block";
+
+        }
 
       }
 
+      let playSound1 = () => new Audio("http://www.newmuslims.com/audio/SubhanAllah01.mp3").play()
+
+      let playSound2 = () => new Audio("http://www.newmuslims.com/audio/Alhamdulillah01.mp3").play()
+
+      let playSound3 = () => new Audio("http://www.newmuslims.com/audio/la_ilaha01.mp3").play()
+
+      let playSound4 = () => new Audio("http://www.newmuslims.com/audio/Allahu_Akbar01.mp3").play()
+      
+      let playSound5 = () => new Audio("http://www.newmuslims.com/audio/Assalamu_Alaikum01.mp3").play()
 
 </script>
 
