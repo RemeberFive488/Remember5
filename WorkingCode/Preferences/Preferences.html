@@ -9,6 +9,10 @@
   <link rel="stylesheet" type="text/css" href="Preferences.css" media="screen" />
 </head>
 <body>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
 <div class="header">
   <title>Remember5</title>
   <div class="inner_header">
@@ -41,7 +45,7 @@
         <div class="checkbox">
             <input type="checkbox" id="click" onclick="Notification_on()">
             <script src="Preferences.js"></script>
-            <script src="\WorkingCode\Prayer\TEMP_Prayertimes.js"></script>
+            <!-- <script src="\WorkingCode\Prayer\TEMP_Prayertimes.js"></script> -->
             <label for="click" class="text"></label>
         </div>
     </div>
@@ -49,10 +53,10 @@
     <div id="bottom">
         <h1>Location:</h1>
         <div class="checkbox2">
-            <input type="checkbox" id="click">
-            <label for="click" class="text"></label>
+            <input type="checkbox" id="click2" onclick="Location_on()">
+            <label for="click2" class="text"></label>
         </div>
-        <div>
+        <!-- <div>
             <ul><li><a href="#">Distance⬇️</a>
               <ul class="dropdown">
                 <li><a herf="#"> Km</a></li>
@@ -60,7 +64,7 @@
                 <li><a herf="#"> Mi</a></li>
               </ul>
             </ul>  
-        </div>
+        </div> -->
     </div>
   </div>
   <div id="Fix">
