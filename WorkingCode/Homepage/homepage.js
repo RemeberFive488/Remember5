@@ -31,3 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const logoutButton = document.getElementById("logout");
+
+  if (logoutButton) {
+    logoutButton.addEventListener("click", () => {
+      window.location.href = "\\WorkingCode\\Login\\Login.html";
+
+    });
+  } else {
+    console.error("Logout button not found");
+  }
+});
+
+
