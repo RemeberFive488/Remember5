@@ -100,5 +100,5 @@ function ShowNotification(Fajr,Sunrise,Dhuhr,Asr,Maghrib,Isha) {
            
         }
         
-    },60 * 1000);
+    },30 * 1000);
 }

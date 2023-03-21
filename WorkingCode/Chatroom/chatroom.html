@@ -8,12 +8,35 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+
+  <div class="header2">
+    <div class = "inner_header">
+        <div class = "logo">  
+            <img class="MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
+            <img class="Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
+        </div>
+        
+        <ul class="navigation" >
+            <a href ="\WorkingCode\Homepage\ActuallyHomePage.html"><li><button class="btn2 btn2-home"> Home</button></li></a>
+            <a href ="\WorkingCode\About\About.html"><li><button class="btn2 btn2-about"> About</button></li></a>
+        <a href="\WorkingCode\Contact\Contact.html"><li><button class="btn2 btn2-contact"> Contact</button></li></a>
+        </ul>
+
+    </div>
+
+</div> 
+
 </head>
+
+
 <body class="red lighten-5"> 
-  <div class="red">
-    <header class="white-text red">---------------------------------------menu bar here-----------------------------------------------</header>
-  </div>
+
 <script src="chatroom.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+
 <div class="black lighten-5 no-pad-top no-padding no-pad-bot">
 
   <div class="container">
@@ -47,7 +70,7 @@
             </button>
             <input type="file" id="file-attach-input" style="display: none;">
             <a class="btn-floating btn-small waves-effect waves-light orange lighten-2 right" id="emoji-picker-button"><i class="material-icons">insert_emoticon</i></a>
-            <a class="btn-floating btn-small waves-effect waves-light green right" id="file-attach-button"><i class="material-icons">attach_file</i></a>
+            <!-- <a class="btn-floating btn-small waves-effect waves-light green right" id="file-attach-button"><i class="material-icons">attach_file</i></a> -->
           </div>
         </form>
       </div>
@@ -64,7 +87,5 @@
       <a href="#!" class="modal-close waves-effect waves-orange btn-flat right white-text">Close</a>
     </div>
   </div>
-  <footer class="white-text red">---------------------------------------footer here-----------------------------------------------</footer>
-
 </body>
 </html>

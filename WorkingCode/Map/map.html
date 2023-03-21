@@ -1,0 +1,85 @@
+
+<html>
+    
+    
+   
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="map.css">
+    <title>Map</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="map.js"></script>
+    <style>
+      #map {
+        margin-left: 200px;
+        margin-top: 155px;
+        height: 500px;
+        width: 80%;
+      }
+
+      /* form{
+        margin-top:30px;
+        margin-right:10px;
+      } */
+
+      .form-container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form {
+  width: 80%;
+  margin: 30px auto;
+  text-align: left;
+  font-size: 20px;
+  padding: 20px;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 20px;
+}
+    </style>
+  </head>
+
+
+  <body onload="initMap()" >
+    <div class="header">
+        <title>Remember5</title>
+        <div class="inner_header">
+      
+            <div class="logo">
+                
+                <img class="MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
+            </div>
+      
+            <img class = "Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
+      
+            <ul class="navigation">
+              <a href ="\WorkingCode\Homepage\ActuallyHomePage.html"><li><button class="btn btn-home"> Home</button></li></a>
+              <a href ="\WorkingCode\About\About.html"><li><button class="btn btn-about"> About</button></li></a>
+              <a href="\WorkingCode\Contact\Contact.html"><li><button class="btn btn-contact"> Contact</button></li></a>
+            </ul>
+      
+        </div>
+      </div>
+
+    <h1 style ="font-size: 40px">Remember5: Map</h1>
+    <div id="map"></div>
+    <div class="form-container">
+        <form>
+          <p style="font-size: 30px; color:blue">Nearby Users:</p>
+          <label for="address1">User 1:</label>
+          <input type="text" id="address1" name="address1" value="Sukmoon Blum"><br><br>
+          <label for="address2">User 2:</label>
+          <input type="text" id="address2" name="address2" value ="Jeremy Chang"><br><br>
+          <p ></p>
+          <p >Click On Markers For More Information</p>
+          <button type="button" onclick="displayAddresses()">Show on Map</button>
+        </form>
+      </div>
+  </body>
+</html>
