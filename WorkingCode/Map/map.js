@@ -1,6 +1,7 @@
 let userIds = [];
 let onwards = true;
-
+let user_Prefernes_ON;
+let user_Currently_loged_in
 
 document.addEventListener('DOMContentLoaded', () => {
   const firebaseConfig = {
@@ -21,7 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   auth.onAuthStateChanged(user => {
     if (user) {
+     
       console.log('User logged in: ', user);
+      user_Currently_loged_in=user.uid
     } else {
       console.log('User logged out');
     }
@@ -29,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
     ID_Array();
+    
+
   
 });
 
@@ -49,6 +54,8 @@ function initMap() {
 
 
 async function ID_Array() {
+
+
   const db = firebase.firestore();
 
   const createAccountSnapshot = await db.collection("CreateAccount").get();
@@ -72,9 +79,32 @@ async function ID_Array() {
 
 }
 
+async function checkSettings() {
+  const db = firebase.firestore();
+
+ const preferences = await db.collection(user_Currently_loged_in).doc('Preferences').get();
+
+ if (preferences.exists) {
+  user_Prefernes_ON  = preferences.data().location;
+  //  console.log("user_Prefernes_ON: ", user_Prefernes_ON)
+
+ } else {
+   console.log('Preferences document does not exist');
+   user_Prefernes_ON=false;
+   
+ }
+
+ displayAddresses() 
+}
 
 async function displayAddresses() 
 {
+  
+  // console.log("user_Prefernes_ON 2: ", user_Prefernes_ON)
+
+  if(user_Prefernes_ON==true){
+
+  
   clearMarkers();
   
 
@@ -128,7 +158,13 @@ async function displayAddresses()
       console.log('Selected user preferences document does not exist');
     }
   });
- 
+}
+
+else{
+  alert("You must have you location on in your preferneces page to use this featrue")
+}
+
+
 }
 
 
