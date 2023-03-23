@@ -1,5 +1,5 @@
 let userIds = [];
-
+let onwards = true;
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -72,35 +72,74 @@ async function ID_Array() {
 
 }
 
-window.onload
 
-async function displayAddresses() {
+async function displayAddresses() 
+{
   clearMarkers();
   
 
   const db = firebase.firestore();
+  const dropdown = document.getElementById("usernamesDropdown");
 
   console.log(userIds.length);
-  for(let i =0; i <userIds.length;i++){
-    //console.log(userIds[i])
-    const preferences = await db.collection(userIds[i]).doc('Preferences').get();
+  for(let i =0; i <userIds.length;i++)
+  {
+      //console.log(userIds[i])
+      const preferences = await db.collection(userIds[i]).doc('Preferences').get();
 
-  if (preferences.exists) {
-    const username = preferences.data().username;
-    const address = preferences.data().address;
-    console.log("Username: ",username)
-    console.log("address: ",address)
-  
-    await geocodeAddress(address, username);
-  } else {
-    console.log('Preferences document does not exist');
+    if (preferences.exists) {
+      const username = preferences.data().username;
+      const address = preferences.data().address;
+      console.log("Username: ",username)
+      console.log("address: ",address)
+    
+      await geocodeAddress(address, username);
+
+
+      if(onwards==true){
+        const option = document.createElement("option");
+        option.value = username;
+        option.text = username;
+        dropdown.appendChild(option);
+      }
+      
+
+    } else {
+      console.log('Preferences document does not exist');
+    }
+
+   
   }
-  }
+  onwards=false;
+   const usernamesInputElement = document.getElementById("usernames");
+   usernamesInputElement.value = userIds.length;
   
+  
+  // Center map on selected user's location
+  dropdown.addEventListener("change", async () => {
+    const selectedOption = dropdown.options[dropdown.selectedIndex];
+    console.log(dropdown.selectedIndex)
+    const selectedUsername = selectedOption.value;
+    const selectedPreferences = await db.collection(userIds[dropdown.selectedIndex-1]).doc('Preferences').get();
+    if (selectedPreferences.exists) {
+      const selectedAddress = selectedPreferences.data().address;
+      await geocodeAddress(selectedAddress, selectedUsername);
+    } else {
+      console.log('Selected user preferences document does not exist');
+    }
+  });
  
 }
 
 
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
 
 async function geocodeAddress(address,name) {
     const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=${mapboxgl.accessToken}`);
@@ -116,7 +155,13 @@ async function geocodeAddress(address,name) {
     const [lng, lat] = data.features[0].center;
     map.setCenter([lng, lat]);
 
-    var marker = new mapboxgl.Marker()
+    
+    
+    var markerColor = getRandomColor();
+    var marker = new mapboxgl.Marker({
+      color: markerColor
+    })
+    //var marker = new mapboxgl.Marker()
       .setLngLat([lng, lat])
       .addTo(map);
 
