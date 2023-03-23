@@ -2,7 +2,6 @@
 <html>
     
     
-   
 
   <head>
     <link rel="stylesheet" type="text/css" href="map.css">
@@ -10,24 +9,26 @@
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
     <script src="map.js"></script>
     <style>
       #map {
+        position: fixed;
+
         margin-left: 200px;
-        margin-top: 155px;
+        margin-top: 255px;
         height: 500px;
         width: 80%;
       }
 
-      /* form{
-        margin-top:30px;
-        margin-right:10px;
-      } */
 
       .form-container {
   width: 100%;
   margin: 0 auto;
-  text-align: center;
+ 
 }
 
 form {
@@ -42,6 +43,20 @@ input, button {
   padding: 10px;
   font-size: 20px;
 }
+
+.map-button-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 20px 0;
+}
+
+.map-button-container button {
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
     </style>
   </head>
 
@@ -69,17 +84,11 @@ input, button {
 
     <h1 style ="font-size: 40px">Remember5: Map</h1>
     <div id="map"></div>
-    <div class="form-container">
-        <form>
-          <p style="font-size: 30px; color:blue">Nearby Users:</p>
-          <label for="address1">User 1:</label>
-          <input type="text" id="address1" name="address1" value="Sukmoon Blum"><br><br>
-          <label for="address2">User 2:</label>
-          <input type="text" id="address2" name="address2" value ="Jeremy Chang"><br><br>
-          <p ></p>
-          <p >Click On Markers For More Information</p>
-          <button type="button" onclick="displayAddresses()">Show on Map</button>
-        </form>
-      </div>
+    
+    <div class="map-button-container">
+      <button type="button" onclick="displayAddresses()">Show on Map</button>
+    </div>
+    
+
   </body>
 </html>

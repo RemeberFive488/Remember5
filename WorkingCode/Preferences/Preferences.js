@@ -1,3 +1,4 @@
+let usernameDB;
 document.addEventListener('DOMContentLoaded', () => {
     const firebaseConfig = {
       apiKey: "AIzaSyBxoV0Qji0j8GjG2N4jqYWWUtmUnN1Qyec",
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     auth.onAuthStateChanged(user => {
       if (user) {
         console.log('User logged in: ', user);
+        usernameDB=user.displayName;
       } else {
         console.log('User logged out');
       }
@@ -159,6 +161,7 @@ function Notif_DB(notificationPreference){
                 // Create the document with the notification preference
                 docRef.set({
                     notification: notificationPreference,
+                     username: usernameDB
                 })
                     .then(function () {
                         console.log("Notification preference successfully added!");
@@ -191,6 +194,7 @@ function Loc_DB(notification){
                 // Update the document with the notification preference
                 docRef.update({
                     location: notification,
+                    username: usernameDB
                 })
                     .then(function () {
                         console.log("Location preference successfully updated!");
@@ -205,6 +209,7 @@ function Loc_DB(notification){
                 // Create the document with the notification preference
                 docRef.set({
                     location: notification,
+                    username: usernameDB
                 })
                     .then(function () {
                         console.log("Location preference successfully added!");
@@ -282,6 +287,7 @@ function getLocation() {
       
               docRef.update({
                 address: address,
+                username: usernameDB
               })
                 .then(function () {
                   console.log("Address successfully updated!");
@@ -295,6 +301,7 @@ function getLocation() {
       
               docRef.set({
                 address: address,
+                username: usernameDB
               })
                 .then(function () {
                   console.log("Address successfully added!");
