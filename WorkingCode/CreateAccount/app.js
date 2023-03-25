@@ -1,3 +1,4 @@
+let userID;
 const firebaseConfig = {
   apiKey: "AIzaSyBxoV0Qji0j8GjG2N4jqYWWUtmUnN1Qyec",
   authDomain: "remember5-321e2.firebaseapp.com",
@@ -20,7 +21,21 @@ const form = document.getElementById('add_landmark_form')
 
 auth.onAuthStateChanged(user => {
     if (user) {
+      userID=user.uid;
+      console.log(userID);
 
+      db.collection("CreateAccount")
+      .doc(form.emailid.value)
+      .update({
+        ID: userID
+      })
+      .then(() => {
+        console.log("UID successfully Entered!");
+      })
+      .catch((error) => {
+        console.error("Error adding UID: ", error);
+      });
+    
       console.log('User logged in: ', user);
     } else {
       console.log('User logged out');
@@ -65,12 +80,22 @@ form.addEventListener("submit", e => {
 
     const user_name = form.nameid.value
 
-    db.collection("CreateAccount").add({
-        nameid: form.nameid.value,
-        emailid: form.emailid.value,
-        passwordid: form.passwordid.value
+    db.collection("CreateAccount")
+    .doc(form.emailid.value)
+    .set({
+      nameid: form.nameid.value,
+      emailid: form.emailid.value,
+      passwordid: form.passwordid.value,
+    })
+    .then(() => {
+      console.log("Document successfully written!");
+    })
+    .catch((error) => {
+      console.error("Error writing document: ", error);
     });
 
+  
+  
     // sign up the user
   auth.createUserWithEmailAndPassword(form.emailid.value, form.passwordid.value).then(cred => {
    
@@ -115,9 +140,9 @@ form.addEventListener("submit", e => {
 
 
 
-    form.nameid.value = ''
-    form.emailid.value = ''
-    form.passwordid.value = ''
+    // form.nameid.value = ''
+    // form.emailid.value = ''
+    // form.passwordid.value = ''
 
 
    

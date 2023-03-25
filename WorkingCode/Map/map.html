@@ -14,50 +14,6 @@
     
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
     <script src="map.js"></script>
-    <style>
-      #map {
-        position: fixed;
-
-        margin-left: 200px;
-        margin-top: 255px;
-        height: 500px;
-        width: 80%;
-      }
-
-
-      .form-container {
-  width: 100%;
-  margin: 0 auto;
- 
-}
-
-form {
-  width: 80%;
-  margin: 30px auto;
-  text-align: left;
-  font-size: 20px;
-  padding: 20px;
-}
-
-input, button {
-  padding: 10px;
-  font-size: 20px;
-}
-
-.map-button-container {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 20px 0;
-}
-
-.map-button-container button {
-  font-size: 20px;
-  padding: 10px 20px;
-}
-
-    </style>
   </head>
 
 
@@ -86,8 +42,18 @@ input, button {
     <div id="map"></div>
     
     <div class="map-button-container">
-      <button type="button" onclick="displayAddresses()">Show on Map</button>
+      <button type="button" onclick="checkSettings()">Show Users On Map</button>
     </div>
+    
+
+    <h2>Users displayed on map:</h2>
+    <input type="text" id="usernames" name="usernames" value="0" readonly style="width: 50;">
+    
+
+    <select id="usernamesDropdown">
+      <option>Users Online</option>
+    </select>
+
     
 
   </body>
