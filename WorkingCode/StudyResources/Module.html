@@ -112,6 +112,11 @@
           cursor: pointer;
       }
 
+      h3 {
+        font-size: 1.5em;
+        margin-bottom: 30px;
+      }
+
     </style>
 
     
@@ -245,6 +250,15 @@
             side.className = 'side_info';
             side.innerHTML = 
                 '<a href="#lesson" onclick=lessonDisplay(' + id + ')>'+ "Lesson " + (i+1) + '</a>'
+
+            let l6 = document.getElementById("L62");
+            let l7 = document.getElementById("L72");
+            
+            if(title=="") {
+              l6.style.display = "none";
+              l7.style.display = "none";
+
+            }
             
            document.getElementById('lessons').appendChild(side); 
       
@@ -256,10 +270,11 @@
 
 
       function lessonDisplay(lessonID){
-
         //console.log( lessonID )
+
         if(lessonID.id=="L1"){
           //console.log("I work")
+
           let l1 = document.getElementById("L12");
           let l2 = document.getElementById("L22");
           let l3 = document.getElementById("L32");
