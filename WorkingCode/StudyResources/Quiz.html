@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="StudyResources.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <title>Quiz</title>
+
+    <style>
+    /*hr {
+        width: auto; 
+        background: #1e5799; 
+        height: 4px; 
+        background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);
+        margin: 40px 0 40px 0;
+      }
+
+      p {
+          font-size: 1.37em;
+          line-height: 1.6;
+          text-indent: 7%;
+          margin-bottom: 30px;
+      }*/
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .message {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma;
+        color: firebrick;
+        padding: 10px;
+        font-size: 1.6em;
+      }
+
+      .game {
+        margin: px;
+        padding: px;
+        background-color: #eee;
+      }
+
+      .question {
+        font-family: cursive;
+        font-size: 1.4em;  
+        color: darkslateblue;
+        padding: 5px;
+        margin: 3px;
+      }
+
+      .container {
+        width: 110vh;
+        margin: auto;
+        border: 1px solid #ddd;
+      }
+
+      #btn {
+        display: block;
+        padding: 12px;
+        font-size: 2em;
+        margin: 30px auto;
+        color: darkslategray;
+        background-color: rgb(127, 251, 255);
+      }
+
+      .opts button {
+        margin: 15px;
+        padding: 8px;
+        color:blanchedalmond;
+        background-color: slategrey;
+        width: 100vh;
+        font-size: 1.3em;
+        font-family: Garamond, serif;;
+      }
+
+      .next {
+        display: block;
+        margin: 25px auto;
+        width: 125px;
+        padding: 12px;
+        font-size: 1.6em;
+        color: darkslategray;
+        background-color: rgb(127, 251, 255);
+      }
+
+    </style>
+</head>
+
+    <body>
+        <div class="header">
+            <div class = "inner_header">
+        
+                <div class = "logo">
+                    <img class = "MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
+                </div>
+        
+                <ul class="navigation" >
+                  <a href ="\WorkingCode\Homepage\ActuallyHomePage.html"><li><button class="btn btn-home"> Home</button></li></a>
+                  <a href ="\WorkingCode\About\About.html"><li><button class="btn btn-about"> About</button></li></a>
+                  <a href="\WorkingCode\Contact\Contact.html"><li><button class="btn btn-contact"> Contact</button></li></a>
+                </ul>
+        
+            </div>
+        
+            <img class = "Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
+          </div>
+    
+          
+    
+          <div class="sidemenu" style="font-size: 22px;">
+            <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/StudyResources.html">Homepage</a>
+            <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Modules.html">Modules</a>
+            <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Quizzes.html">Quizzes</a>
+            <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Grades.html">Grades</a>   
+          </div>
+
+          <div class="content">
+          
+            <div class="container"></div>
+            <button id = "btn">Start</button>
+            
+            </div>
+    </body>
+
+    <script>
+        const searchString = window.location.search;
+        const params = new URLSearchParams(searchString);
+        const ID = params.get('ID');
+        console.log(ID)
+
+        const btn = document.querySelector('#btn')
+        const main = document.querySelector('.container')
+        const message = pageEles(main,'div','Press Start button','message')
+        const output = pageEles(main,'div','','game')
+        const game = {score:0}
+
+        btn.onclick = loadData    
+
+        function pageEles(parent,t,html,c) {
+            const ele = document.createElement(t)
+            ele.innerHTML = html;
+            ele.classList.add(c)
+            return parent.appendChild(ele)
+        }
+        
+      function loadData() {
+        btn.style.display = 'none'
+        fetch('./data.json')
+        .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            
+            let obj = data.modules.find(p => p.mod_id === ID);
+            console.log(obj)
+            let data1 = obj.MyQuestions
+
+            const temp = {
+                total : data1.length,
+                q: data1,
+                counter: 0
+            };
+            createQuestion(temp)
+
+          })}
+
+        function createQuestion(data1) {
+            const el = pageEles(output,'div','',"question")
+            //console.log(q1)
+          
+            
+            if(data1.q.length == 0) {
+                message.innerHTML = `<h1>Quiz Over</h1><div>Your grade ${game.score} out of ${data1.total} questions.`
+                  message.style.color="firebrick"
+            }
+            else {
+                const tBtn = pageEles(el,'button','Next','next')
+            
+                tBtn.onclick = () => {
+                    el.remove()
+                    createQuestion(data1)
+            }
+
+                const question = data1.q.shift()
+                data1.counter++
+                message.textContent = `Question ${data1.counter} of ${data1.total}`
+                console.log(question)
+
+                if(data1.q.length == 0)
+                    tBtn.textContent = 'End Quiz'
+
+                tBtn.style.display = 'none'
+                outputQuestion(question,el,tBtn)
+           
+        }
+        }
+
+        function outputQuestion (question, parent,tBtn) {
+            console.log(question)
+            const que = pageEles(parent,'div', `${question.question}`,'question')
+            const arr = question.opt
+            arr.push(question.answer)
+            arr.sort(() => {
+                return Math.random() - 0.5
+            })
+            const btns = pageEles(parent, 'div','','opts')
+            arr.forEach(e => {
+                const optemp = pageEles(btns,'button',e,'btns')
+              
+                
+                optemp.onclick = () => {
+                    if(question.answer == e) {
+                        message.textContent = 'Correct'
+                        message.style.color = 'green'
+                        game.score++
+                         
+                    const temps = parent.querySelectorAll('.btns')
+                    temps.forEach(el => {
+                        el.disabled = true
+                        const bgc = (question.answer == el.textContent) ? 'green' : 'gray'
+                        //const bgc =  'gray'
+                        el.style.backgroundColor = bgc
+                    })
+                    }
+                    else {
+                        message.textContent = 'Incorrect'
+                        message.style.color = 'red'
+                        const temps = parent.querySelectorAll('.btns')
+                    temps.forEach(el => {
+                        el.disabled = true
+                        if (e != question.answer) {
+                          el.style.backgroundColor = "red"
+                        }
+
+                        if(e != el.textContent){
+                          el.style.backgroundColor = "gray"
+                        }
+                        //const bgc =  'gray'
+                        
+                    })
+                    }
+                
+
+                  
+                    tBtn.style.display = 'block'
+                    parent.append(tBtn)
+    
+                }
+                message.style.color="firebrick";
+
+            })
+            console.log(arr)
+        }
+
+        function pageEles(parent, t, html,c){
+            const ele = document.createElement(t)
+            ele.innerHTML = html
+            ele.classList.add(c)
+            return parent.appendChild(ele)
+        }
+
+    </script>
+    </html>

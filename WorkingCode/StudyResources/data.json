@@ -7,6 +7,114 @@
         "mod_header": "The Beginner's Guide to Understanding Islam",
         "mod_img": "https://www.mymasjid.ca/wp-content/uploads/2017/12/What-is-Islam_.jpg",
 
+        "MyQuestions": [
+            {
+              "question": "What does the Quran say about the things which people take as objects of worship besides Allah?",
+              "answer": "These things do not deserve any worship, as they themselves are creations and have no power to bring any benefit",
+              "opt": ["These things do not deserve any worship, as they are made by human hands and are not divinely created","These things may be worshiped, as they represent the things created by Allah", "These things should be worshiped as Allah resides within them"]
+            },
+            {
+              "question": "This Testimony of Faith (<i>Shahadah</i>) reminds us of our purpose in life, which is:",
+              "answer": "to worship Allah alone",
+               "opt": ["to raise a healthy and happy family and cater to its needs","to pray five times a day and lead a life of seclusion", "to fulfill all ones worldly desires through every way possible"]
+            },
+            {
+              "question": "The testimony <i>‘Muhammad rasoolu Allah’</i> implies:",
+              "answer": "All of the above",
+               "opt": ["believing him in what he informs","obeying Prophet Muhammad in what he commands", "shunning what he has prohibited", "worshipping Allah alone the way he instructed us"]
+            },
+            {
+              "question": "What is the meaning of the phrase <i>‘Muhammad rasoolu Allah’</i>?",
+              "answer": "Muhammad is the Messenger of Allah",
+               "opt": ["Muhammad is the slave of Allah","Muhammad is the follower of Allah", "Muhammad is the son of Allah"]
+            },
+            {
+              "question": "What was the universal message of all the Messengers sent by Allah since the dawn of humanity?",
+              "answer": "To worship Allah Alone, and to reject all false deities",
+               "opt": ["To worship Allah, and pay homage to all other deities","To worship Allah Alone, and seek His help through lesser forms of deities", "To worship Allah Alone, and seek His help through His Messengers"]
+            },
+            {
+              "question": "The message of the Oneness of God (<i>Tawheed</i>) is found in the Testimony of Faith. This message was:",
+              "answer": "a universal message of all the Prophets of Allah",
+               "opt": ["particular to the message of Prophet Muhammad (peace be upon him)","particular to the message of Prophet Abraham (peace be upon him)", "a universal message of all the Prophets of Allah who were sent after Prophet Abraham (peace be upon him)"]
+            },
+            {
+              "question": "The word ‘Islam’ means:",
+              "answer": "submission",
+               "opt": ["violance","piece","muslim","none of the above"]
+            },
+            {
+              "question": "The Five Pillars of Islam are in essence:",
+              "answer": "five acts of worship",
+               "opt": ["five daily prescribed prayers","five fundamental beliefs", "five columns in Makkah made of white marble"]
+            },
+            {
+              "question": "The Pillars of Islam are:",
+              "answer": "bearing witness to the two testimonies, prayers, fasting, <i>zakah</i>, and <i>Hajj</i>",
+               "opt": ["belief in Quran","prayers and <i>Jihad</i>", "prayers, fasting and <i>Hajj</i>"]
+            },
+            {
+              "question": "The basics of Islam are captured in:",
+              "answer": "the Five Pillars of Islam",
+              "opt": ["the Six Articles of Faith","the Five Pillars of Islam and the Six Articles of Faith","none of the above"]  
+            },
+            {
+              "question": "The Five Pillars and the Six Articles are based on a prophetic tradition called:",
+              "answer": "the <i>hadith</i>",
+               "opt": ["the <i>hadith</i> of Gabriel","the <i>hadith</i> of the angel", "the <i>hadith</i> of Umar"]
+            },
+            {
+              "question": "The Six Articles of Faith include:",
+              "answer": "all of the above",
+               "opt": ["belief in God","belief in prophets and messengers", "belief in angels", "belief in divine decree"]
+            },
+            {
+              "question": "Belief in the angels entails:",
+              "answer": "none of the above",
+               "opt": ["belief that they were created by Allah to be worshiped and sought help from","belief that Allah is dependent upon them for carrying out His decisions", "belief that they do not exist at all and it is merely folklore"]
+            },
+            {
+              "question": "Belief in the Messengers entails:",
+              "answer": "all of the above",
+               "opt": ["belief that they were mere humans","belief that obedience to them is a must", "belief that they conveyed the message from Allah and did not legislate from their own selves"]
+            },
+            {
+              "question": "The Six Articles of Faith represent:",
+              "answer": "a firm belief in the heart, and not simply blind faith",
+               "opt": ["simple blind faith","a personal choice to believe or not to believe on the basis of it being logical", "none of the above"]
+            },
+            {
+              "question": "How does the desire of Paradise affect a Muslim?",
+              "answer": "It makes him live it hard",
+               "opt": ["It causes him to seek conflict with everyone who practices a different religion than his","It makes the Muslim focus on worship and ignore the people around him", "It makes the Muslim a better human being by his fulfilling the duties of Allah and the rights of fellow human beings"]
+            },
+            {
+              "question": "With regards to life after death Muslims believe that:",
+              "answer": "a day will come when everything will come to an end, and Allah will raise the creation again and judge them according to their deeds",
+               "opt": ["they will be reincarnated and made to live on earth again in a better form","there is no life after death and everything will turn to dust", "Allah has not spoken about the events after death and has kept the knowledge to Himself"]
+            },
+            {
+              "question": "The desire to achieve Paradise in the afterlife:",
+              "answer": "gives us a sense of direction",
+               "opt": ["makes us ignorant of the actions that lead to the hell fire","makes us realize that we need to grow more gardens on earth", "makes us realize that the worldly affairs is a waste of time"]
+            },
+            {
+              "question": "Happiness is:",
+              "answer": "feeling good and value-based",
+               "opt": ["in fulfilling all physical desires","avoiding pain, maximizing pleasure", "the aim of life", "sensation-based"]
+            },
+            {
+              "question": "Paradise:",
+              "answer": "has traditionally inspired Islamic Gardens serving as reminders to the faithful of the pleasures of the Paradise to come",
+               "opt": ["is Allah’s residence","is union with Allah", "is for sensual gratification only"]
+            },
+            {
+              "question": "",
+              "answer": "",
+               "opt": ["","", "", ""]
+            }
+          ],
+
         "lessons": [
         {
             "id": "L1",   
@@ -116,6 +224,114 @@
         "mod_id": "2",
         "mod_header": "The Beginner's Guide to Learning How To Pray",
         "mod_img": "https://www.mymasjid.ca/wp-content/uploads/2017/12/How-to-Pray-Salah.jpg",
+
+        "MyQuestions": [
+          {
+            "question": "One begins the prayer by raising up the hands to the shoulders and saying:",
+            "answer": "<i>Allahu Akbar’</i>",
+             "opt": ["<i>‘Subhanallah’</i>","<i>As-salaamu alaikum’</i>", "<i>‘La ilaha il-lal-lah’ </i>"]
+          },
+          {
+            "question": "Purity is one of the prerequisites for prayer (salah). This state of purity is pertinent to:",
+            "answer": "all of the above",
+             "opt": ["one’s clothes being free of any impurity","one's body being in a state of purity, by performing ablution (wudoo) or ritual bath (ghusl)", "the surface on which the prayer is to be performed being free of impurities"]
+          },
+          {
+            "question": "In which language are the statements specific to the formal prayers to be said?",
+            "answer": "Arabic",
+             "opt": ["in one’s own mother tongue","Persian", "Hebrew"]
+          },
+          {
+            "question": "Which of the following statements is a description of <i>salah</i>?",
+            "answer": "The formal establishment of prayer consisting of specific statements and actions",
+             "opt": ["The formal establishment of prayer consisting of specific statements and no actions","The formal establishment of prayer consisting of silent gestures and no utterance of any specific statements", "The formal establishment of prayer consisting of the utterance of self composed poetry and actions"]
+          },
+          {
+            "question": "A Muslim is required to offer the daily prayers:",
+            "answer": "five times a day",
+             "opt": ["three times a day","two times a day", "There is no specific number with regards to the daily prayers"]
+          },
+          {
+            "question": "What is the <i>Adhan</i>?",
+            "answer": "specific words to announce the beginning of prayer time",
+             "opt": ["words of <i>salah</i>","a prayer", "none of the above"]
+          },
+          {
+            "question": "Which companions did the Prophet appoint to call the <i>adhan</i>?",
+            "answer": "Bilal, Ibn Umm Maktum, Abu Mah-zura, Sa’ad al-Qaraz",
+             "opt": ["Abu Bakr, ‘Umar, Abdullah ibn Zaid","Abu Bakr, ‘Umar, Bilal, Abu Mah-zura", "Bilal, ‘Umar, Ibn Umm Maktum"]
+          },
+          {
+            "question": "Which two companions of Prophet Muhammad saw visions of <i>adhan</i>?",
+            "answer": "Abdullah ibn Zaid and ‘Umar",
+             "opt": ["‘Umar and Abdullah ibn ‘Umar","‘Uthman and Abdullah ibn Abbas", "Abu Bakr and ‘Ali"]
+          },
+          {
+            "question": "The callers to prayer will have the longest necks on the Day of Resurrection. What does this mean?",
+            "answer": "They have the most good deeds and They will be masters and leaders. ",
+             "opt": ["They have the most good deeds","They will be masters and leaders", "It has no meaning"]
+          },
+          {
+            "question": "Essentials of faith covered by the adhan include:",
+            "answer": "tawheed",
+             "opt": ["fasting","pilgrimage", "zakah"]
+          },
+          {
+            "question": "Select a true statement with regards to the Friday prayer.",
+            "answer": "On Fridays, the <i>Dhuhr</i> prayer is replaced with the prayer known as <i>Salat ul-Jumuah</i>",
+             "opt": ["On Fridays, the <i>Asr</i> prayer is replaced with the prayer known as <i>Salat ul-Jumuah</i>","On Fridays, the <i>Dhuhr</i> prayer is followed by the prayer known as <i>Salat ul-Jumuah</i>", "On Fridays, the <i>Dhuhr</i> prayer is preceded with the prayer known as <i>Salat ul-Jumuah</i>"]
+          },
+          {
+            "question": "Select the correct statement:",
+            "answer": "All of the above",
+             "opt": ["Women are not required to pray the Friday prayer","Women may attend the Friday prayer if they want to", "Women must pray the <i>Dhuhr</i> prayer at home if they do not attend the Friday prayer"]
+          },
+          {
+            "question": "The person delivering the Friday sermon is referred to as:",
+            "answer": "Khatib",
+             "opt": ["Imam","Muazin", "Sheikh"]
+          },
+          {
+            "question": "Identify the way(s) in which <i>Salat ul-Jumuah</i> is different than the <i>Dhuhr</i> prayer.",
+            "answer": "All of the above",
+             "opt": ["<i>Salat ul-Jumuah</i> is two <i>rakahs</i>, whereas <i>Dhuhr</i> prayer is four <i>rakahs</i>","<i>Salat ul-Jumuah</i> consists of a sermon in addition to the prayer", "<i>Salat ul-Jumuah<i/> cannot be offered at home, whereas <i>Dhuhr</i> can be offered at home"]
+          },
+          {
+            "question": "Before making <i>du'a</i> one must realize that:",
+            "answer": "only Allah responds to <i>du'a</i>",
+             "opt": ["Allah can only give to us from what is within His limited power","Allah can only respond to one individual at a time", "if the <i>du'a</i> goes unanswered there are many others that we can call upon for help"]
+          },
+          {
+            "question": "The Arabic word <i>‘Du'a’</i> means:",
+            "answer": "to ask your Lord for His help and support",
+             "opt": ["to pray to your Lord for His help and support","to supplicate to your Lord for His help and support", "All of the above"]
+          },
+          {
+            "question": "Select the benefit(s) of <i>du'a</i>:",
+            "answer": "Allah is close to the person who makes <i>du'a</i>",
+             "opt": ["<i>Du'a</i> replaces all other forms of worship ordained by Allah","<i>Du'a</i> is a weapon to oppress others", " All of the above"]
+          },
+          {
+            "question": "A detailed account of the method of performing ablution is found in:",
+            "answer": "the Holy Quran",
+             "opt": ["the <i>hadith</i> of the Prophet Muhammad (peace be upon him)","previous scriptures", "historical accounts of our ancestors"]
+          },
+          {
+            "question": "With regards to the intention preceding the performance of ablution (<i>wudoo</i>):",
+            "answer": "the intention is in the heart and is not to be uttered",
+             "opt": ["the intention should be uttered loudly and clearly","the intention is not a prerequisite for ablution", "the intention is in the heart and it is optional to utter it aloud"]
+          },
+          {
+            "question": "The method of performing ablution:",
+            "answer": "is the same for both men and women",
+             "opt": ["differs between men and women","is the same for both men and women with a few exceptions with regards to the sequence with which the body parts are washed", "differs for both men and women with regards to the quantity of water which is to be used"]
+          },
+          {
+            "question": "Whilst performing ablution:",
+            "answer": "one should always start with the right side whenever washing the body parts",
+             "opt": ["one should always start with the left side whenever washing the body parts","one need not be particular about which side to start with when washing the body parts", "one may alternate between left and right when washing the body parts", "there is no mention of which side should be washed first when washing the body parts"]
+          }
+          ],
 
         "lessons": [
         {
@@ -232,6 +448,114 @@
     "mod_id": "3",
     "mod_header": "Islamic Beliefs",
     "mod_img": "https://www.newmuslims.com/upload/lessons/images/World_of_Jinn_(Part_1_of_2)._001.jpg",
+
+    "MyQuestions": [
+        {
+          "question": "Belief in Allah consists of:",
+          "answer": "All of the above",
+          "opt": ["belief in divine existence","belief in Allah’s Lordship", "belief in Allah’s right to worship", "belief in how Allah is described in Qur’an and <i>Sunnah</i>"]
+        },
+        {
+          "question": "",
+          "answer": "Lord is the Ruler of the universe and the Lawgiver",
+          "opt": ["Jesus is also Lord","Lord is the Creator of the physical universe only", "Lord is the Lawgiver only"]
+        },
+        {
+          "question": "One of Allah’s Most Beautiful Names as they appear in the Qur’an and <i>Sunnah</i> in translation is:",
+          "answer": "The Most Compassionate",
+          "opt": ["Deceitful","First Cause", "The Old Guy Upstairs"]
+        },
+        {
+          "question": "A minor form of <i>shirk</i> is:",
+          "answer": "showing off",
+          "opt": ["invoking or supplicating to a deity besides Allah","asking a dead person for help", "giving another creation a portion of divine love reserved for Allah"]
+        },
+        {
+          "question": "Major forms of <i>shirk</i> include:",
+          "answer": "swearing by other than Allah’s Name",
+          "opt": ["showing off","praying to holy men", "kissing the forehead of a holy man"]
+        },
+        {
+          "question": "Choose prevalent example(s) of <i>shirk</i>",
+          "answer": "All of the above",
+          "opt": ["astrology","crystal balls", "good luck charms"]
+        },
+        {
+          "question": "Belief in messengers entails:",
+          "answer": "belief in only those whose names appear in Quran and <i>Sunnah</i>",
+          "opt": ["faith in their existence only","following the law of every prophet", "belief in them and their names, but following the Law brought by Prophet Muhammad as it supersedes previous laws"]
+        },
+        {
+          "question": "What is the purpose of belief in the messengers?",
+          "answer": "All of the above",
+          "opt": ["To give us real life examples to live our lives according to","To leave no excuse for human beings on the Day of Judgment", "To clarify our reason for existence", "None of the above"]
+        },
+        {
+          "question": "Muslims believe prophets were:",
+          "answer": "human, but divinely protected from erring in conveying the message",
+          "opt": ["human, therefore made mistakes in conveying the message","humans absolved from having to worship Allah", "divine because they performed miracles"]
+        },
+        {
+          "question": "Select the exact names of sacred scriptures appearing in the Qur'an a Muslim is required to believe in:",
+          "answer": "Injeel and Torah",
+          "opt": ["New Testament","Old Testament", "the Holy Bible"]
+        },
+        {
+          "question": "What external factors assisted in the preservation of the Qur'an?",
+          "answer": "Memorization by a large number of Muslims in each generation",
+          "opt": ["Preservation by writing","Recitation in each daily prayer", "Being read and written in Arabic, the language it was originally revealed in", "All of the above"]
+        },
+        {
+          "question": "The Qur'an:",
+          "answer": "is a judge over what is correct and true in the previous scriptures and what is not",
+          "opt": ["is imitable","is not meant to replace earlier scriptures", "rejects all previous scriptures"]
+        },
+        {
+          "question": "What can be said about the guardian angels?",
+          "answer": "That they are called ‘angels in succession’",
+          "opt": ["That every nation has one","That they will test people after their death", "That they are ‘good’, and ‘evil’, angels"]
+        },
+        {
+          "question": "The “honorable scribes”:",
+          "answer": "record human deeds",
+          "opt": ["bear God’s Throne","write down the provision of the fetus", "write future events"]
+        },
+        {
+          "question": "What is true of Gabriel?",
+          "answer": "He would convey the revelation from Allah to His Messengers.",
+          "opt": ["He is wingless","He is responsible for driving clouds", "He never appeared in visible form", "None of the above"]
+        },
+        {
+          "question": "What is the Muslim belief regarding <i>Siraat</i>?",
+          "answer": "People will pass it in accordance with the works they performed in this life",
+          "opt": ["It is a wide bridge stretching over Hell","After crossing it people will enter Paradise right away", "Intercession will get people across it"]
+        },
+        {
+          "question": "The following will occur on the Day of Judgment:",
+          "answer": "Some people will be shaded by God’s Throne",
+          "opt": ["People will come back to life from their graves in the clothes they were buried in","It will rain for one month", "The Trumpet will be blown by Gabriel"]
+        },
+        {
+          "question": "Select a false statement:",
+          "answer": "Waiting for Judgment to begin will be exhausting",
+          "opt": ["Actual balances will weigh people’s good and bad deeds","Records will be presented to people in their right or left hand", "All prophets will be allowed the Greatest Intercession"]
+        },
+        {
+          "question": "Allah’s Foreknowledge:",
+          "answer": "is all inclusive and complete",
+          "opt": ["excludes minute details","is limited to future events", "is limited to past events"]
+        },
+        {
+          "question": "The components of faith in the divine decree (<i>Qadr</i>) are:",
+          "answer": "all of the above",
+          "opt": ["foreknowledge","writing", "will", "creation"]
+        },
+        {
+          "question": "In the Preserved Tablet Allah has written:",
+          "answer": "all of the above",
+          "opt": ["the life spans of all human beings","the amount of their sustenance", "the eternal selection and condemnation for all humanity"]
+        }
+      ],
 
     "lessons":  [
     {
@@ -350,10 +674,18 @@
     "mod_header": "Miracles of the Prophets",
     "mod_img": "https://www.mymasjid.ca/wp-content/uploads/2017/10/masjid-nabawi-prophet-mosque.jpg",
 
+    "MyQuestions": [
+      {
+        "question": "Coming soon...",
+        "answer": "",
+        "opt": ["","", ""]
+      }
+      ],
+
     "lessons":  [
     {
         "id": "L1",
-        "title": "",
+        "title": "Coming soon...",
         "header_1": "",
         "header_2": "",
         "header_3": "",
@@ -465,10 +797,18 @@
     "mod_header": "Mosques and World of Jinn",
     "mod_img": "https://www.newmuslims.com/upload/lessons/images/Friday_Prayer_part_2._001.jpg",
 
+    "MyQuestions": [
+      {
+        "question": "Coming soon...",
+        "answer": "",
+        "opt": ["","", ""]
+      }
+      ],
+
     "lessons":  [
     {
         "id":"L1",
-        "title": "",
+        "title": "Coming soon...",
         "header_1": "",
         "header_2": "",
         "header_3": "",
@@ -580,10 +920,18 @@
     "mod_header": "Sacred Cities and Pilgrimage",
     "mod_img": "https://www.mymasjid.ca/wp-content/uploads/2016/10/why-do-we-pray.png",
 
+    "MyQuestions": [
+      {
+        "question": "Coming soon...",
+        "answer": "",
+        "opt": ["","", ""]
+      }
+      ],
+
     "lessons":  [
     {
         "id": "L1",
-        "title": "",
+        "title": "Coming soon...",
         "header_1": "",
         "header_2": "",
         "header_3": "",

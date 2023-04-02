@@ -4,14 +4,17 @@
     <link rel="stylesheet" type="text/css" href="StudyResources.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
     <title>Module</title>
 
     <style>
+
       p {
-          font-size: 1.37em;
-          line-height: 1.6;
-          text-indent: 7%;
-          margin-bottom: 30px;
+        font-size: 1.37em;
+        line-height: 1.6;
+        text-indent: 7%;
+        margin-bottom: 30px;
       }
 
        ul li {
@@ -107,14 +110,51 @@
       }
 
       .play:hover {
-          color: red;
-          text-decoration: underline red;
-          cursor: pointer;
+        color: red;
+        text-decoration: underline red;
+        cursor: pointer;
       }
 
       h3 {
         font-size: 1.5em;
         margin-bottom: 30px;
+      }
+
+      .highlighted {
+        background-color:yellow;
+      }
+
+      .highlight {
+        background-color: #fff34d;
+        -moz-border-radius: 5px;
+        /* FF1+ */
+        -webkit-border-radius: 5px;
+        /* Saf3-4 */
+        border-radius: 5px;
+        /* Opera 10.5, IE 9, Saf5, Chrome */
+        -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+        /* FF3.5+ */
+        -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+        /* Saf3.0+, Chrome */
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+        /* Opera 10.5+, IE 9.0 */
+      }
+
+      .highlight {
+        padding:1px 4px;
+        margin:0 -4px;
+      }
+
+      .ui-block-b, .ui-block-e, .textSearchvalue_h {
+        width: 150px; height: 40px; margin: 5px;
+      }
+
+      .ui-block-b, .ui-block-e{
+        background-color:aquamarine;
+      }
+
+      .side_info a {
+        padding: 15px;
       }
 
     </style>
@@ -141,17 +181,40 @@
         <img class = "Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
       </div>
 
-    
+      
 
       <div class="sidemenu">
+
         <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Modules.html">Modules</a>
         <div id= "lessons"></div>
         <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Quizzes.html">Quiz</a> 
+
+        <div class="searchContend_h">
+          <div class="ui-grid-c">
+              <div class="ui-block-a">
+                  <input style="padding: 0px; font-size: 0.9em;" name="text-12" id="text-12" value="" type="text" class="textSearchvalue_h" placeholder="Search the page…">
+              </div>
+              
+              <button class="ui-block-b"> <a style="padding: 0px; font-size: 1.37em; color:firebrick;" href="#" data-role="button" data-corners="false" data-inline="true" class="searchButtonClickText_h">Search</a>
+              </button>
+              
+           <!--   <div class="ui-block-c"> <a href="#" data-role="button" data-corners="false" data-inline="true" class="next_h">Next</a>
+              </div>  
+              <button class="ui-block-d"> <a href="#" data-role="button" data-corners="false" data-inline="true" class="previous_h">Previous</a>
+              </button>   -->  
+              
+              <button class="ui-block-e"> <a style="padding: 0px; font-size: 1.37em; color:firebrick;" href="#" data-role="button" data-corners="false" data-inline="true" class="clear_h">Clear Search</a>
+              </button>
+
+          </div>
+        </div> 
+        
       </div>
 
- 
 
       <div class="content">
+
+
    
         <div id="form"></div>
   
@@ -160,24 +223,110 @@
 
 <script>
 
+////////////////---------- start SEARCH BAR ---------------////////////////////////
+
+function searchAndHighlight(searchTerm, selector) {
+    if (searchTerm) {
+        var wholeWordOnly = new RegExp("\\g"+searchTerm+"\\g","ig"); //matches whole word only
+        //var anyCharacter = new RegExp("\\g["+searchTerm+"]\\g","ig"); //matches any word with any of search chars characters
+        var selector = selector || "#form"; //use body as selector if none provided
+        var searchTermRegEx = new RegExp(searchTerm, "ig");
+        var matches = $(selector).text().match(searchTermRegEx);
+        if (matches != null && matches.length > 0)
+          {
+            $('.highlighted').removeClass('highlighted'); //Remove old search highlights  
+
+            //Remove the previous matches
+            $span = $('#realTimeContents span');
+            $span.replaceWith($span.html());
+
+          if (searchTerm === "&") {
+            searchTerm = "&amp;";
+            searchTermRegEx = new RegExp(searchTerm, "ig");
+          }
+
+  
+          var htmlContent = $(selector).html();
+          var highlightedHtml = htmlContent.replace(searchTermRegEx, function(match) {
+            return "<span class='match'>" + match + "</span>";
+          });
+          $(selector).html(highlightedHtml);
+          $('.match').addClass('highlighted');
+
+
+/*--------------- SELECT EACH WORD WITH NEXT AND PREVIOUS BUTTONS ------------------------
+
+            $(selector).html($(selector).html().replace(searchTermRegEx, "<span class='match'>" + searchTerm + "</span>"));
+            $('.match:first').addClass('highlighted');
+
+            var i = 0;
+
+            $('.next_h').off('click').on('click', function () {
+                i++;
+
+                if (i >= $('.match').length) i = 0;
+
+                $('.match').removeClass('highlighted');
+                $('.match').eq(i).addClass('highlighted');
+                $('.ui-mobile-viewport').animate({
+                    scrollTop: $('.match').eq(i).offset().top
+                }, 300);
+            });
+            $('.previous_h').off('click').on('click', function () {
+
+                i--;
+
+                if (i < 0) i = $('.match').length - 1;
+
+                $('.match').removeClass('highlighted');
+                $('.match').eq(i).addClass('highlighted');
+                $('.ui-mobile-viewport').animate({
+                    scrollTop: $('.match').eq(i).offset().top
+                }, 300);
+            });
+
+
+            if ($('.highlighted:first').length) { //if match found, scroll to where the first one appears
+                $(window).scrollTop($('.highlighted:a').position().top);
+            }
+*/
+
+            return true;
+          }
+    } 
+    return false;
+}
+
+$(document).on('click', '.searchButtonClickText_h', function (event) {
+
+    $(".highlighted").removeClass("highlighted").removeClass("match");
+    if (!searchAndHighlight($('.textSearchvalue_h').val())) {
+        alert("No results found");
+    }
+});
+
+$(document).on('click', '.clear_h', function (event) {
+    $('.textSearchvalue_h').val('');
+    $(".highlighted").removeClass("highlighted").removeClass("match");
+});
+
+////////////////---------- end SEARCH BAR ---------------////////////////////////
+
   const searchString = window.location.search;
   const params = new URLSearchParams(searchString);
   const ID = params.get('ID');
   console.log(ID)
-
-
  
-        
       function Func() {
         fetch("./data.json")
           .then((res) => {
             return res.json();
           })
           .then((data) => {
-
+  
             let obj = data.modules.find(p => p.mod_id === ID);
-            console.log(obj)
-            
+            console.log("obj: ",obj)
+
             let modInfo = document.createElement('div');
             modInfo.className = 'module_info';
             modInfo.innerHTML = 
@@ -193,87 +342,84 @@
               console.log(id);
 
 
-            let text1 = obj.lessons[i].text_1;
-            let text2 = obj.lessons[i].text_2;
-            let text3 = obj.lessons[i].text_3;
-            let text4 = obj.lessons[i].text_4;
-            let text5 = obj.lessons[i].text_5;
-            let title = obj.lessons[i].title;
+              let text1 = obj.lessons[i].text_1;
+              let text2 = obj.lessons[i].text_2;
+              let text3 = obj.lessons[i].text_3;
+              let text4 = obj.lessons[i].text_4;
+              let text5 = obj.lessons[i].text_5;
+              let title = obj.lessons[i].title;
+              
+              let hdr1 = obj.lessons[i].header_1;
+              let hdr2 = obj.lessons[i].header_2;
+              let hdr3 = obj.lessons[i].header_3;
+              let hdr4 = obj.lessons[i].header_4;
+              let hdr5 = obj.lessons[i].header_5;
+    
+
+
+              let lessonInfo = document.createElement('div');
+              lessonInfo.setAttribute("id",id+"2");
+              lessonInfo.className = 'lesson_info';
+
+              if(hdr3=="") {
+                lessonInfo.innerHTML = 
+                  '<h1 style="margin: 20px 0 20px 0;">' + "Lesson " + (i+1) + " - " + title + '</h1>' +
+                  '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">' + '<h2>' + hdr1 + '</h2>' + '<hr>' + text1 +
+                  '<hr>' + '<h2>' + hdr2 + '</h2>' + '<hr>' + text2;
+              }
+              else if(hdr4=="") {
+                lessonInfo.innerHTML = 
+                  '<h1 style="margin: 20px 0 20px 0;">' + "Lesson " + (i+1) + " - " + title + '</h1>' +
+                  '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">' + '<h2>' + hdr1 + '</h2>' + '<hr>' + text1 +
+                  '<hr>' + '<h2>' + hdr2 + '</h2>' + '<hr>' + text2 + 
+                  '<hr>' + '<h2>' + hdr3 + '</h2>' + '<hr>' + text3; 
+              }
+              else if(hdr5=="") {
+                lessonInfo.innerHTML = 
+                  '<h1 style="margin: 20px 0 20px 0;">' + "Lesson " + (i+1) + " - " + title + '</h1>' +
+                  '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">' + '<h2>' + hdr1 + '</h2>' + '<hr>' + text1 +
+                  '<hr>' + '<h2>' + hdr2 + '</h2>' + '<hr>' + text2 + 
+                  '<hr>' + '<h2>' + hdr3 + '</h2>' + '<hr>' + text3 +
+                  '<hr>' + '<h2>' + hdr4 + '</h2>' + '<hr>' + text4; 
+              }
+              else {
+                lessonInfo.innerHTML = 
+                  '<h1 style="margin: 20px 0 20px 0;">' + "Lesson " + (i+1) + " - " + title + '</h1>' +
+                  '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">' + '<h2>' + hdr1 + '</h2>' + '<hr>' + text1 +
+                  '<hr>' + '<h2>' + hdr2 + '</h2>' + '<hr>' + text2 + 
+                  '<hr>' + '<h2>' + hdr3 + '</h2>' + '<hr>' + text3 + 
+                  '<hr>' + '<h2>' + hdr4 + '</h2>' + '<hr>' + text4 +
+                  '<hr>' + '<h2>' + hdr5 + '</h2>' + '<hr>' + text5; 
+              }
             
-            let hdr1 = obj.lessons[i].header_1;
-            let hdr2 = obj.lessons[i].header_2;
-            let hdr3 = obj.lessons[i].header_3;
-            let hdr4 = obj.lessons[i].header_4;
-            let hdr5 = obj.lessons[i].header_5;
-  
+              document.getElementById('form').appendChild(lessonInfo); 
 
-
-            let lessonInfo = document.createElement('div');
-            lessonInfo.setAttribute("id",id+"2");
-            lessonInfo.className = 'lesson_info';
-
-            if(hdr3=="") {
-              lessonInfo.innerHTML = 
-                '<h1 style="margin: 20px 0 20px 0;">' + "Lesson " + (i+1) + " - " + title + '</h1>' +
-                '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">' + '<h2>' + hdr1 + '</h2>' + '<hr>' + text1 +
-                '<hr>' + '<h2>' + hdr2 + '</h2>' + '<hr>' + text2;
-            }
-            else if(hdr4=="") {
-              lessonInfo.innerHTML = 
-                '<h1 style="margin: 20px 0 20px 0;">' + "Lesson " + (i+1) + " - " + title + '</h1>' +
-                '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">' + '<h2>' + hdr1 + '</h2>' + '<hr>' + text1 +
-                '<hr>' + '<h2>' + hdr2 + '</h2>' + '<hr>' + text2 + 
-                '<hr>' + '<h2>' + hdr3 + '</h2>' + '<hr>' + text3; 
-            }
-            else if(hdr5=="") {
-              lessonInfo.innerHTML = 
-                '<h1 style="margin: 20px 0 20px 0;">' + "Lesson " + (i+1) + " - " + title + '</h1>' +
-                '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">' + '<h2>' + hdr1 + '</h2>' + '<hr>' + text1 +
-                '<hr>' + '<h2>' + hdr2 + '</h2>' + '<hr>' + text2 + 
-                '<hr>' + '<h2>' + hdr3 + '</h2>' + '<hr>' + text3 +
-                '<hr>' + '<h2>' + hdr4 + '</h2>' + '<hr>' + text4; 
-            }
-            else {
-              lessonInfo.innerHTML = 
-                '<h1 style="margin: 20px 0 20px 0;">' + "Lesson " + (i+1) + " - " + title + '</h1>' +
-                '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">' + '<h2>' + hdr1 + '</h2>' + '<hr>' + text1 +
-                '<hr>' + '<h2>' + hdr2 + '</h2>' + '<hr>' + text2 + 
-                '<hr>' + '<h2>' + hdr3 + '</h2>' + '<hr>' + text3 + 
-                '<hr>' + '<h2>' + hdr4 + '</h2>' + '<hr>' + text4 +
-                '<hr>' + '<h2>' + hdr5 + '</h2>' + '<hr>' + text5; 
-            }
-            
-            document.getElementById('form').appendChild(lessonInfo); 
-
-            let side = document.createElement('div');
-            side.setAttribute("id",id);
-            side.className = 'side_info';
-            side.innerHTML = 
-                '<a href="#lesson" onclick=lessonDisplay(' + id + ')>'+ "Lesson " + (i+1) + '</a>'
-
-            let l6 = document.getElementById("L62");
-            let l7 = document.getElementById("L72");
-            
-            if(title=="") {
-              l6.style.display = "none";
-              l7.style.display = "none";
-
-            }
-            
-           document.getElementById('lessons').appendChild(side); 
-      
+              let side = document.createElement('div');
+              side.setAttribute("id",id);
+              side.className = 'side_info';
               
 
-        }
+              if(title=="") {
+                break;
+              }    
+              else {
+                    side.innerHTML = 
+                  '<a href="#lesson" onclick=lessonDisplay(' + id + ')>'+ "Lesson " + (i+1) + '</a>'
+              }
+    
+              document.getElementById('lessons').appendChild(side); 
+            }
 
-        })}
+            const quizzesLink = document.querySelector('a[href="http://127.0.0.1:5500/WorkingCode/StudyResources/Quizzes.html"]');
+            console.log(quizzesLink)
+            quizzesLink.href = "http://127.0.0.1:5500/WorkingCode/StudyResources/Quiz.html?ID="+ID
+            console.log("Out ID: ",ID)
+          })}
 
 
-      function lessonDisplay(lessonID){
-        //console.log( lessonID )
+      function lessonDisplay(lessonID) {
 
-        if(lessonID.id=="L1"){
-          //console.log("I work")
+        if(lessonID.id=="L1") {
 
           let l1 = document.getElementById("L12");
           let l2 = document.getElementById("L22");
@@ -292,8 +438,8 @@
           l7.style.display = "none";
 
         }
-        else   if(lessonID.id=="L2"){
-          //console.log("I work")
+        else if(lessonID.id=="L2") {
+
           let l1 = document.getElementById("L12");
           let l2 = document.getElementById("L22");
           let l3 = document.getElementById("L32");
@@ -311,8 +457,8 @@
           l7.style.display = "none";
 
         }
-        else   if(lessonID.id=="L3"){
-          //console.log("I work")
+        else if(lessonID.id=="L3") {
+    
           let l1 = document.getElementById("L12");
           let l2 = document.getElementById("L22");
           let l3 = document.getElementById("L32");
@@ -330,8 +476,8 @@
           l7.style.display = "none";
 
         }
-        else   if(lessonID.id=="L4"){
-          //console.log("I work")
+        else if(lessonID.id=="L4") {
+
           let l1 = document.getElementById("L12");
           let l2 = document.getElementById("L22");
           let l3 = document.getElementById("L32");
@@ -349,8 +495,8 @@
           l7.style.display = "none";
 
         }
-        else   if(lessonID.id=="L5"){
-          //console.log("I work")
+        else if(lessonID.id=="L5") {
+
           let l1 = document.getElementById("L12");
           let l2 = document.getElementById("L22");
           let l3 = document.getElementById("L32");
@@ -369,8 +515,8 @@
 
         }
 
-        else   if(lessonID.id=="L6"){
-          //console.log("I work")
+        else if(lessonID.id=="L6") {
+
           let l1 = document.getElementById("L12");
           let l2 = document.getElementById("L22");
           let l3 = document.getElementById("L32");
@@ -389,8 +535,8 @@
 
         }
 
-        else   if(lessonID.id=="L7"){
-          //console.log("I work")
+        else if(lessonID.id=="L7") {
+          
           let l1 = document.getElementById("L12");
           let l2 = document.getElementById("L22");
           let l3 = document.getElementById("L32");
@@ -420,6 +566,7 @@
       let playSound4 = () => new Audio("http://www.newmuslims.com/audio/Allahu_Akbar01.mp3").play()
       
       let playSound5 = () => new Audio("http://www.newmuslims.com/audio/Assalamu_Alaikum01.mp3").play()
+
 
 </script>
 
