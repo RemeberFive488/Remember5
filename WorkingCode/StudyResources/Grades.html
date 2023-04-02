@@ -1,63 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="StudyResources.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Grades</title>
-
-    <style>
-       hr {
-        width: auto; 
-        background: #1e5799; 
-        height: 4px; 
-        background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);
-        margin: 40px 0 40px 0;
-      }
-
-      .sidemenu {
-        font-size: 22px;
-      }
-    </style>
-
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="StudyResources.js"></script>
+  <link rel="stylesheet" type="text/css" href="StudyResources.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Grades</title>
+  <style>
+    hr {
+      width: auto;
+      background: #1e5799;
+      height: 4px;
+      background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);
+      margin: 40px 0 40px 0;
+    }
+    .sidemenu {
+      font-size: 22px;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="header">
-        <div class = "inner_header">
-    
-            <div class = "logo">
-                <img class = "MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
-            </div>
-    
-            <ul class="navigation" >
-              <a href ="\WorkingCode\Homepage\ActuallyHomePage.html"><li><button class="btn btn-home"> Home</button></li></a>
-              <a href ="\WorkingCode\About\About.html"><li><button class="btn btn-about"> About</button></li></a>
-              <a href="\WorkingCode\Contact\Contact.html"><li><button class="btn btn-contact"> Contact</button></li></a>
-            </ul>
-    
-        </div>
-    
-        <img class = "Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
+  <div class="header">
+    <div class="inner_header">
+      <div class="logo">
+        <img class="MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
       </div>
-    
-    
-    <div class="sidemenu">
-      <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/StudyResources.html">Homepage</a>
-      <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Modules.html">Modules</a>
-      <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Quizzes.html">Quizzes</a>
-      <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Grades.html">Grades</a>   
+      <ul class="navigation">
+        <a href="\WorkingCode\Homepage\ActuallyHomePage.html">
+          <li><button class="btn btn-home"> Home</button></li>
+        </a>
+        <a href="\WorkingCode\About\About.html">
+          <li><button class="btn btn-about"> About</button></li>
+        </a>
+        <a href="\WorkingCode\Contact\Contact.html">
+          <li><button class="btn btn-contact"> Contact</button></li>
+        </a>
+      </ul>
     </div>
-    
-    
-    <div class="content">
-      <h1 style="color: darkcyan; font-size: 2.5em;">Remember5: Grades</h1>
+    <img class="Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
+  </div>
 
-      <hr>
- 
-      <div id="gradelist"></div>
+  <div class="sidemenu">
+    <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/StudyResources.html">Homepage</a>
+    <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Modules.html">Modules</a>
+    <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Quizzes.html">Quizzes</a>
+    <a href="http://127.0.0.1:5500/WorkingCode/StudyResources/Grades.html">Grades</a>
+  </div>
 
+  <div class="content">
+    <h1 style="color: darkcyan; font-size: 2.5em;">Remember5: Grades</h1>
+    <hr>
+    <div id="gradelist"></div>
+
+    <div id="finalgrade">
+      <p>Final Grade: <span id="finalgrade-value"></span> / 63</p>
     </div>
-</body>
+
+    <div id="finalpercentage">
+      <p>Final Grade Percentage: <span id="finalpercentage-value"></span>%</p>
+    </div>
+
+
+    <div id="letterGrade">
+      <p>Grade: <span id="Grade-letter"></span></p>
+    </div>
+
+  </div>
+
+
+
+
+
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyBxoV0Qji0j8GjG2N4jqYWWUtmUnN1Qyec",
+    authDomain: "remember5-321e2.firebaseapp.com",
+    projectId: "remember5-321e2",
+    storageBucket: "remember5-321e2.appspot.com",
+    messagingSenderId: "363183328287",
+    appId: "1:363183328287:web:3f597b880859c5eb18192a",
+    measurementId: "G-XPX3Y2K184"
+};
+
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+} else {
+  firebase.app(); // use the existing app
+}
+const db = firebase.firestore();
+db.settings({});
+
+const auth = firebase.auth();
+
+auth.onAuthStateChanged(user => {
+  if (user) {
+    const uid = user.uid;
+    db.collection(uid).doc("Quiz Scores").get().then((doc) => {
+      if (doc.exists) {
+        const data = doc.data();
+        console.log(data);
+
+        // Create an empty HTML string to store the grades
+        let gradeHTML = '';
+
+        let final_grade =0;
+        let final_percentage =0.0;
+        // Iterate over each grade and add it to the HTML string
+        for (const [key, value] of Object.entries(data)) {
+          gradeHTML += `<p>${key}: ${value}</p>`;
+          final_grade +=value;
+        }
+        // final_grade=57.9;
+        final_percentage= ((final_grade/63) *100).toFixed(2);
+        console.log("final_grade: ",final_grade)
+        console.log("final_percentage: ",final_percentage)
+
+
+        const finalGradeDiv = document.getElementById("finalgrade-value");
+        finalGradeDiv.innerHTML = final_grade;
+
+        const finalPer = document.getElementById("finalpercentage-value");
+        finalPer.innerHTML = final_percentage;
+
+        const GradeDiv = document.getElementById("Grade-letter");
+        if(final_percentage<60.0){
+          GradeDiv.innerHTML = "F";
+        }
+        else if(final_percentage>=60.0 && final_percentage<=69.0){
+          GradeDiv.innerHTML = "D";
+        }
+        else if(final_percentage>=69.0 && final_percentage<=76.0){
+          GradeDiv.innerHTML = "C";
+        }
+        else if(final_percentage>=76.0 && final_percentage<=79.0){
+          GradeDiv.innerHTML = "C+";
+        }
+        else if(final_percentage>=79.0 && final_percentage<=82.0){
+          GradeDiv.innerHTML = "B-";
+        }
+        else if(final_percentage>=82.0 && final_percentage<=86.0){
+          GradeDiv.innerHTML = "B";
+        }
+        else if(final_percentage>=86.0 && final_percentage<=89.0){
+          GradeDiv.innerHTML = "B+";
+        }
+        else if(final_percentage>=89.0 && final_percentage<=92.0){
+          GradeDiv.innerHTML = "A-";
+        }
+        else if(final_percentage>=92.0 && final_percentage<=100.0){
+          GradeDiv.innerHTML = "A";
+        }
+
+
+        // Set the HTML of the div element to the grades
+        document.getElementById('gradelist').innerHTML = gradeHTML;
+      } else {
+        console.log("No such document!");
+      }
+    }).catch((error) => {
+      console.log("Error getting document:", error);
+    });
+  } else {
+    console.log('User logged out');
+  }
+});
+
+
+</script>
+
 </html>

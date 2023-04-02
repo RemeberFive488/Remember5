@@ -184,8 +184,6 @@ auth.onAuthStateChanged(user => {
     } 
 
 
-
-
     else 
     {
       console.log('User logged out');

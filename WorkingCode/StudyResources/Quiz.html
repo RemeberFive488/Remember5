@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+  <script src="StudyResources.js"></script>
     <link rel="stylesheet" type="text/css" href="StudyResources.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -125,6 +129,64 @@
     </body>
 
     <script>
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBxoV0Qji0j8GjG2N4jqYWWUtmUnN1Qyec",
+    authDomain: "remember5-321e2.firebaseapp.com",
+    projectId: "remember5-321e2",
+    storageBucket: "remember5-321e2.appspot.com",
+    messagingSenderId: "363183328287",
+    appId: "1:363183328287:web:3f597b880859c5eb18192a",
+    measurementId: "G-XPX3Y2K184"
+  };
+       
+  firebase.initializeApp(firebaseConfig)
+  const db = firebase.firestore();
+              db.settings({});
+
+              const auth = firebase.auth();
+
+              auth.onAuthStateChanged(user => {
+              if (user) {
+                const uid = user.uid;
+                const docRef = db.collection(uid).doc('Quiz Scores');
+                
+
+                // Use the get() method to check if the document exists
+                docRef.get()
+                  .then(doc => {
+                    if (doc.exists) {
+                      
+                    } else {
+                      console.log('Quiz Scores document does not exist');
+                      auth.onAuthStateChanged(user => {
+                      if (user) {
+                        const uid = user.uid;
+                        const docRef = db.collection(uid).doc('Quiz Scores');
+
+                        // Use the set() method to create the document
+                        docRef.set({})
+                          .then(() => {
+                            console.log('Quiz Scores document created');
+                          })
+                          .catch(error => {
+                            console.error('Error creating Quiz Scores document: ', error);
+                          });
+                      } else {
+                        console.log('User logged out');
+                      }
+                    });
+                    }
+                  })
+                  .catch(error => {
+                    console.error('Error getting Quiz Scores document: ', error);
+                  });
+              } else {
+                console.log('User logged out');
+              }
+            });
+
+
         const searchString = window.location.search;
         const params = new URLSearchParams(searchString);
         const ID = params.get('ID');
@@ -154,7 +216,7 @@
           .then((data) => {
             
             let obj = data.modules.find(p => p.mod_id === ID);
-            console.log(obj)
+            //console.log(obj)
             let data1 = obj.MyQuestions
 
             const temp = {
@@ -173,7 +235,66 @@
             
             if(data1.q.length == 0) {
                 message.innerHTML = `<h1>Quiz Over</h1><div>Your grade ${game.score} out of ${data1.total} questions.`
-                  message.style.color="firebrick"
+                message.style.color="firebrick"
+                console.log("Correct: ", game.score)
+               console.log("ALL: ",  data1.total)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+              
+                const urlParams = new URLSearchParams(window.location.search);
+
+                // Get the value of the "ID" parameter
+                const id = urlParams.get('ID');
+
+                // Use the "id" variable as needed
+                console.log("::::::::::::::::::::::::: ",id);
+              
+
+                const db = firebase.firestore();
+              db.settings({});
+
+              const auth = firebase.auth();
+
+              auth.onAuthStateChanged(user => {
+
+              if (user) {
+                const uid = user.uid;
+                const docRef = db.collection(uid).doc('Quiz Scores');
+                const propertyName = `Quiz_${id}`;
+
+                // Use the get() method to check if the document exists
+                docRef.get()
+                  .then(doc => {
+                    if (doc.exists) {
+                      // Use the update() method to add a new field to the document
+                      docRef.update({
+                        [propertyName]: game.score,
+                      })
+                        .then(() => {
+                          console.log('Data written to collection');
+                        })
+                        .catch(error => {
+                          console.error('Error writing to collection: ', error);
+                        });
+                    } else {
+                      console.log('Quiz Scores document does not exist');
+                     
+                    }
+                  })
+                  .catch(error => {
+                    console.error('Error getting Quiz Scores document: ', error);
+                  });
+              } else {
+                console.log('User logged out');
+              }
+            });
+
+               
+               
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
             }
             else {
                 const tBtn = pageEles(el,'button','Next','next')
@@ -186,8 +307,9 @@
                 const question = data1.q.shift()
                 data1.counter++
                 message.textContent = `Question ${data1.counter} of ${data1.total}`
-                console.log(question)
+                //console.log(question)
 
+              
                 if(data1.q.length == 0)
                     tBtn.textContent = 'End Quiz'
 
@@ -198,7 +320,9 @@
         }
 
         function outputQuestion (question, parent,tBtn) {
-            console.log(question)
+            //console.log(question)
+
+
             const que = pageEles(parent,'div', `${question.question}`,'question')
             const arr = question.opt
             arr.push(question.answer)
@@ -251,7 +375,7 @@
                 message.style.color="firebrick";
 
             })
-            console.log(arr)
+            //console.log(arr)
         }
 
         function pageEles(parent, t, html,c){
@@ -261,5 +385,9 @@
             return parent.appendChild(ele)
         }
 
+
+        
     </script>
+
+
     </html>
