@@ -13,20 +13,6 @@
     <title>Quiz</title>
 
     <style>
-    /*hr {
-        width: auto; 
-        background: #1e5799; 
-        height: 4px; 
-        background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);
-        margin: 40px 0 40px 0;
-      }
-
-      p {
-          font-size: 1.37em;
-          line-height: 1.6;
-          text-indent: 7%;
-          margin-bottom: 30px;
-      }*/
 
       * {
         box-sizing: border-box;
@@ -55,7 +41,7 @@
       }
 
       .container {
-        width: 110vh;
+        max-width: 110vh;
         margin: auto;
         border: 1px solid #ddd;
       }
@@ -69,12 +55,17 @@
         background-color: rgb(127, 251, 255);
       }
 
+      .opts {
+        display: flex;
+        flex-direction: column;
+      }
+
       .opts button {
         margin: 15px;
         padding: 8px;
         color:blanchedalmond;
         background-color: slategrey;
-        width: 100vh;
+        width: inherit;
         font-size: 1.3em;
         font-family: Garamond, serif;;
       }
@@ -87,6 +78,12 @@
         font-size: 1.6em;
         color: darkslategray;
         background-color: rgb(127, 251, 255);
+      }
+
+      #btn:hover, .next:hover {
+        cursor: pointer;
+        border: 1px solid #f01919e5;
+        background-color: bisque;
       }
 
     </style>

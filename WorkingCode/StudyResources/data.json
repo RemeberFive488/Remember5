@@ -41,7 +41,7 @@
             {
               "question": "The word ‘Islam’ means:",
               "answer": "submission",
-               "opt": ["violance","piece","muslim","none of the above"]
+               "opt": ["violance","peace","muslim","none of the above"]
             },
             {
               "question": "The Five Pillars of Islam are in essence:",
@@ -50,8 +50,8 @@
             },
             {
               "question": "The Pillars of Islam are:",
-              "answer": "bearing witness to the two testimonies, prayers, fasting, <i>zakah</i>, and <i>Hajj</i>",
-               "opt": ["belief in Quran","prayers and <i>Jihad</i>", "prayers, fasting and <i>Hajj</i>"]
+              "answer": "bearing witness to the two testimonies, prayers, fasting, zakah, and Hajj",
+               "opt": ["belief in Quran","prayers and Jihad", "prayers, fasting and Hajj"]
             },
             {
               "question": "The basics of Islam are captured in:",
@@ -60,8 +60,8 @@
             },
             {
               "question": "The Five Pillars and the Six Articles are based on a prophetic tradition called:",
-              "answer": "the <i>hadith</i>",
-               "opt": ["the <i>hadith</i> of Gabriel","the <i>hadith</i> of the angel", "the <i>hadith</i> of Umar"]
+              "answer": "the hadith",
+               "opt": ["the hadith of Angel Gabriel","the hadith of the angel", "the hadith of Umar"]
             },
             {
               "question": "The Six Articles of Faith include:",
@@ -85,8 +85,8 @@
             },
             {
               "question": "How does the desire of Paradise affect a Muslim?",
-              "answer": "It makes him live it hard",
-               "opt": ["It causes him to seek conflict with everyone who practices a different religion than his","It makes the Muslim focus on worship and ignore the people around him", "It makes the Muslim a better human being by his fulfilling the duties of Allah and the rights of fellow human beings"]
+              "answer": "It makes the Muslim a better human being by his fulfilling the duties of Allah and the rights of fellow human beings",
+               "opt": ["It causes him to seek conflict with everyone who practices a different religion than his","It makes the Muslim focus on worship and ignore the people around him", "It leads to a Muslim devoting his life to wealth and possession"]
             },
             {
               "question": "With regards to life after death Muslims believe that:",
@@ -99,19 +99,19 @@
                "opt": ["makes us ignorant of the actions that lead to the hell fire","makes us realize that we need to grow more gardens on earth", "makes us realize that the worldly affairs is a waste of time"]
             },
             {
-              "question": "Happiness is:",
-              "answer": "feeling good and value-based",
-               "opt": ["in fulfilling all physical desires","avoiding pain, maximizing pleasure", "the aim of life", "sensation-based"]
+              "question": "Select a true statement regarding how the Quran was revealed:",
+              "answer": "The Quran was revealed in stages over 23 years",
+               "opt": ["The Quran was revealed as a book in one sitting","The Quran was revealed as a book in one sitting", "The Quran was revealed by angel Michael", "The Quran was revealed as a chronological book"]
             },
             {
-              "question": "Paradise:",
-              "answer": "has traditionally inspired Islamic Gardens serving as reminders to the faithful of the pleasures of the Paradise to come",
-               "opt": ["is Allah’s residence","is union with Allah", "is for sensual gratification only"]
+              "question": "Literally, the Arabic word ‘ayah’ means:",
+              "answer": "sign",
+               "opt": ["chapter","disjointed letters", "recitation"]
             },
             {
-              "question": "",
-              "answer": "",
-               "opt": ["","", "", ""]
+              "question": "The Quran has how many surahs of unequal length?",
+              "answer": "114",
+               "opt": ["110","111", "112", "113"]
             }
           ],
 
@@ -228,8 +228,8 @@
         "MyQuestions": [
           {
             "question": "One begins the prayer by raising up the hands to the shoulders and saying:",
-            "answer": "<i>Allahu Akbar’</i>",
-             "opt": ["<i>‘Subhanallah’</i>","<i>As-salaamu alaikum’</i>", "<i>‘La ilaha il-lal-lah’ </i>"]
+            "answer": "Allahu Akbar’",
+             "opt": ["‘Subhanallah’","As-salaamu alaikum’", "‘La ilaha il-lal-lah’"]
           },
           {
             "question": "Purity is one of the prerequisites for prayer (salah). This state of purity is pertinent to:",
@@ -242,9 +242,9 @@
              "opt": ["in one’s own mother tongue","Persian", "Hebrew"]
           },
           {
-            "question": "Which of the following statements is a description of <i>salah</i>?",
-            "answer": "The formal establishment of prayer consisting of specific statements and actions",
-             "opt": ["The formal establishment of prayer consisting of specific statements and no actions","The formal establishment of prayer consisting of silent gestures and no utterance of any specific statements", "The formal establishment of prayer consisting of the utterance of self composed poetry and actions"]
+            "question": "Salat ul-Jumuah consists of:",
+            "answer": "a short sermon followed by a congregational prayer",
+             "opt": ["a congregational prayer devoid of any sermon","a congregational Dhuhr prayer followed by a short sermon", "a congregational prayer followed by a short sermon"]
           },
           {
             "question": "A Muslim is required to offer the daily prayers:",
@@ -254,7 +254,7 @@
           {
             "question": "What is the <i>Adhan</i>?",
             "answer": "specific words to announce the beginning of prayer time",
-             "opt": ["words of <i>salah</i>","a prayer", "none of the above"]
+             "opt": ["words of salah","a prayer", "none of the above"]
           },
           {
             "question": "Which companions did the Prophet appoint to call the <i>adhan</i>?",
@@ -277,44 +277,44 @@
              "opt": ["fasting","pilgrimage", "zakah"]
           },
           {
+            "question": "The person delivering the Friday sermon is referred to as:",
+            "answer": "All of the above",
+             "opt": ["Imam","Muazin", "Sheikh", "Khatib"]
+          },
+          {
             "question": "Select a true statement with regards to the Friday prayer.",
-            "answer": "On Fridays, the <i>Dhuhr</i> prayer is replaced with the prayer known as <i>Salat ul-Jumuah</i>",
-             "opt": ["On Fridays, the <i>Asr</i> prayer is replaced with the prayer known as <i>Salat ul-Jumuah</i>","On Fridays, the <i>Dhuhr</i> prayer is followed by the prayer known as <i>Salat ul-Jumuah</i>", "On Fridays, the <i>Dhuhr</i> prayer is preceded with the prayer known as <i>Salat ul-Jumuah</i>"]
+            "answer": "On Fridays, the Dhuhr prayer is replaced with the prayer known as Salat ul-Jumuah",
+             "opt": ["On Fridays, the Asr prayer is replaced with the prayer known as Salat ul-Jumuah","On Fridays, the Dhuhr prayer is followed by the prayer known as Salat ul-Jumuah", "On Fridays, the Dhuhr prayer is preceded with the prayer known as Salat ul-Jumuah"]
           },
           {
             "question": "Select the correct statement:",
-            "answer": "All of the above",
-             "opt": ["Women are not required to pray the Friday prayer","Women may attend the Friday prayer if they want to", "Women must pray the <i>Dhuhr</i> prayer at home if they do not attend the Friday prayer"]
+            "answer": "Women may attend the Friday prayer if they want to",
+             "opt": ["Women are required to pray the Friday prayer", "All of the above" , "Women must pray the Dhuhr prayer at home if they do not attend the Friday prayer"]
           },
           {
-            "question": "The person delivering the Friday sermon is referred to as:",
-            "answer": "Khatib",
-             "opt": ["Imam","Muazin", "Sheikh"]
+            "question": "Before making <i>du'a</i> one must realize that:",
+            "answer": "only Allah responds to du'a",
+             "opt": ["Allah can only give to us from what is within His limited power","Allah can only respond to one individual at a time", "if the du'a goes unanswered there are many others that we can call upon for help"]
+          },
+          {
+            "question": "The Arabic word <i>‘Du'a’</i> means:",
+            "answer": "All of the above",
+             "opt": ["to pray to your Lord for His help and support","to supplicate to your Lord for His help and support", "to ask your Lord for His help and support"]
+          },
+          {
+            "question": "Select the benefit(s) of <i>du'a</i>:",
+            "answer": "Allah is close to the person who makes du'a",
+             "opt": ["Du'a replaces all other forms of worship ordained by Allah","Du'a is a weapon to oppress others", " All of the above"]
           },
           {
             "question": "Identify the way(s) in which <i>Salat ul-Jumuah</i> is different than the <i>Dhuhr</i> prayer.",
             "answer": "All of the above",
-             "opt": ["<i>Salat ul-Jumuah</i> is two <i>rakahs</i>, whereas <i>Dhuhr</i> prayer is four <i>rakahs</i>","<i>Salat ul-Jumuah</i> consists of a sermon in addition to the prayer", "<i>Salat ul-Jumuah<i/> cannot be offered at home, whereas <i>Dhuhr</i> can be offered at home"]
-          },
-          {
-            "question": "Before making <i>du'a</i> one must realize that:",
-            "answer": "only Allah responds to <i>du'a</i>",
-             "opt": ["Allah can only give to us from what is within His limited power","Allah can only respond to one individual at a time", "if the <i>du'a</i> goes unanswered there are many others that we can call upon for help"]
-          },
-          {
-            "question": "The Arabic word <i>‘Du'a’</i> means:",
-            "answer": "to ask your Lord for His help and support",
-             "opt": ["to pray to your Lord for His help and support","to supplicate to your Lord for His help and support", "All of the above"]
-          },
-          {
-            "question": "Select the benefit(s) of <i>du'a</i>:",
-            "answer": "Allah is close to the person who makes <i>du'a</i>",
-             "opt": ["<i>Du'a</i> replaces all other forms of worship ordained by Allah","<i>Du'a</i> is a weapon to oppress others", " All of the above"]
+             "opt": ["Salat ul-Jumuah is two rakahs, whereas Dhuhr prayer is four rakahs","Salat ul-Jumuah consists of a sermon in addition to the prayer", "Salat ul-Jumuah cannot be offered at home, whereas Dhuhr can be offered at home"]
           },
           {
             "question": "A detailed account of the method of performing ablution is found in:",
             "answer": "the Holy Quran",
-             "opt": ["the <i>hadith</i> of the Prophet Muhammad (peace be upon him)","previous scriptures", "historical accounts of our ancestors"]
+             "opt": ["the hadith of the Prophet Muhammad (peace be upon him)","previous scriptures", "historical accounts of our ancestors"]
           },
           {
             "question": "With regards to the intention preceding the performance of ablution (<i>wudoo</i>):",
@@ -456,7 +456,7 @@
           "opt": ["belief in divine existence","belief in Allah’s Lordship", "belief in Allah’s right to worship", "belief in how Allah is described in Qur’an and <i>Sunnah</i>"]
         },
         {
-          "question": "",
+          "question": "Allah is the Lord",
           "answer": "Lord is the Ruler of the universe and the Lawgiver",
           "opt": ["Jesus is also Lord","Lord is the Creator of the physical universe only", "Lord is the Lawgiver only"]
         },
@@ -466,14 +466,14 @@
           "opt": ["Deceitful","First Cause", "The Old Guy Upstairs"]
         },
         {
-          "question": "A minor form of <i>shirk</i> is:",
-          "answer": "showing off",
-          "opt": ["invoking or supplicating to a deity besides Allah","asking a dead person for help", "giving another creation a portion of divine love reserved for Allah"]
+          "question": "Worship in Islam:",
+          "answer": "None of the above",
+          "opt": ["is for Allah and whom He allows","is only in private", "is dry and physical only", "is based upon what the individual decides for himself"]
         },
         {
           "question": "Major forms of <i>shirk</i> include:",
           "answer": "swearing by other than Allah’s Name",
-          "opt": ["showing off","praying to holy men", "kissing the forehead of a holy man"]
+          "opt": ["showing off (riyaa in Arabic)","praying to holy men", "kissing the forehead of a holy man"]
         },
         {
           "question": "Choose prevalent example(s) of <i>shirk</i>",
@@ -488,7 +488,7 @@
         {
           "question": "What is the purpose of belief in the messengers?",
           "answer": "All of the above",
-          "opt": ["To give us real life examples to live our lives according to","To leave no excuse for human beings on the Day of Judgment", "To clarify our reason for existence", "None of the above"]
+          "opt": ["To give us real life examples to live our lives according to","To leave no excuse for human beings on the Day of Judgment", "To clarify our reason for existence"]
         },
         {
           "question": "Muslims believe prophets were:",
@@ -502,8 +502,8 @@
         },
         {
           "question": "What external factors assisted in the preservation of the Qur'an?",
-          "answer": "Memorization by a large number of Muslims in each generation",
-          "opt": ["Preservation by writing","Recitation in each daily prayer", "Being read and written in Arabic, the language it was originally revealed in", "All of the above"]
+          "answer": "All of the above",
+          "opt": ["Preservation by writing","Recitation in each daily prayer", "Being read and written in Arabic, the language it was originally revealed in", "Memorization by a large number of Muslims in each generation"]
         },
         {
           "question": "The Qur'an:",
@@ -521,7 +521,7 @@
           "opt": ["bear God’s Throne","write down the provision of the fetus", "write future events"]
         },
         {
-          "question": "What is true of Gabriel?",
+          "question": "What is true of Angel Gabriel (Jibreel)?",
           "answer": "He would convey the revelation from Allah to His Messengers.",
           "opt": ["He is wingless","He is responsible for driving clouds", "He never appeared in visible form", "None of the above"]
         },
@@ -536,9 +536,9 @@
           "opt": ["People will come back to life from their graves in the clothes they were buried in","It will rain for one month", "The Trumpet will be blown by Gabriel"]
         },
         {
-          "question": "Select a false statement:",
-          "answer": "Waiting for Judgment to begin will be exhausting",
-          "opt": ["Actual balances will weigh people’s good and bad deeds","Records will be presented to people in their right or left hand", "All prophets will be allowed the Greatest Intercession"]
+          "question": "Allah’s way of communication to humanity is:",
+          "answer": "revelation sent to men, chosen by Him to convey His message.",
+          "opt": ["dreams only","visions only", "None of the above"]
         },
         {
           "question": "Allah’s Foreknowledge:",

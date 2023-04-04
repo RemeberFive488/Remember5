@@ -10,17 +10,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Grades</title>
+
   <style>
-    hr {
+
+    .big_hr {
       width: auto;
       background: #1e5799;
       height: 4px;
       background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);
       margin: 40px 0 40px 0;
     }
+
     .sidemenu {
       font-size: 22px;
+    }   
+
+    p {
+      font-size: 1.7em;
+      line-height: 1.7;
+      text-indent: 7%;  
+      font-family: Calibri;
+      color:rgb(85, 2, 85);
     }
+    
+
+    .style-one {
+      height: 12px;
+      border: 0;
+      box-shadow: inset 0 12px 12px -12px rgb(138, 137, 137);
+}
+
   </style>
 </head>
 
@@ -55,26 +74,26 @@
 
   <div class="content">
     <h1 style="color: darkcyan; font-size: 2.5em;">Remember5: Grades</h1>
-    <hr>
+    <hr class="big_hr">
     <div id="gradelist"></div>
 
     <div id="finalgrade">
-      <p>Final Grade: <span id="finalgrade-value"></span> / 63</p>
+      <p style="margin-top: 60px;">Final Grade: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; <span id="finalgrade-value"></span> / 63</p>
+      <hr class="style-one">
     </div>
 
     <div id="finalpercentage">
-      <p>Final Grade Percentage: <span id="finalpercentage-value"></span>%</p>
+      <p>Final Grade Percentage: &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; <span id="finalpercentage-value"></span>%</p>
+      <hr class="style-one">
     </div>
 
 
     <div id="letterGrade">
-      <p>Grade: <span id="Grade-letter"></span></p>
+      <p  style="word-spacing: 350px;">Grade: <span id="Grade-letter"></span></p>
+      <hr class="style-one">
     </div>
 
   </div>
-
-
-
 
 
 <script>
@@ -113,7 +132,7 @@ auth.onAuthStateChanged(user => {
         let final_percentage =0.0;
         // Iterate over each grade and add it to the HTML string
         for (const [key, value] of Object.entries(data)) {
-          gradeHTML += `<p>${key}: ${value}</p>`;
+          gradeHTML += `<p style=" word-spacing: 340px;">${key}: ${value}</p><hr>`;
           final_grade +=value;
         }
         // final_grade=57.9;
