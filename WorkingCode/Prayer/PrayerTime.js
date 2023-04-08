@@ -12,6 +12,7 @@ const firebaseConfig = {
   const db = firebase.firestore()
   db.settings({});
   
+  let UniBool=true;
   const auth = firebase.auth();
 
   auth.onAuthStateChanged(user => {
@@ -56,18 +57,14 @@ const firebaseConfig = {
     //   countryInput.innerHTML = doc.data().Country;
     countryInput.setAttribute("value", doc.data().Country);
 
+    
        initial(doc.data().City,doc.data().Country,doc.data().State)
       
   } else {
       console.log("Document does not exist");
-      
-  }
-  }).catch(function(error) {
-  console.error("Error getting document:", error);
-  });
-});
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+console.log("Calling this")
 
 fetch("https://api.aladhan.com/v1/timingsByCity?city=West%20Grove&state=PA&country=United%20States&method=2").then((data)=>{
     //console.log(data); json formatr
@@ -129,6 +126,7 @@ fetch("https://api.aladhan.com/v1/timingsByCity?city=West%20Grove&state=PA&count
         //console.log(a-b);
 
         if (getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Fajr && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Dhuhr ) {
+            console.log("Dhuhr-auth");
             time.innerHTML = "Dhuhr";   
         } 
         else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Dhuhr && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Asr) {
@@ -159,10 +157,17 @@ fetch("https://api.aladhan.com/v1/timingsByCity?city=West%20Grove&state=PA&count
  
 });
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  }
+  }).catch(function(error) {
+  console.error("Error getting document:", error);
+  });
+});
+
 
 function myFunction(){
 
-
+UniBool=false;
 let city = document.querySelector("#city");
 let country = document.querySelector("#country");
 let state = document.querySelector("#state");
@@ -197,6 +202,10 @@ auth.onAuthStateChanged(user => {
 
   });
 
+
+  //initial(city.value,country.value,state.value);
+
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 fetch("https://api.aladhan.com/v1/timingsByCity?city="+city.value+"&state="+state.value+"&country="+country.value+"&method=2").then((data)=>{
     //console.log(data); json formatr
@@ -259,6 +268,7 @@ fetch("https://api.aladhan.com/v1/timingsByCity?city="+city.value+"&state="+stat
         //console.log(a-b);
 
         if (getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Fajr && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Dhuhr ) {
+            console.log("Dhuhr-myfunction");
             time.innerHTML = "Dhuhr";   
         } 
         else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Dhuhr && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Asr) {
@@ -282,6 +292,7 @@ fetch("https://api.aladhan.com/v1/timingsByCity?city="+city.value+"&state="+stat
     },1000);
     
     ShowNotification(objectData.data.timings.Fajr,objectData.data.timings.Sunrise,objectData.data.timings.Dhuhr,objectData.data.timings.Asr,objectData.data.timings.Maghrib,objectData.data.timings.Isha);
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
  
 }).catch((error) => {
@@ -414,7 +425,8 @@ return timeString;
 
 
 function initial(city,country,state){
-    fetch("https://api.aladhan.com/v1/timingsByCity?city="+city.value+"&state="+state.value+"&country="+country.value+"&method=2").then((data)=>{
+    console.log("initial")
+    fetch("https://api.aladhan.com/v1/timingsByCity?city="+city+"&state="+state+"&country="+country+"&method=2").then((data)=>{
     //console.log(data); json formatr
     return data.json(); //Convert to object
 }).then((objectData)=>{
@@ -452,6 +464,7 @@ function initial(city,country,state){
 
     Maghrib2=`<p>${Twelve_hour_format(objectData.data.timings.Maghrib)}</p>`;
     document.getElementById("Maghrib2").innerHTML= Maghrib2;
+    console.log("Maghrib2: ",Maghrib2 )
 
     Isha=`<p>${Twelve_hour_format(objectData.data.timings.Isha)}</p>`;
     document.getElementById("Isha").innerHTML= Isha;
@@ -463,37 +476,42 @@ function initial(city,country,state){
 
     let time = document.getElementById("Upcoming");
     setInterval(() =>{
-
-        const d = new Date();
+        if(UniBool==true){
+            const d = new Date();
         
-        var a = (d.getHours());
-        var b = (getHours(objectData.data.timings.Fajr));
+            var a = (d.getHours());
+            var b = (getHours(objectData.data.timings.Fajr));
+            
+            //console.log((d.getHours())-(b));
+            //console.log(a);
+            //console.log(b);
+            //console.log(a-b);
+    
+            if (getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Fajr && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Dhuhr ) {
+                console.log("Dhuhr-initial");
+                time.innerHTML = "Dhuhr";   
+            } 
+            else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Dhuhr && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Asr) {
+                console.log("ASR-initial");
+                time.innerHTML = "Asr"; 
+            }
+            else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Asr && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Maghrib) {
+                time.innerHTML = "Maghrib"; 
+            }
+            else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Maghrib && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Isha) {
+                time.innerHTML = "Isha"; 
+            }
+            else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Isha) {
+                time.innerHTML = "Fajr";
+    
+               
+            }
+            else{
+                time.innerHTML = "Fajr"; 
+            }
+        }
+
         
-        //console.log((d.getHours())-(b));
-        //console.log(a);
-        //console.log(b);
-        //console.log(a-b);
-
-        if (getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Fajr && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Dhuhr ) {
-            time.innerHTML = "Dhuhr";   
-        } 
-        else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Dhuhr && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Asr) {
-            time.innerHTML = "Asr"; 
-        }
-        else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Asr && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Maghrib) {
-            time.innerHTML = "Maghrib"; 
-        }
-        else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Maghrib && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Isha) {
-            time.innerHTML = "Isha"; 
-        }
-        else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Isha) {
-            time.innerHTML = "Fajr";
-
-           
-        }
-        else{
-            time.innerHTML = "Fajr"; 
-        }
 
     },1000);
     
