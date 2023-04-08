@@ -47,12 +47,16 @@ const firebaseConfig = {
     //   cityInput.innerHTML = doc.data().City;
       cityInput.setAttribute("value", doc.data().City);
 
+      var stateInput = document.getElementById("state");
+      //   countryInput.innerHTML = doc.data().State;
+      stateInput.setAttribute("value", doc.data().State);
+
 
       var countryInput = document.getElementById("country");
     //   countryInput.innerHTML = doc.data().Country;
     countryInput.setAttribute("value", doc.data().Country);
 
-       initial(doc.data().City,doc.data().Country)
+       initial(doc.data().City,doc.data().Country,doc.data().State)
       
   } else {
       console.log("Document does not exist");
@@ -65,7 +69,7 @@ const firebaseConfig = {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-fetch("https://api.aladhan.com/v1/timingsByCity?city=West%20Grove&country=United%20States&method=2").then((data)=>{
+fetch("https://api.aladhan.com/v1/timingsByCity?city=West%20Grove&state=PA&country=United%20States&method=2").then((data)=>{
     //console.log(data); json formatr
     return data.json(); //Convert to object
 }).then((objectData)=>{
@@ -161,6 +165,7 @@ function myFunction(){
 
 let city = document.querySelector("#city");
 let country = document.querySelector("#country");
+let state = document.querySelector("#state");
 let message = document.querySelector("#message");
 //console.log(city.value);
 
@@ -173,6 +178,7 @@ auth.onAuthStateChanged(user => {
 
       docRef.set({
         City: city.value,
+        State: state.value,
         Country: country.value
       }).then(function() 
       {
@@ -192,7 +198,7 @@ auth.onAuthStateChanged(user => {
   });
 
 
-fetch("https://api.aladhan.com/v1/timingsByCity?city="+city.value+"&country="+country.value+"&method=2").then((data)=>{
+fetch("https://api.aladhan.com/v1/timingsByCity?city="+city.value+"&state="+state.value+"&country="+country.value+"&method=2").then((data)=>{
     //console.log(data); json formatr
     return data.json(); //Convert to object
 }).then((objectData)=>{
@@ -278,7 +284,10 @@ fetch("https://api.aladhan.com/v1/timingsByCity?city="+city.value+"&country="+co
     ShowNotification(objectData.data.timings.Fajr,objectData.data.timings.Sunrise,objectData.data.timings.Dhuhr,objectData.data.timings.Asr,objectData.data.timings.Maghrib,objectData.data.timings.Isha);
 
  
-});
+}).catch((error) => {
+    console.error("Error fetching data from API:");
+    alert("Bad Address, Please Try Again")
+  });
 
 }
 
@@ -404,8 +413,8 @@ return timeString;
 }
 
 
-function initial(city,country){
-    fetch("https://api.aladhan.com/v1/timingsByCity?city="+city+"&country="+country+"&method=2").then((data)=>{
+function initial(city,country,state){
+    fetch("https://api.aladhan.com/v1/timingsByCity?city="+city.value+"&state="+state.value+"&country="+country.value+"&method=2").then((data)=>{
     //console.log(data); json formatr
     return data.json(); //Convert to object
 }).then((objectData)=>{
