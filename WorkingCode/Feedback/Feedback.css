@@ -34,7 +34,7 @@ body {
     flex-direction:column;
     background-image: conic-gradient(from 3.1416rad at 10% 50%, #f0f340d5, #636bb1);
     padding: 30px;
-    text-transform: capitalize;
+    text-transform: none;
     border-radius: 30px;
 }
 .form-container form h3 {
@@ -61,7 +61,7 @@ body {
     margin: 5px 0 5px 0;
     border: none;
     box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.3);
-    text-transform: capitalize;
+    text-transform: none;
     font-size: 1rem;
     padding-bottom: 10px;
 }
@@ -192,7 +192,7 @@ h1 {
     font-style: normal;
     font-weight: 700;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    text-transform: none;
     text-shadow: 0 1px white; 
 }
 
@@ -482,7 +482,7 @@ h1 {
         flex-direction:column;
         background-image: conic-gradient(from 3.1416rad at 10% 50%, #f0f340d5, #636bb1);
         padding: 30px;
-        text-transform: capitalize;
+        text-transform: none;
         border-radius: 30px;
         
     }
@@ -517,7 +517,7 @@ h1 {
         margin: 5px 0 5px 0;
         border: none;
         box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.3);
-        text-transform: capitalize;
+        text-transform: none;
         font-size: 1rem;
         padding-bottom: 22px;
     }
@@ -555,7 +555,7 @@ h1 {
         flex-direction:column;
         background-image: conic-gradient(from 3.1416rad at 10% 50%, #f0f340d5, #636bb1);
         padding: 30px;
-        text-transform: capitalize;
+        text-transform: none;
         border-radius: 30px;
         margin-top: 181px;
         margin-bottom: 0px;
@@ -594,7 +594,7 @@ h1 {
         margin: 5px 0 5px 0;
         border: none;
         box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.3);
-        text-transform: capitalize;
+        text-transform: none;
         font-size: 1rem;
         padding-bottom: 22px;
     }
@@ -632,7 +632,7 @@ h1 {
         flex-direction:column;
         background-image: conic-gradient(from 3.1416rad at 10% 50%, #f0f340d5, #636bb1);
         padding: 30px;
-        text-transform: capitalize;
+        text-transform: none;
         border-radius: 30px;
         margin-top: 134px;
         margin-bottom: 0px;

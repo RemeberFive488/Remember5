@@ -33,6 +33,48 @@ const ratingInputs = document.querySelectorAll('input[name="rate"]');
           }
         })
 
+        db.collection("Feedback").where("rating", "==", "5")
+            .get()
+            .then((querySnapshot) => {
+                const testimonials = [];
+                querySnapshot.forEach((doc) => {
+                testimonials.push(doc.data());
+                });
+                const randomIndex = Math.floor(Math.random() * testimonials.length);
+                const randomTestimonial = testimonials[randomIndex];
+                $("#testimonialPara").text(randomTestimonial.review);
+                $("#author").text(currentUser);
+            })
+            .catch((error) => {
+                console.log("Error getting testimonials: ", error);
+        });
+
+        $(".myButton").on("click", function() {
+            db.collection("Feedback")
+              .where("rating", "==", "5")
+              .get()
+              .then((querySnapshot) => {
+                const testimonials = [];
+                querySnapshot.forEach((doc) => {
+                  testimonials.push(doc.data());
+                });
+                const currentIndex = testimonials.findIndex((testimonial) => {
+                  return testimonial.review === $("#testimonialPara").text();
+                });
+                let newIndex = 0;
+                do {
+                  newIndex = Math.floor(Math.random() * (testimonials.length));
+                } while (newIndex === currentIndex);
+                const randomTestimonial = testimonials[newIndex];
+                $("#testimonialPara").text(randomTestimonial.review);
+                $("#author").text(currentUser);
+              })
+              .catch((error) => {
+                console.log("Error getting testimonials: ", error);
+              });
+          });
+        
+
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             
