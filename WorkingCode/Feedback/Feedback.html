@@ -3,11 +3,19 @@
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="Feedback.css">
 <link rel="stylesheet" href="https://fontawesome.com/icons/star?s=solid&f=classic">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>Remember5</title>
    
 </head>
 
 <body>
+    <script src="Feedback.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+
+
     <div class="header">
         <title>Remember5</title>
         <div class="inner_header">
@@ -26,6 +34,20 @@
             </ul>
     
         </div>
+        
+        <div style="width: 800px; margin: 3vh 0; padding-top: 10px; padding-bottom: 50px;"> 
+
+            <div class="testimonial-quote group">
+                <div class="quote-container">
+                    <blockquote>
+                        <p>Overall, fantastic! I'd recommend them to anyone looking for a creative, thoughtful, and professional team.”</p>
+                    </blockquote>  
+                    <cite><span>Kristi Bruno</span><br></cite>
+                    <button class="myButton">get another!</button>
+                </div>
+            </div> 
+        </div>
+
     </div>
     
     <div class="form-container">
@@ -34,9 +56,9 @@
             <h3>Leave Feedback</h3>
     
             <label for="">Review</label>
-            <textarea placeholder="Your Review" required=""></textarea>
+            <textarea id="review" placeholder="Write your review" required=""></textarea>
             <label for="">Suggestions</label>
-            <textarea placeholder="Your Suggestions" required=""></textarea>
+            <textarea id="suggestion" placeholder="Enter any suggestions" required=""></textarea>
 
             
                 <h4>Rating</h4>
@@ -55,7 +77,7 @@
                     <span class="result"></span>
                 </div>   
            </div>
-            <button class="Button">Submit</button>
+            <button type="submit" class="Button">Submit</button>
         </form>
     </div>
     
