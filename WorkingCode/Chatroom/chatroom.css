@@ -5,12 +5,10 @@
     cursor: pointer;
   }
   
-  /* Add styles for message form */
   #messagingArea {
     margin-top: 20px;
   }
   
-  /* Add styles for message input */
   #userInput {
     font-size: 1.2rem;
     width: 100%;
@@ -18,18 +16,15 @@
   }
 
   
-  /* Add styles for emoji picker button */
   #emoji-picker-button {
     margin-left: 5px;
   }
   
-  /* Add styles for file attach button */
   #file-attach-button {
     margin-left: 5px;
   }
  
 
-  /* Chatroom container properties */
 
 .chatroom {
   height: 500px;
@@ -37,21 +32,18 @@
   overflow: auto;
 }
 
-/* Style the messages in the chatroom */
 .chatroom .message {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
 }
 
-/* Style the text in the messages */
 .chatroom .message p {
     margin: 0;
     padding: 3px 7px 3px 7px;
 
 }
 
-/* Style the input field for sending messages */
 .chatroom input[type="text"] {
     padding: 10px;
     margin-top: 10px;
@@ -82,19 +74,6 @@
     font-size: 2em;
     margin: auto;
   }
-
-/* #emoji-picker {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  transform: translate(-50%, -50%);
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.5);
-}  */
 
 #emoji-picker {
   background-color: rgba(0, 0, 0, 0.5);
@@ -195,6 +174,9 @@ body {
   height: 100vh;
   margin-top: 50px;
   margin-bottom: 50px;
+  /*background-image: url("\\WorkingCode\\Images\\mountains.jpg");*/
+  background-image: url("\\WorkingCode\\Images\\mountains.jpg");
+  background-size: cover;
 }
 
 /*header*/
@@ -365,4 +347,7 @@ font-weight: bold;
   transform: scale(1,1);
 }
 
+.headerclass {
+  margin-top: 10%;
+}
 /**/
