@@ -43,7 +43,7 @@ const ratingInputs = document.querySelectorAll('input[name="rate"]');
                 const randomIndex = Math.floor(Math.random() * testimonials.length);
                 const randomTestimonial = testimonials[randomIndex];
                 $("#testimonialPara").text(randomTestimonial.review);
-                $("#author").text(currentUser);
+                $("#author").text(randomTestimonial.username);
             })
             .catch((error) => {
                 console.log("Error getting testimonials: ", error);
@@ -68,7 +68,7 @@ const ratingInputs = document.querySelectorAll('input[name="rate"]');
                 } while (newIndex === currentIndex);
                 const randomTestimonial = testimonials[newIndex];
                 $("#testimonialPara").text(randomTestimonial.review);
-                $("#author").text(testimonial.username);
+                $("#author").text(randomTestimonial.username);
               } else {
                 //console.log("Not enough testimonials with rating 5");
               }
