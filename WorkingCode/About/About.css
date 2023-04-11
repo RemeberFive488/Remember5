@@ -225,7 +225,15 @@ p{
     
 }
 
-#feature1, #feature2, #feature3,#feature4,#feature5 {
+#feature6 p {
+    color:#000000;
+    font-size:1.0em;
+    margin-top: -13px;
+    
+}
+
+
+#feature1, #feature2, #feature3,#feature4,#feature5,#feature6 {
 width:210px;
 height: 100px;
 background-color:#bdbaba;
@@ -237,7 +245,8 @@ margin:0 14px 1em 14px;
 }
 
 
-#feature1 h2, #feature2 h2, #feature3 h2,#feature4 h2,#feature5 h2 {
+
+#feature1 h2, #feature2 h2, #feature3 h2,#feature4 h2,#feature5 h2,#feature6 h2 {
 color:#000000;
 font-weight:bold;
 font-size: 15px;
