@@ -50,14 +50,15 @@ const ratingInputs = document.querySelectorAll('input[name="rate"]');
         });
 
         $(".myButton").on("click", function() {
-            db.collection("Feedback")
-              .where("rating", "==", "5")
-              .get()
-              .then((querySnapshot) => {
-                const testimonials = [];
-                querySnapshot.forEach((doc) => {
-                  testimonials.push(doc.data());
-                });
+          db.collection("Feedback")
+            .where("rating", "==", "5")
+            .get()
+            .then((querySnapshot) => {
+              const testimonials = [];
+              querySnapshot.forEach((doc) => {
+                testimonials.push(doc.data());
+              });
+              if (testimonials.length > 1) {
                 const currentIndex = testimonials.findIndex((testimonial) => {
                   return testimonial.review === $("#testimonialPara").text();
                 });
@@ -67,12 +68,16 @@ const ratingInputs = document.querySelectorAll('input[name="rate"]');
                 } while (newIndex === currentIndex);
                 const randomTestimonial = testimonials[newIndex];
                 $("#testimonialPara").text(randomTestimonial.review);
-                $("#author").text(currentUser);
-              })
-              .catch((error) => {
-                console.log("Error getting testimonials: ", error);
-              });
-          });
+                $("#author").text(testimonial.username);
+              } else {
+                //console.log("Not enough testimonials with rating 5");
+              }
+            })
+            .catch((error) => {
+              console.log("Error getting testimonials: ", error);
+            });
+        });
+        
         
 
         form.addEventListener('submit', (e) => {
@@ -93,7 +98,8 @@ const ratingInputs = document.querySelectorAll('input[name="rate"]');
               chatroomMessagesRef.doc(newDocumentName).set({
                 review: review,
                 suggestion: suggestion,
-                rating: rating
+                rating: rating,
+                username: currentUser
               })
               .then(() => {
                 console.log("Document successfully written!");
