@@ -132,7 +132,7 @@ form.addEventListener("submit", e => {
   }).catch(function(error) {
     //Error could be something like EMAIL already in use
     //TODO: add something for user to see the error message
-    console.log(error);
+    console.log(error.message);
   });
 
 //   const upuser = firebase.auth().currentUser;
