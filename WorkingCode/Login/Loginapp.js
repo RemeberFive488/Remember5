@@ -46,7 +46,9 @@ const firebaseConfig = {
   
     const email = loginForm['nameidl'].value;
     const password = loginForm['passwordidl'].value;
-    
+    let infinite = true;
+
+    // while(infinite==true){ }
   
     try {
       const cred = await auth.signInWithEmailAndPassword(email, password).then(cred => {
@@ -57,15 +59,30 @@ const firebaseConfig = {
 
       window.location.href = "\\WorkingCode\\Homepage\\ActuallyHomePage.html";
 
+      document.getElementById("error-message").innerHTML = "";
 
       })
       
     } catch (error) {
-        console.log(error)
-        console.log("Unsuccessful Login")
-        alert("Wrong Email/Password")
+      
+
+      var newDiv = document.createElement("div");
+      newDiv.id = "error-message";
+
+      // Append the new div to an existing element
+      var parentElement = document.getElementById("parentError");
+      parentElement.appendChild(newDiv);
+
+        //console.log(error.message)
+        console.log("Unsuccessful Login: "+error.message)
+        var errorMessage = "Unsuccessful Login: " + error.message;
+        document.getElementById("error-message").innerHTML = errorMessage;
+        //alert(error.message)
+        //Login()
         
     }
+
+
   });
   
 
