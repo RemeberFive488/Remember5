@@ -165,8 +165,30 @@
 }
 
 .chatroom-perimiter {
-  border: 2px solid lightskyblue;
+  border: 7px solid lightskyblue;
+  animation: border-color 5s infinite alternate;
 }
+
+@keyframes border-color {
+  0% {
+    border-color: #4d4d4d;
+  }
+  25% {
+    border-color: #9e0059;
+  }
+  50% {
+    border-color: #003300;
+  }
+  75% {
+    border-color: #ffd700;
+  }
+  100% {
+    border-color: #4d4d4d;
+  }
+}
+
+
+
 
 body {
   display: flex;
