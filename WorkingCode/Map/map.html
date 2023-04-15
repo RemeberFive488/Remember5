@@ -1,10 +1,11 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
     
-    
-
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="map.css">
+
     <title>Map</title>
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
@@ -16,45 +17,46 @@
     <script src="map.js"></script>
   </head>
 
-
   <body onload="initMap()" >
+  
     <div class="header">
-        <title>Remember5</title>
-        <div class="inner_header">
-      
-            <div class="logo">
-                
-                <img class="MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
-            </div>
-      
-            <img class = "Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
-      
-            <ul class="navigation">
+      <title>Remember5</title>
+
+      <div class="inner_header">
+  
+          <div class="logo">       
+              <img class="MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
+          </div>
+  
+          <img class = "Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
+  
+          <ul class="navigation">
               <a href ="\WorkingCode\Homepage\ActuallyHomePage.html"><li><button class="btn btn-home"> Home</button></li></a>
               <a href ="\WorkingCode\About\About.html"><li><button class="btn btn-about"> About</button></li></a>
               <a href="\WorkingCode\Contact\Contact.html"><li><button class="btn btn-contact"> Contact</button></li></a>
-            </ul>
-      
-        </div>
+              <a href ="homepage.js"><li><button id ="logout" class="btn btn-home"> Logout</button></li></a>
+          </ul>
       </div>
-
-    <h1 style ="font-size: 40px">Remember5: Map</h1>
-    <div id="map"></div>
-    
-    <div class="map-button-container">
-      <button type="button" onclick="checkSettings()">Show Users On Map</button>
     </div>
-    
 
-    <h2>Users displayed on map:</h2>
-    <input type="text" id="usernames" name="usernames" value="0" readonly style="width: 50;">
-    
+    <div class="form-map">
 
-    <select id="usernamesDropdown">
-      <option>Users Online</option>
-    </select>
+      <h1>Remember5: Map</h1>
+        
+      <div id="map"></div>
+        
+      <div class="map-button-container">
+        <button type="button" onclick="checkSettings()">Show Users On Map</button>
+        <select id="usernamesDropdown">
+          <option>Users Online</option>
+        </select>
+      </div>
+        
+      <h2>Users displayed on map:
+        <input type="text" id="usernames" name="usernames" value="0" readonly>
+      </h2>
 
-    
+    </div>
 
   </body>
 </html>
