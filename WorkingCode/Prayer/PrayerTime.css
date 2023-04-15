@@ -302,3 +302,12 @@
         font-size: 0.6em;       
     }
 }
+
+@media (min-height: 884px) {
+    .container {
+
+        top: 91px;
+        transform: scale(0.8);
+    }
+
+}
