@@ -38,7 +38,7 @@
     align-content: center;
     flex-direction: column;
     justify-content: center;
-    margin-top: 90px;
+    margin-top: 6em;
 }
 
 #map {
@@ -46,7 +46,7 @@
     width: 70%;
 }
 
-  .form-container {
+.form-container {
     width: 100%;
     margin: 0 auto;
 }
@@ -60,7 +60,7 @@ form {
 }
 
 input, button {
-    font-size: 20px;
+    font-size: 1em;
 }
 
 .map-button-container {
@@ -88,6 +88,7 @@ input, button {
 
 h2 {
     text-align: center;
+    font-size: 1.3em;
 }
 
 #usernames {
@@ -100,24 +101,29 @@ select {
     text-align: center;
     background-color: #fff;
     border: 1px solid #ccc;
-    height: 47px;
-    font-size: 20px;
-    width: 250px;
+    height: 2.6em;
+    font-size: 1em;
+    width: 12em;
     border-radius: 2px;
+    margin: 0 0.6em; 
 }
   
 select option {
-    font-size: 18px;
+    font-size: 1em;
 }
 
 h1 {
-    font-size: 30px;
-    text-align: center;     
+    font-size: 2em;
+    text-align: center;    
 }
 
 p {
     position: fixed; 
-    margin-bottom:1%
+    margin-bottom: 1%
+}
+
+button, #usernamesDropdown {
+    margin: 0 0.7em; 
 }
 
 
@@ -235,8 +241,7 @@ p {
 
 
 
-
-/**************  MOON RESPONSIVE***************/
+/**************  MOON RESPONSIVE ***************/
 
 @media (max-width: 750px) {
 
@@ -278,8 +283,57 @@ p {
         align-items: left;
         justify-content: left;
         vertical-align: middle;
-        margin-bottom: 4.3rem;
         padding: 1rem 0;
         font-size: 0.6em;       
+    }
+}
+
+
+@media (min-height: 770px) {
+
+    h1 {
+        font-size: 2.7em;
+        text-align: center;   
+        padding: 1em;  
+    }
+
+    button, input, #usernamesDropdown {
+        font-size: 1.4em;
+    }
+
+    select option  {
+        font-size: 0.6em;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+    }
+}
+
+
+@media (max-width: 432px) {
+    .map-button-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button, #usernamesDropdown {
+        margin: 0.3em 0.7em;
+    }
+
+    select option {
+        font-size: 0.7em;
+    }
+
+    .form-map {
+        margin-top: 5em;
+    }
+
+    #map {
+        height: 30em;
+    }
+
+    h1 {
+        font-size: 1.7em;
     }
 }

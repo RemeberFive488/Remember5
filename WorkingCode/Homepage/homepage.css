@@ -246,7 +246,13 @@ p {
 }
 
 
+@media (min-height: 884px) {
 
+    .AllPages {
+        top: 54%;
+       
+    }
+}
 
 
 

@@ -153,19 +153,18 @@
     height: auto;
     width: auto;
     position: relative;
-    top: 10px;
-    transform: scale(0.7);
+    transform: scale(0.6);
 }
 
 .topDesign{
     text-align: center;
     justify-content: center;
-    width: 70%;
+    width: 100%;
     background: #ffffff;
     border-radius: 19px 19px 0 0;
     box-shadow: 5px 20px 50px #000;
     background-image: linear-gradient(darkslateblue, rgb(255, 255, 255));
-    padding-top: 25px;
+    padding-top: 1.3em;
     padding-bottom: 15px;
 }
 
@@ -173,7 +172,7 @@
     text-align: center;
     justify-content: center;
     background-image: linear-gradient(rgb(255, 255, 255), darkslateblue);
-    width: 70%;
+    width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 0 0 19px 19px;
@@ -183,7 +182,7 @@
 .myTable {
     text-align: center;
     justify-content: center;
-    width: 70%;
+    width: 100%;
     background-color: rgb(255, 255, 255);
     border-collapse: collapse;
     border: 5px solid white;
@@ -196,10 +195,10 @@
 }
 
 .myTable th, .myTable td {
-    padding: 15px;
+    padding: 0.5em;
     border: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 25px;
+    font-size: 1.6em;
     text-align: center;
 }
 
@@ -216,42 +215,40 @@
 #city {
     font-size: large;
     padding-left: 5px;
-    margin-left: 45px;
 }
 
 #country {
     font-size: large;
     padding-left: 5px;
-    margin-left: 7px;
-    margin-right: 39px;   
 }
 
 #state {
     font-size: large;
     padding-left: 5px;
-    margin-left: 37px;
 }
 
 #button {
     height: 2em;
     width: 4em;
     font-size: large;
-    /* margin-top: 10px; */
+    margin-top: 0.6em;
 }
 
 #c1 {
-    margin-left: 112px;
+    margin-left: 2px;
 }
 
 #bg-video {
     position: fixed;
-    top: 3%;
+    /*top: 3%;*/
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
     object-fit: cover;
   }
+
+
 
 
 
@@ -297,15 +294,20 @@
         align-items: left;
         justify-content: left;
         vertical-align: middle;
-        margin-bottom: 4.3rem;
         padding: 1rem 0;
-        font-size: 0.6em;       
+        font-size: 0.6em;    
+        
+    }
+
+    .myTable th, .myTable td {
+        padding: 0.3em;
+        font-size: 1.4em;
     }
 }
 
-@media (min-height: 884px) {
-    .container {
+@media (min-height: 668px) {
 
+    .container {
         top: 91px;
         transform: scale(0.8);
     }

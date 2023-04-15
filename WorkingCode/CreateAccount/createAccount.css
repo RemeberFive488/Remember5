@@ -5,24 +5,34 @@
     text-decoration: none;
 }
 
-.header{
+.inner_header {
+    display:black;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 300%;
+    width: inherit;
+    text-align: center;
+}
+
+.header {
     justify-content: top;
     align-items: top;
     margin:0;
     padding:0;
     list-style: none;
     text-decoration: none;
-    width: 100%;
-	height: 112px;
+    height: 5.5em;
     display: rgb(0, 0, 0);
     background-color: rgb(0, 0, 0);
     position: fixed;
     top:0;
     left:0;
     right:0;
-
 }
-body{
+
+body {
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -37,26 +47,22 @@ body{
 }
 
 
-.logo{
+.logo {
     height: 100%;
     display: table;
     float: left;
 }
 
-
-
-.MoonText{
-
-    width: 355px;
+.MoonText {
+    width: 17em;
     display: table-cell;
     vertical-align: middle;
     left: 0;
-
 }
 
-.Moon{
-    width: 150px;
-    height:130px;
+.Moon {
+    width: 125px;
+    height:105px;
     position:absolute;
     top:50%;
     left:50%;
@@ -66,36 +72,32 @@ body{
 
 
 @keyframes myfirst {
-    0%{
+    0% {
         transform: translate(-50%,-50%) rotate(0deg);
     }
-    100%{
+    100% {
         transform: translate(-50%,-50%) rotate(360deg);
     }
 }
 
 
-.navigation{
+.navigation {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: right;
     vertical-align: middle;
-    padding-top: 25px;
-
+    padding: 23px 0;
 }
 
-.navigation a{
+.navigation a {
     height: 100%;
     display: table;
     float: left;
     padding: 0px 20px;
-    
-
 }
 
-.navigation a li
-{
+.navigation a li {
     display: table-cell;
     vertical-align: middle;
     height:100%;
@@ -103,24 +105,20 @@ body{
     font-size:20px;
 }
 
-.btn
-{
+.btn {
     position: relative;
     background:black;
     color: #fff;
     width: 110%;
-   margin-bottom: 2rem;
-    padding: 1rem 0;
+    padding: 0.7rem 0;
     border:none;
     outline:none;
-	font-size: 1em;
+	font-size: 0.9rem;
 	font-weight: bold;
     cursor: pointer;
-	
 }
 
-.btn::after
-{
+.btn::after {
     content:'';
     position: absolute;
     width:100%;
@@ -130,99 +128,70 @@ body{
     background-color: red;
 }
 
-.btn-home::after
-{
+.btn-home::after {
     transform: scale(0,1);
-    transition: transform 0.3s ease;
-    
+    transition: transform 0.3s ease;  
 }
 
-.btn-home:hover::after
-{
+.btn-home:hover::after {
     transform: scale(1,1);
 }
 
-.btn-about::after
-{
+.btn-about::after {
     transform: scale(0,1);
     transition: transform 0.3s ease;
-    
 }
 
-.btn-about:hover::after
-{
+.btn-about:hover::after {
     transform: scale(1,1);
 }
 
-
-.btn-contact::after
-{
+.btn-contact::after {
     transform: scale(0,1);
-    transition: transform 0.3s ease;
-    
+    transition: transform 0.3s ease;   
 }
 
-.btn-contact:hover::after
-{
+.btn-contact:hover::after {
     transform: scale(1,1);
 }
 
 
 
+h2 {
+    text-align: center;
+    color: white;
+    padding-top: 1em;
+}
 
-
-
-
-
-
-
-.CreateAccount{
-	width: 29em;
-	height: 33em;
+.createAccount {
+	width: 20em;
+    height: 26em;
 	background: #796525;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	border-radius: 19px;
 	box-shadow: 5px 20px 50px #000;
+    margin-top: 4em;
 }
-#chk{
-	display: none;
-}
-.signup{
-	position: relative;
-	width:100%;
-	height: 100%;
-}
-label{
-	color: #fff;
-	font-size: 2.1em;
-	justify-content: center;
-	display: flex;
-	margin: 60px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .99s ease-in;
-}
-input{
+
+input {
 	width: 60%;
-	height: 20px;
+	height: 2.7em;
 	background: #e0dede;
 	justify-content: center;
 	display: flex;
-	margin: 20px auto;
-	padding: 10px;
+	margin: 2em auto 0 auto;
+    padding-left: 1.2em;
 	border: none;
 	outline: none;
 	border-radius: 5px;
 }
-.signup button{
+.createAccount button {
 	width: 60%;
 	height: 40px;
-	margin: 10px auto;
+	margin: auto;
 	justify-content: center;
 	display: block;
 	color: #fff;
-    
-/*	background: #573b8a;*/
     background: black;
 	font-size: 1em;
 	font-weight: bold;
@@ -234,15 +203,13 @@ input{
 	cursor: pointer;
 }
 
-.login button{
+.login button {
 	width: 60%;
 	height: 40px;
 	margin: 10px auto;
 	justify-content: center;
 	display: block;
 	color: #fff;
-    
-/*	background: #573b8a;*/
     background: black;
 	font-size: 1em;
 	font-weight: bold;
@@ -254,376 +221,108 @@ input{
 	cursor: pointer;
 }
 
-.login button:hover{
+.login button:hover {
 	background: #492b81;
 }
 
-.signup button:hover{
+.signup button:hover {
 	background: #492b81;
 }
 
-.login label{
-	/*color: #573b8a;*/
+.login label {
     color: black;
 	transform: scale(.9);
 }
 
-#chk:checked ~ .login{
+#chk:checked ~ .login {
 	transform: translateY(-500px);
 }
-#chk:checked ~ .login label{
+
+#chk:checked ~ .login label {
 	transform: scale(1);	
 }
-#chk:checked ~ .signup label{
+
+#chk:checked ~ .signup label {
 	transform: scale(.6);
 }
-.login{
-	width: 350px;
-	height: 500px;
-	background: white;
-	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 5px 20px 50px #000;
-}
 
 
 
 
 
+/****************** RESPONSIVE **********************/
 
+@media (max-width: 750px) {
 
-
-
-
-
-
-
-
-
-
-@media (max-height:800px){
-    .CreateAccount{
-        margin-top: 10%;
-        width: 29em;
-        height: 30em;
-        background: #796525;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 5px 20px 50px #000;
+    .createAccount {
+        transform: scale(0.9);
     }
-}
 
-
-
-@media (max-width:750px){
-
-    .CreateAccount{
-        width: 250px;
-        height: 350px;
-        background: #796525;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 5px 20px 50px #000;
-    }
-    #chk{
-        display: none;
-    }
-    .signup{
-        position: relative;
-        width:100%;
-        height: 100%;
-    }
-    label{
-        color: #fff;
-        font-size: 1.2em;
-        justify-content: center;
-        
-        margin: 30px;
-        font-weight: bold;
-        cursor: pointer;
-        
-    }
-    input{
-        font-size: 100%;
-        width: 80%;
-        height: 7px;
+    input {
         background: #e0dede;
         justify-content: center;
         display: flex;
         border: none;
-        margin-left:10px;
         outline: none;
         border-radius: 5px;
     }
-    .signup button{
-        width: 60%;
-        height: 30px;
-        margin: 10px auto;
-        justify-content: center;
-        display: block;
-        color: #fff;
-        font-size: 0.8em;
-    /*	background: #573b8a;*/
-        background: black;
-        font-weight: bold;
-        margin-top: 25px;
-        outline: none;
-        border: none;
-        border-radius: 5px;
-        transition: .50s ease-in;
-        cursor: pointer;
-    }
-    
-    .login button{
-        width: 60%;
-        height: 40px;
-        margin: 10px auto;
-        justify-content: center;
-        display: block;
-        color: #fff;
-        
-    /*	background: #573b8a;*/
-        background: black;
-        font-size: 1em;
-        font-weight: bold;
-        margin-top: 20px;
-        outline: none;
-        border: none;
-        border-radius: 5px;
-        transition: .50s ease-in;
-        cursor: pointer;
-    }
-    
-    .login button:hover{
-        background: #492b81;
-    }
-    
-    .signup button:hover{
-        background: #492b81;
-    }
-    
-    .login label{
-        /*color: #573b8a;*/
-        color: black;
-        transform: scale(.9);
-    }
-    
-    #chk:checked ~ .login{
-        transform: translateY(-500px);
-    }
-    #chk:checked ~ .login label{
-        transform: scale(1);	
-    }
-    #chk:checked ~ .signup label{
-        transform: scale(.6);
-    }
-    .login{
-        width: 350px;
-        height: 500px;
-        background: white;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 5px 20px 50px #000;
-    }
+  
 
+    /**************  MOON RESPONSIVE***************/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    *{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        text-decoration: none;
-    }
-    
-    .header{
-        justify-content: top;
-        align-items: top;
-        margin:0;
-        padding:0;
-        list-style: none;
-        text-decoration: none;
+    .header {
         width: 100%;
         height: 70px;
-        display: rgb(0, 0, 0);
-        background-color: rgb(0, 0, 0);
-        position: fixed;
-        top:0;
-        left:0;
-        right:0;
-    
     }
-    body{
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        font-family: 'Jost', sans-serif;
-        background: linear-gradient(to top, #0c290e, #427256, #243e2e);
-        background-image: url("\\WorkingCode\\Images\\7.jpg");
-        background-size: cover;
-        
-    }
-    
-    
-    .logo{
+
+    .logo {
         size: 100%;
-        display: table;
         vertical-align: middle;
         margin-top: 2%;
-        height:100%;
-        float: left;
     }
-    
-    
-    
-    .MoonText{
-    
+
+    .MoonText {
         width: 155px;
-        display: table-cell;
-        vertical-align: middle;
-        left: 0;
-    
     }
-    
-    .Moon{
+
+    .Moon {
         width: 75px;
         height:60px;
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform: translate(50%,-50%); 
-        animation: myfirst 15s infinite linear;
     }
-    
-    
-    @keyframes myfirst {
-        0%{
-            transform: translate(-50%,-50%) rotate(0deg);
-        }
-        100%{
-            transform: translate(-50%,-50%) rotate(360deg);
-        }
+
+    .navigation {
+        padding-top: 11px;
     }
-    
-    
-    .navigation{
-        
-        display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: right;
-    vertical-align: middle;
-    padding-top: 11px;
-        
-    
-    }
-    
-    .navigation a{
-        height: 0%;
-        display: table;
-        
+
+    .navigation a {
+        height: 0%;   
         padding: 0px 5px;
-        
-        
-    
     }
-    
-    .navigation a li
-    {
-        display: table-cell;
-        vertical-align: middle;
+
+    .navigation a li {
         height:0%;
-        color: white;
-        font-size:20px;
         margin-right: 9rem;
     }
-    
-    .btn
-    {
-        
+
+    .btn {
         align-items: left;
         justify-content: left;
         vertical-align: middle;
-        position: relative;
-        background:black;
-        color: #fff;
-        width: 110%;
-        margin-bottom: 4.3rem;
         padding: 1rem 0;
-        border:none;
-        outline:none;
-        font-size: 0.6em;
-        font-weight: bold;
-        cursor: pointer;
+        font-size: 0.6em;    
         
     }
-    
-    .btn::after
-    {
-        content:'';
-        position: absolute;
-        width:100%;
-        height:0.175rem;
-        left:0;
-        bottom:0;
-        background-color: red;
-    }
-    
-    .btn-home::after
-    {
-        transform: scale(0,1);
-        transition: transform 0.3s ease;
-        
-    }
-    
-    .btn-home:hover::after
-    {
-        transform: scale(1,1);
-    }
-    
-    .btn-about::after
-    {
-        transform: scale(0,1);
-        transition: transform 0.3s ease;
-        
-    }
-    
-    .btn-about:hover::after
-    {
-        transform: scale(1,1);
-    }
-    
-    
-    .btn-contact::after
-    {
-        transform: scale(0,1);
-        transition: transform 0.3s ease;
-        
-    }
-    
-    .btn-contact:hover::after
-    {
-        transform: scale(1,1);
-    }
-    
 
+    .myTable th, .myTable td {
+        padding: 0.3em;
+        font-size: 1.4em;
+    }
 
+}
+
+@media (min-height: 800px) and (min-width: 751px) {
+    .createAccount {
+        width: 26em;
+        height: 32em;
+    }
 }

@@ -224,26 +224,23 @@ input {
 }
 
 .login {
-	width: 350px;
-	height: 500px;
+    width: 20em;
+    height: 28em;
 	background: white;
 	overflow: hidden;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
     transform: scale(0.8);
+    margin-top: 2.5em;
 }
 
 
-
-
-/*************** TABLET AND DIAGONAL COMPUTERS *******************/
-@media (max-height:750px) { 
-
+@media (min-height: 668px) {
     .login {
-        margin-top: 10%;
-    }   
+        width: 28em;
+        height: 35em;
+    }
 }
-
 
 
 /************** PHONE MODES ********************/
@@ -251,8 +248,8 @@ input {
 @media (max-width:750px) {
 
     .login {
-        width: 250px;
-        height: 350px;
+        width: 23em;
+        height: 26em;
     }
 
     label {
