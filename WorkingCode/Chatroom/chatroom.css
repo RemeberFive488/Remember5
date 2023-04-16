@@ -1,413 +1,374 @@
 #emoji-list img {
-    width: 32px;
-    height: 32px;
-    margin: 5px;
-    cursor: pointer;
-  }
-  
-  #messagingArea {
-    margin-top: 20px;
-  }
-  
-  #userInput {
-    font-size: 1.2rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  
-  #emoji-picker-button {
-    margin-left: 5px;
-  }
-  
-  #file-attach-button {
-    margin-left: 5px;
-  }
- 
-.headerclass no-pad-top no-padding no-pad-bot {
-  transform: scale(0.7);
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+  cursor: pointer;
 }
 
+#messagingArea {
+  margin-top: 20px;
+}
+
+#userInput {
+  font-size: 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+#emoji-picker-button {
+  margin-left: 5px;
+}
+
+#file-attach-button {
+  margin-left: 5px;
+}
+
+
+
 .chatroom {
-  height: 500px;
-  width: 300px;
-  overflow: auto;
+height: 500px;
+width: 300px;
+overflow: auto;
 }
 
 .chatroom .message {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .chatroom .message p {
-    margin: 0;
-    padding: 3px 7px 3px 7px;
+  margin: 0;
+  padding: 3px 7px 3px 7px;
 
 }
 
 .chatroom input[type="text"] {
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-    width: 100%;
-    box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 
 /* Style the button for sending messages */
 .chatroom input[type="submit"] {
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-    background-color: #256bb6;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-left:5px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #256bb6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left:5px;
 }
 
 /* Send message button hovered */
 .chatroom input[type="submit"]:hover {
-    background-color: #24478d;
+  background-color: #24478d;
 }
 
-  span {
-    font-size: 2em;
-    margin: auto;
-  }
+span {
+  font-size: 2em;
+  margin: auto;
+}
 
 #emoji-picker {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 50%;
-  width: 50%;
-  top: 50%;
-  bottom: 50%;
+background-color: rgba(0, 0, 0, 0.5);
+height: 50%;
+width: 50%;
+top: 50%;
+bottom: 50%;
 }
 
 #emoji-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-evenly;
-  align-items: center;
-  width: 80%;
-  height: 80%;
-  margin: 10%;
+display: flex;
+flex-wrap: wrap;
+justify-content:space-evenly;
+align-items: center;
+width: 80%;
+height: 80%;
+margin: 10%;
 }
 
- .emoji-span {
-  width: 30px;
-  height: 30px;
-  background-size:cover;
-  background-repeat: no-repeat;
-  margin: 5px;
-  transition: transform 0.2s ease-in-out;
-  cursor: default;
+.emoji-span {
+width: 30px;
+height: 30px;
+background-size:cover;
+background-repeat: no-repeat;
+margin: 5px;
+transition: transform 0.2s ease-in-out;
+cursor: default;
 } 
 
 .emoji-span:hover {
-  transform: scale(1.5);
+transform: scale(1.5);
 }
 
 .message {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 10px;
+display: flex;
+align-items: flex-start;
+margin-bottom: 10px;
 }
 
 
 .newMsg {
-  max-width: 50%;
-  border-radius: 40px;
-  background-color: #e5e5ea;
-  overflow-wrap: break-word;
-  font-size: 20px;
-  margin: 10%;
+max-width: 50%;
+border-radius: 40px;
+background-color: #e5e5ea;
+overflow-wrap: break-word;
+font-size: 20px;
+margin: 10%;
 }
 
 .message-options {
-  float: right;
-  size: 20px;
-  font-size: 2px;
+float: right;
+size: 20px;
+font-size: 2px;
 }
 
 .like-button, .dislike-button {
-  background: none;
-  border: none;
-  cursor: pointer;
+background: none;
+border: none;
+cursor: pointer;
 }
 
 .avatar {
-  width: 80px;
-  height: auto;
-  border: 1px solid black;
+width: 80px;
+height: auto;
+border: 1px solid black;
 }
 
 
 .thumbdown {
-  color:lightcoral;
+color:lightcoral;
 }
 
 .thumbdown:hover {
-  color: red;
+color: red;
 }
 
 
 .thumbup {
-  color: rgb(38, 175, 38);
+color: rgb(38, 175, 38);
 }
 
 .thumbup:hover {
-  color:rgb(28, 226, 28);
+color:rgb(28, 226, 28);
 }
 
 
 .likeSystem {
-  padding-left: 2px;
+padding-left: 2px;
 }
 
 .chatroom-perimiter {
-  border: 7px solid lightskyblue;
-  animation: border-color 5s infinite alternate;
+border: 7px solid lightskyblue;
+animation: border-color 5s infinite alternate;
 }
 
 @keyframes border-color {
-  0% {
-    border-color: #4d4d4d;
-  }
-  25% {
-    border-color: #9e0059;
-  }
-  50% {
-    border-color: #003300;
-  }
-  75% {
-    border-color: #ffd700;
-  }
-  100% {
-    border-color: #4d4d4d;
-  }
+0% {
+  border-color: #4d4d4d;
+}
+25% {
+  border-color: #9e0059;
+}
+50% {
+  border-color: #003300;
+}
+75% {
+  border-color: #ffd700;
+}
+100% {
+  border-color: #4d4d4d;
+}
 }
 
 
 
 
 body {
-  display: flex;
-  height: 100vh;
-  background-image: url("\\WorkingCode\\Images\\mountains.jpg");
-  background-size: cover;
+display: flex;
+flex-direction: column;
+height: 100vh;
+margin-top: 50px;
+margin-bottom: 50px;
+background-image: url("\\WorkingCode\\Images\\mountains.jpg");
+background-size: cover;
 }
-
-
 
 /*header*/
 
 *{
-  margin: 0;
+margin: 0;
 padding: 0;
-  list-style: none;
-  text-decoration: none;
+list-style: none;
+text-decoration: none;
 }
 
 .inner_header{
-    
-    width: 100%;
-    height: 100%;
-    display:black;
-   
-   
+  
+  width: 100%;
+  height: 100%;
+  display:black;
+ 
+ 
 }
 
 
 .header2{
-  justify-content: top;
-  align-items: top;
-  margin:0;
-  padding:0;
-  list-style: none;
-  text-decoration: none;
-  width: 100%;
-  height: 5.5em;
-  display: rgb(0, 0, 0);
-  background-color: rgb(0, 0, 0);
-  position: fixed;
-  top:0;
-  left:0;
-  right:0;
+justify-content: top;
+align-items: top;
+margin:0;
+padding:0;
+list-style: none;
+text-decoration: none;
+width: 100%;
+height: 112px;
+display: rgb(0, 0, 0);
+background-color: rgb(0, 0, 0);
+position: fixed;
+top:0;
+left:0;
+right:0;
 
 }
 
 
 .logo{
-  height: 100%;
-  display: table;
-  float: left;
+height: 100%;
+display: table;
+float: left;
 }
 
 
 
 .MoonText{
 
-  width: 17em;
-  display: table-cell;
-  vertical-align: middle;
-  left: 0;
+width: 355px;
+display: table-cell;
+vertical-align: middle;
+left: 0;
 
 }
 
 .Moon{
-  width: 125px;
-  height:105px;
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform: translate(50%,-50%); 
-  animation: myfirst 15s infinite linear;
+width: 150px;
+height:130px;
+position:absolute;
+top:50%;
+left:50%;
+transform: translate(50%,-50%); 
+animation: myfirst 15s infinite linear;
 }
 
 
 @keyframes myfirst {
-  0%{
-      transform: translate(-50%,-50%) rotate(0deg);
-  }
-  100%{
-      transform: translate(-50%,-50%) rotate(360deg);
-  }
+0%{
+    transform: translate(-50%,-50%) rotate(0deg);
+}
+100%{
+    transform: translate(-50%,-50%) rotate(360deg);
+}
 }
 
 
 .navigation{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: right;
-  vertical-align: middle;
-  /*padding-top: 25px;*/
-  padding-top: 0.7em;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: right;
+vertical-align: middle;
+padding-top: 25px;
 
 }
 
 .navigation a{
-  height: 100%;
-  display: table;
-  float: left;
-  padding: 0px 20px;
-  
+height: 100%;
+display: table;
+float: left;
+padding: 0px 20px;
+
 
 }
 
 .navigation a li
 {
-  display: table-cell;
-  vertical-align: middle;
-  height:100%;
-  color: white;
-  font-size:20px;
+display: table-cell;
+vertical-align: middle;
+height:100%;
+color: white;
+font-size:20px;
 }
 
 .btn2
 {
-  position: relative;
-  background:black;
-  color: #fff;
-  width: 110%;
- /*margin-bottom: 2rem;*/
-  padding: 1rem 0;
-  border:none;
-  outline:none;
-  font-size: 0.9em;
-  font-weight: bold;
-  cursor: pointer;
+position: relative;
+background:black;
+color: #fff;
+width: 110%;
+margin-bottom: 2rem;
+padding: 1rem 0;
+border:none;
+outline:none;
+font-size: 1em;
+font-weight: bold;
+cursor: pointer;
 
 }
 
 .btn2::after
 {
-  content:'';
-  position: absolute;
-  width:100%;
-  height:0.175rem;
-  left:0;
-  bottom:0;
-  background-color: red;
+content:'';
+position: absolute;
+width:100%;
+height:0.175rem;
+left:0;
+bottom:0;
+background-color: red;
 }
 
 .btn2-home::after
 {
-  transform: scale(0,1);
-  transition: transform 0.3s ease;
-  
+transform: scale(0,1);
+transition: transform 0.3s ease;
+
 }
 
 .btn2-home:hover::after
 {
-  transform: scale(1,1);
+transform: scale(1,1);
 }
 
 .btn2-about::after
 {
-  transform: scale(0,1);
-  transition: transform 0.3s ease;
-  
+transform: scale(0,1);
+transition: transform 0.3s ease;
+
 }
 
 .btn2-about:hover::after
 {
-  transform: scale(1,1);
+transform: scale(1,1);
 }
 
 
 .btn2-contact::after
 {
-  transform: scale(0,1);
-  transition: transform 0.3s ease;
-  
+transform: scale(0,1);
+transition: transform 0.3s ease;
+
 }
 
 .btn2-contact:hover::after
 {
-  transform: scale(1,1);
+transform: scale(1,1);
 }
 
-.container{
-  transform: scale(0.6) !important;
+.headerclass {
+margin-top: 10%;
 }
-
-@media (max-width: 750px){
-  
-  .container {
-    transform: scale(0.8);
-   /* margin: 7em auto 0 auto;*/
-    width: 100% !important;
-  }
-
-  .newMsg {
-        max-width: 100%;
-  }
-  
-  .card_panel {
-    padding:0;
-  }
-
-  .Moon {
-    width:0;
-    height: 0;
-  }
-
-  .navigation a {
-    padding: 1px 5px;
-  }
-
-  .MoonText {
-    width: 15em;
-  }
-}
-
-
-@media only screen and (min-height: 668px) and (min-width: 751px){
-  .container {
-    margin: 6em auto !important;
-    transform: scale(0.8);
-  }
-}
+/**/

@@ -1,14 +1,33 @@
-* {
+*{
     margin: 0;
 	padding: 0;
     list-style: none;
     text-decoration: none;
 }
 
-#parentError {
+.header{
+    justify-content: top;
+    align-items: top;
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+	height: 112px;
+    display: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+
+}
+
+#parentError{
     height: 30%;
     width: 95%;
     padding-left: 2%;
+   
 }
 
 #error-message {
@@ -19,8 +38,9 @@
     margin: 10px 0;
     margin-bottom: -10%;
   }
+  
 
-body {
+body{
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -30,53 +50,31 @@ body {
 	font-family: 'Jost', sans-serif;
     background: linear-gradient(to top, #0c290e, #427256, #243e2e);
     background-image: url("\\WorkingCode\\Images\\7.jpg");
-    background-size: cover;  
-}
-
-.inner_header {
-    display:black;
-    margin: 0 auto;
-}
-
-.title {
-    font-size: 300%;
-    width: inherit;
-    text-align: center;
-}
-
-.header {
-    justify-content: top;
-    align-items: top;
-    margin:0;
-    padding:0;
-    list-style: none;
-    text-decoration: none;
-    height: 5.5em;
-    display: rgb(0, 0, 0);
-    background-color: rgb(0, 0, 0);
-    position: fixed;
-    top:0;
-    left:0;
-    right:0;
+    background-size: cover;
+    
 }
 
 
-.logo {
+.logo{
     height: 100%;
     display: table;
     float: left;
 }
 
-.MoonText {
-    width: 17em;
+
+
+.MoonText{
+
+    width: 355px;
     display: table-cell;
     vertical-align: middle;
     left: 0;
+
 }
 
-.Moon {
-    width: 125px;
-    height:105px;
+.Moon{
+    width: 150px;
+    height:130px;
     position:absolute;
     top:50%;
     left:50%;
@@ -86,32 +84,36 @@ body {
 
 
 @keyframes myfirst {
-    0% {
+    0%{
         transform: translate(-50%,-50%) rotate(0deg);
     }
-    100% {
+    100%{
         transform: translate(-50%,-50%) rotate(360deg);
     }
 }
 
 
-.navigation {
+.navigation{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: right;
     vertical-align: middle;
-    padding: 23px 0;
+    padding-top: 25px;
+
 }
 
-.navigation a {
+.navigation a{
     height: 100%;
     display: table;
     float: left;
     padding: 0px 20px;
+    
+
 }
 
-.navigation a li {
+.navigation a li
+{
     display: table-cell;
     vertical-align: middle;
     height:100%;
@@ -119,20 +121,24 @@ body {
     font-size:20px;
 }
 
-.btn {
+.btn
+{
     position: relative;
     background:black;
     color: #fff;
     width: 110%;
-    padding: 0.7rem 0;
+   margin-bottom: 2rem;
+    padding: 1rem 0;
     border:none;
     outline:none;
-	font-size: 0.9rem;
+	font-size: 1em;
 	font-weight: bold;
     cursor: pointer;
+	
 }
 
-.btn::after {
+.btn::after
+{
     content:'';
     position: absolute;
     width:100%;
@@ -142,34 +148,112 @@ body {
     background-color: red;
 }
 
-.btn-home::after {
-    transform: scale(0,1);
-    transition: transform 0.3s ease;  
-}
-
-.btn-home:hover::after {
-    transform: scale(1,1);
-}
-
-.btn-about::after {
+.btn-home::after
+{
     transform: scale(0,1);
     transition: transform 0.3s ease;
+    
 }
 
-.btn-about:hover::after {
+.btn-home:hover::after
+{
     transform: scale(1,1);
 }
 
-.btn-contact::after {
+.btn-about::after
+{
     transform: scale(0,1);
-    transition: transform 0.3s ease;   
+    transition: transform 0.3s ease;
+    
 }
 
-.btn-contact:hover::after {
+.btn-about:hover::after
+{
     transform: scale(1,1);
 }
 
-label {
+
+.btn-contact::after
+{
+    transform: scale(0,1);
+    transition: transform 0.3s ease;
+    
+}
+
+.btn-contact:hover::after
+{
+    transform: scale(1,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+	padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.inner_header{
+    
+    width: 100%;
+    height: 100%;
+    display:black;
+    margin: 0 auto;
+   
+}
+.header{
+    justify-content: top;
+    align-items: top;
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+	height: 112px;
+    display: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+
+}
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	/*background: linear-gradient(to top, #0f0c29, #302b63, #24243e);
+    6
+    7
+    10
+    --------
+    13
+    14
+    15
+    23
+    28
+    */
+    background: linear-gradient(to top, #0c290e, #427256, #243e2e);
+    background-image: url("\\WorkingCode\\Images\\7.jpg");
+    background-size: cover;
+    
+}
+
+label{
 	color: #fff;
 	font-size: 2.2em;
 	justify-content: center;
@@ -178,9 +262,8 @@ label {
 	font-weight: bold;
 	cursor: pointer;
 	transition: .99s ease-in;
-} 
-
-input {
+}
+input{
 	width: 60%;
 	height: 20px;
 	background: #e0dede;
@@ -193,13 +276,16 @@ input {
 	border-radius: 5px;
 }
 
-.login button {
+
+.login button{
 	width: 60%;
 	height: 40px;
 	margin: 10px auto;
 	justify-content: center;
 	display: block;
 	color: #fff;
+    
+/*	background: #573b8a;*/
     background: black;
 	font-size: 1em;
 	font-weight: bold;
@@ -211,100 +297,270 @@ input {
 	cursor: pointer;
 }
 
-.login button:hover {
+.login button:hover{
 	background: #492b81;
 }
 
-.signup button:hover {
+.signup button:hover{
 	background: #492b81;
 }
 
-.login label {
+.login label{
+	/*color: #573b8a;*/
     color: black;
 	transform: scale(.9);
 }
 
-.login {
-    width: 20em;
-    height: 28em;
+
+.login{
+	width: 350px;
+	height: 500px;
 	background: white;
 	overflow: hidden;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
-    transform: scale(0.8);
-    margin-top: 2.5em;
 }
 
+/*Tablet and more diagonial computers*********************************/
+@media (max-height:750px){
+   
 
-@media (min-height: 668px) {
-    .login {
-        width: 28em;
-        height: 35em;
+    .login{
+        margin-top: 10%;
+        width: 350px;
+        height: 500px;
+        background: rgb(255, 255, 255);
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 5px 20px 50px #000;
     }
-}
-
-
-/************** PHONE MODES ********************/
-
-@media (max-width:750px) {
-
-    .login {
-        width: 23em;
-        height: 26em;
-    }
-
-    label {
-        margin: 30px;
-        font-size: 1.8em;
-    }
-}
-
-
-
-
-/**************** MOON ******************/
-@media (max-width: 750px) {   
     
-    .header {
+}
+
+
+/*Phones mode*********************************/
+@media (max-width:750px){
+
+
+    .login{
+        width: 250px;
+        height: 350px;
+        background: white;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 5px 20px 50px #000;
+    }
+
+    label{
+        color: #fff;
+        font-size: 1.8em;
+        justify-content: center;
+        display: flex;
+        margin: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: .99s ease-in;
+    }
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Moon*********************************/
+@media (max-width:750px){
+
+   
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    .header{
+        justify-content: top;
+        align-items: top;
+        margin:0;
+        padding:0;
+        list-style: none;
+        text-decoration: none;
         width: 100%;
         height: 70px;
+        display: rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0);
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+    
     }
-
-    .logo {
+    body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: 'Jost', sans-serif;
+        background: linear-gradient(to top, #0c290e, #427256, #243e2e);
+        background-image: url("\\WorkingCode\\Images\\7.jpg");
+        background-size: cover;
+        
+    }
+    
+    
+    .logo{
         size: 100%;
+        display: table;
         vertical-align: middle;
         margin-top: 2%;
+        height:100%;
+        float: left;
     }
-
-    .MoonText {
+    
+    
+    
+    .MoonText{
+    
         width: 155px;
+        display: table-cell;
+        vertical-align: middle;
+        left: 0;
+    
     }
-
-    .Moon {
+    
+    .Moon{
         width: 75px;
         height:60px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(50%,-50%); 
+        animation: myfirst 15s infinite linear;
     }
-
-    .navigation {
-        padding-top: 11px;
+    
+    
+    @keyframes myfirst {
+        0%{
+            transform: translate(-50%,-50%) rotate(0deg);
+        }
+        100%{
+            transform: translate(-50%,-50%) rotate(360deg);
+        }
     }
-
-    .navigation a {
-        height: 0%;   
+    
+    
+    .navigation{
+        
+        display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    vertical-align: middle;
+    padding-top: 11px;
+        
+    
+    }
+    
+    .navigation a{
+        height: 0%;
+        display: table;
+        
         padding: 0px 5px;
+        
+        
+    
     }
-
-    .navigation a li {
+    
+    .navigation a li
+    {
+        display: table-cell;
+        vertical-align: middle;
         height:0%;
+        color: white;
+        font-size:20px;
         margin-right: 9rem;
     }
-
-    .btn {
+    
+    .btn
+    {
+        
         align-items: left;
         justify-content: left;
         vertical-align: middle;
+        position: relative;
+        background:black;
+        color: #fff;
+        width: 110%;
+        margin-bottom: 4.3rem;
         padding: 1rem 0;
-        font-size: 0.6em;    
+        border:none;
+        outline:none;
+        font-size: 0.6em;
+        font-weight: bold;
+        cursor: pointer;
         
     }
+    
+    .btn::after
+    {
+        content:'';
+        position: absolute;
+        width:100%;
+        height:0.175rem;
+        left:0;
+        bottom:0;
+        background-color: red;
+    }
+    
+    .btn-home::after
+    {
+        transform: scale(0,1);
+        transition: transform 0.3s ease;
+        
+    }
+    
+    .btn-home:hover::after
+    {
+        transform: scale(1,1);
+    }
+    
+    .btn-about::after
+    {
+        transform: scale(0,1);
+        transition: transform 0.3s ease;
+        
+    }
+    
+    .btn-about:hover::after
+    {
+        transform: scale(1,1);
+    }
+    
+    
+    .btn-contact::after
+    {
+        transform: scale(0,1);
+        transition: transform 0.3s ease;
+        
+    }
+    
+    .btn-contact:hover::after
+    {
+        transform: scale(1,1);
+    }
+    
+
+
+
 }
