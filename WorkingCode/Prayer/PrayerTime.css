@@ -149,15 +149,6 @@ body {
 
 
 .container {
-    /*display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: auto;
-    width: auto;
-    position: relative;*/
     width: 70em;
     transform: scale(0.6);
 }

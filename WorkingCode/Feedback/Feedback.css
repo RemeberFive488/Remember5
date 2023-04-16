@@ -4,43 +4,21 @@
     list-style: none;
     text-decoration: none;
 }
-/*
-body {
-    margin: 0;
-	padding: 0;
-	position: fixed;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-    background-image: url('\\WorkingCode\\Images\\420895_NEW.png');
-    background-size: cover;
-}
-*/
 
 body {
-	/*margin: 0;
-	padding: 0;*/
 	display: flex;
 	justify-content: flex-end;
     align-items: flex-end;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-    /*background: linear-gradient(to top, #0c290e, #427256, #243e2e);*/
     background-image: url('\\WorkingCode\\Images\\420895_NEW.png');
     background-size: cover; 
 }
 
 .form-container {
-    justify-content: right;
-    align-self: right;
-    overflow: hidden;
-    height: 700px;
-    width: 700px;
-    margin-top: 195px;
-    margin-bottom: 0px;
-    margin-left:815px;
-    margin-right:0px;
+    transform: scale(0.7);
 }
+
 .form-container form {
     height: 500px;
     width: 479px;
@@ -52,11 +30,13 @@ body {
     text-transform: none;
     border-radius: 30px;
 }
+
 .form-container form h3 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.3rem;
     color: rgb(28, 5, 83);
 }
+
 .form-container form h4 {
     font: 27.2px "times new roman";
     padding-top: 20px;
@@ -65,11 +45,13 @@ body {
     font-size: 1.7rem;
     color: rgb(28, 5, 83);
 }
+
 .form-container form label {
     font-size: 1.7rem;
     padding: 3px 0;
     color: rgb(28, 5, 83);
 }
+
 .form-container form input, textarea {
     padding: 8px;
     border-radius: 20px;
@@ -80,6 +62,7 @@ body {
     font-size: 1rem;
     padding-bottom: 10px;
 }
+
 .Button {
     margin-top: 30px;
     justify-content: center;
@@ -98,39 +81,31 @@ body {
 }
 
 
-/*-------*/
+/*************************************************/
 
 
 .myButton {
-	box-shadow:inset 0px -1px 6px 0px #91b8b3;
-	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
-	background-color:#768d87;
-	border-radius:12px;
-	border:1px solid #566963;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:13px;
-	font-style:italic;
-	padding:9px 9px;
-	text-decoration:none;
-	text-shadow:0px -1px 0px #2b665e;
-    margin-top: 10px;
+	box-shadow: inset 0px -1px 6px 0px #91b8b3;
+	background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	border-radius: 12px;
+	border: 1px solid #566963;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-style: italic;
+	padding: 9px 9px;
+	text-shadow: 0px -1px 0px #2b665e;
+    margin-top: 1.1em;
 }
+
 .myButton:hover {
 	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
-	background-color:#6c7c7c;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
 }
 
 
-/*-------*/
 
-/*---------*/
+
+/**************************************************/
 
 
 @import "compass/css3";
@@ -141,34 +116,20 @@ h1 {
   margin-bottom: 40px;
 }
 
-.testimonial-quote {
-    font-size: 16px;
+.testimonial-quote { 
+    width: 32em;
+    padding: 1.6em 0 0 1.6em;    
 }
 
 .testimonial-quote blockquote {
-    border: 0;
-    margin: 0;
-    padding: 20;
-
-    background: none;
     color: gray;
     font-family: Georgia, serif;
     font-size: 1.5em;
-    font-style: italic;
-    line-height: 1.4 !important;
-    margin: 0;
+    font-style: italic; 
     position: relative;
     text-shadow: 0 1px white;
-    z-index: 600;
-}
-
-.testimonial-quote blockquote * {
-    box-sizing: border-box; 
-}
-
-.testimonial-quote blockquote p {
-    color: #75808a; 
     line-height: 1.4 !important;
+    margin-bottom: 0.3em;
 }
 
 .testimonial-quote blockquote p:first-child:before {
@@ -181,55 +142,23 @@ h1 {
     top: -.4em;
     left: -.2em;    
     text-shadow: none;
-    z-index: -300;
-}
-
-.testimonial-quote img {
-    border: 3px solid #9CC1D3;
-    border-radius: 50%;
-    display: block;
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    top: -.2em; 
-    left: 0;    
 }
 
 .testimonial-quote cite {
     color: gray;
-    display: block;
     font-size: .8em; 
 }
   
 .testimonial-quote cite span {
-    color: #5e5e5e;
-    font-size: 1em;
     font-style: normal;
     font-weight: 700;
     letter-spacing: 1px;
-    text-transform: none;
     text-shadow: 0 1px white; 
 }
 
-.testimonial-quote {
-    position: relative; 
-}
-
-.testimonial-quote .quote-container {
-    padding-left: 160px; 
-}
-  
-.testimonial-quote.right .quote-container {
-    padding-left: 0;
-    padding-right: 160px; 
-}
-
-.testimonial-quote.right cite {
-    text-align: right; 
-}
 
 
-/*-------*/
+/************************************/
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
   .form-container form div {
@@ -297,19 +226,7 @@ h1 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-  .inner_header {
+.inner_header {
     display:black;
     margin: 0 auto;
 }
@@ -321,12 +238,6 @@ h1 {
 }
 
 .header {
-    justify-content: top;
-    align-items: top;
-    margin:0;
-    padding:0;
-    list-style: none;
-    text-decoration: none;
     height: 5.5em;
     display: rgb(0, 0, 0);
     background-color: rgb(0, 0, 0);
@@ -335,6 +246,7 @@ h1 {
     left:0;
     right:0;
 }
+
 
 .logo {
     height: 100%;
@@ -448,373 +360,78 @@ h1 {
 
 
 
+/**************  MOON RESPONSIVE***************/
 
+@media (max-width: 750px) {
 
-
-
-
-
-
-
-
-
-
-
-@media (max-width:1000px){
-
-    .form-container {
-        justify-content: right;
-        align-self: right;
-        overflow: hidden;
-        height: 700px;
-        width: 700px;
-        margin-top: 166px;
-        margin-bottom: 0px;
-        margin-left:354px;
-        margin-right:0px;
-    }
-    .form-container form {
-        height: 500px;
-        width: 479px;
-        margin: auto;
-        display: flex;
-        flex-direction:column;
-        background-image: conic-gradient(from 3.1416rad at 10% 50%, #f0f340d5, #636bb1);
-        padding: 30px;
-        text-transform: none;
-        border-radius: 30px;
-        
-    }
-}
-
-
-@media (max-width:750px){
-
-    .form-container form div {
-        height: 40px;
-        width: 400px;
-        text-align: center;
-        padding-left: 0px;
-        padding-bottom: 9px;
-        padding-right: 75px;
-        padding-top:4px;
-        direction: rtl;
-      }
-
-    .form-container form h4 {
-        font: 27.2px "times new roman";
-        padding-top: 20px;
-        padding-bottom: 0;
-        text-align: center;
-        font-size: 1.5rem;
-        color: rgb(28, 5, 83);
-    }
-
-    .form-container form input, textarea {
-        padding: 8px;
-        border-radius: 20px;
-        margin: 5px 0 5px 0;
-        border: none;
-        box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.3);
-        text-transform: none;
-        font-size: 1rem;
-        padding-bottom: 22px;
-    }
-
-    .form-container form label {
-        font-size: 1.5rem;
-        padding: 5px 0;
-        color: rgb(28, 5, 83);
-    }
-
-    .form-container form h3 {
-        text-align: center;
-        font-size: 2rem;
-        color: rgb(28, 5, 83);
-    }
-
-    .form-container {
-        justify-content: right;
-        align-self: right;
-        overflow: hidden;
-        height: 700px;
-        width: 700px;
-        margin-top: 195px;
-        margin-bottom: 0px;
-        margin-right:0px;
-        margin-left:0px;
-        display: inline;
-    }
-    .form-container form {
-        
-        height: 329px;
-        width: 247px;
-        margin: auto;
-        display: flex;
-        flex-direction:column;
-        background-image: conic-gradient(from 3.1416rad at 10% 50%, #f0f340d5, #636bb1);
-        padding: 30px;
-        text-transform: none;
-        border-radius: 30px;
-        margin-top: 181px;
-        margin-bottom: 0px;
-        margin-right:0px;
-        margin-left:220px;
-    }
-}
-
-
-/*Phones mode*********************************/
-@media (max-width:500px){
-
-    .form-container form div {
-        height: 40px;
-        width: 400px;
-        text-align: center;
-        padding-left: 0px;
-        padding-bottom: 9px;
-        padding-right: 75px;
-        padding-top:4px;
-        direction: rtl;
-      }
-
-    .form-container form h4 {
-        font: 27.2px "times new roman";
-        padding-top: 20px;
-        padding-bottom: 0;
-        text-align: center;
-        font-size: 1.5rem;
-        color: rgb(28, 5, 83);
-    }
-
-    .form-container form input, textarea {
-        padding: 8px;
-        border-radius: 20px;
-        margin: 5px 0 5px 0;
-        border: none;
-        box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.3);
-        text-transform: none;
-        font-size: 1rem;
-        padding-bottom: 22px;
-    }
-
-    .form-container form label {
-        font-size: 1.5rem;
-        padding: 5px 0;
-        color: rgb(28, 5, 83);
-    }
-
-    .form-container form h3 {
-        text-align: center;
-        font-size: 2rem;
-        color: rgb(28, 5, 83);
-    }
-
-    .form-container {
-        justify-content: right;
-        align-self: right;
-        overflow: hidden;
-        height: 700px;
-        width: 700px;
-        margin-top: 195px;
-        margin-bottom: 0px;
-        margin-right:0px;
-        margin-left:0px;
-        display: inline;
-    }
-    .form-container form {
-        
-        height: 329px;
-        width: 247px;
-        margin: auto;
-        display: flex;
-        flex-direction:column;
-        background-image: conic-gradient(from 3.1416rad at 10% 50%, #f0f340d5, #636bb1);
-        padding: 30px;
-        text-transform: none;
-        border-radius: 30px;
-        margin-top: 134px;
-        margin-bottom: 0px;
-        margin-right:0px;
-        margin-left:44px;
-    }
-
-    
-
-
-}
-
-
-/*Moon*********************************/
-@media (max-width:750px){
-
-   
-    *{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        text-decoration: none;
-    }
-    
-    .header{
-        justify-content: top;
-        align-items: top;
-        margin:0;
-        padding:0;
-        list-style: none;
-        text-decoration: none;
+    .header {
         width: 100%;
         height: 70px;
-        display: rgb(0, 0, 0);
-        background-color: rgb(0, 0, 0);
-        position: fixed;
-        top:0;
-        left:0;
-        right:0;
-    
     }
-  
-    
-    
-    .logo{
+
+    .logo {
         size: 100%;
-        display: table;
         vertical-align: middle;
         margin-top: 2%;
-        height:100%;
-        float: left;
     }
-    
-    
-    
-    .MoonText{
-    
+
+    .MoonText {
         width: 155px;
-        display: table-cell;
-        vertical-align: middle;
-        left: 0;
-    
     }
-    
-    .Moon{
+
+    .Moon {
         width: 75px;
         height:60px;
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform: translate(50%,-50%); 
-        animation: myfirst 15s infinite linear;
     }
-    
-    
-    @keyframes myfirst {
-        0%{
-            transform: translate(-50%,-50%) rotate(0deg);
-        }
-        100%{
-            transform: translate(-50%,-50%) rotate(360deg);
-        }
+
+    .navigation {
+        padding-top: 11px;
     }
-    
-    
-    .navigation{
-        
-        display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: right;
-    vertical-align: middle;
-    padding-top: 11px;
-        
-    
-    }
-    
-    .navigation a{
-        height: 0%;
-        display: table;
-        
+
+    .navigation a {
+        height: 0%;   
         padding: 0px 5px;
-        
-        
-    
     }
-    
-    .navigation a li
-    {
-        display: table-cell;
-        vertical-align: middle;
+
+    .navigation a li {
         height:0%;
-        color: white;
-        font-size:20px;
         margin-right: 9rem;
     }
-    
-    .btn
-    {
-        
+
+    .btn {
         align-items: left;
         justify-content: left;
         vertical-align: middle;
-        position: relative;
-        background:black;
-        color: #fff;
-        width: 110%;
-        margin-bottom: 4.3rem;
         padding: 1rem 0;
-        border:none;
-        outline:none;
-        font-size: 0.6em;
-        font-weight: bold;
-        cursor: pointer;
+        font-size: 0.6em;    
         
     }
-    
-    .btn::after
-    {
-        content:'';
-        position: absolute;
-        width:100%;
-        height:0.175rem;
-        left:0;
-        bottom:0;
-        background-color: red;
+
+    .testimonial-quote {
+        width: 30em;
+        font-size: 0.7em;
     }
-    
-    .btn-home::after
-    {
-        transform: scale(0,1);
-        transition: transform 0.3s ease;
-        
+
+    .form-container {
+        transform: scale(0.55);
     }
-    
-    .btn-home:hover::after
-    {
-        transform: scale(1,1);
+
+    body {
+        display: flex;
+        justify-content: center;
     }
-    
-    .btn-about::after
-    {
-        transform: scale(0,1);
-        transition: transform 0.3s ease;
-        
+}
+
+
+@media (min-height: 668px) and (min-width: 751px) {
+   body {
+        display: flex;
+        justify-content: flex-end;
+        /*align-items: flex-end;*/
+        align-items: center;
     }
-    
-    .btn-about:hover::after
-    {
-        transform: scale(1,1);
+
+    .testimonial-quote {
+        padding: 2.8em 0 0 2.8em;
     }
-    
-    
-    .btn-contact::after
-    {
-        transform: scale(0,1);
-        transition: transform 0.3s ease;
-        
-    }
-    
-    .btn-contact:hover::after
-    {
-        transform: scale(1,1);
-    }
-    
 }

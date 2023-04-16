@@ -358,9 +358,9 @@ p {
         align-items: left;
         justify-content: left;
         vertical-align: middle;
-        margin-bottom: 4.3rem;
         padding: 1rem 0;
-        font-size: 0.6em;       
+        font-size: 0.6em;    
+        
     }
 
     .whitebox {
