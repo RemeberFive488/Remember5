@@ -164,13 +164,13 @@ h2 {
 }
 
 .createAccount {
-	width: 20em;
-    height: 26em;
+	width: 25em;
+    height: 32em;
 	background: #796525;
-	/*overflow: hidden;*/
 	border-radius: 19px;
 	box-shadow: 5px 20px 50px #000;
     margin-top: 4em;
+    transform: scale(0.7);
 }
 
 input {
@@ -195,7 +195,7 @@ input {
     background: black;
 	font-size: 1em;
 	font-weight: bold;
-	margin-top: 35px;
+	margin-top: 2em;
 	outline: none;
 	border: none;
 	border-radius: 5px;
@@ -255,7 +255,7 @@ input {
 @media (max-width: 750px) {
 
     .createAccount {
-        transform: scale(0.9);
+        transform: scale(0.8);
     }
 
     input {
@@ -324,5 +324,6 @@ input {
     .createAccount {
         width: 26em;
         height: 32em;
+        transform: scale(0.8);
     }
 }

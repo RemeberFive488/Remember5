@@ -1,27 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<link rel="stylesheet" href="Feedback.css">
-<link rel="stylesheet" href="https://fontawesome.com/icons/star?s=solid&f=classic">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<title>Remember5</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="Feedback.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/star?s=solid&f=classic">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Feedback</title>
    
 </head>
 
 <body>
+
     <script src="Feedback.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
 
 
-
     <div class="header">
+
         <title>Remember5</title>
+
         <div class="inner_header">
     
             <div class="logo">
-                
                 <img class="MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
             </div>
     
@@ -38,10 +43,13 @@
         <div style="width: 800px; margin: 3vh 0; padding-top: 10px; padding-bottom: 50px;"> 
 
             <div class="testimonial-quote group">
+
                 <div class="quote-container">
+
                     <blockquote>
                         <p id="testimonialPara">”</p>
                     </blockquote>  
+
                     <cite><span id="author"></span><br></cite>
                     <button class="myButton">See another!</button>
                 </div>
@@ -63,24 +71,23 @@
             
                 <h4>Rating</h4>
                 <div class="center">
-                <div class="stars">
-                    <input type="radio" id="five" name="rate" value="5">
-                    <label for="five"></label>
-                    <input type="radio" id="four" name="rate" value="4">
-                    <label for="four"></label>
-                    <input type="radio" id="three" name="rate" value="3">
-                    <label for="three"></label>
-                    <input type="radio" id="two" name="rate" value="2">
-                    <label for="two"></label>
-                    <input type="radio" id="one" name="rate" value="1">
-                    <label for="one"></label>
-                    <span class="result"></span>
-                </div>   
-           </div>
+                    <div class="stars">
+                        <input type="radio" id="five" name="rate" value="5">
+                        <label for="five"></label>
+                        <input type="radio" id="four" name="rate" value="4">
+                        <label for="four"></label>
+                        <input type="radio" id="three" name="rate" value="3">
+                        <label for="three"></label>
+                        <input type="radio" id="two" name="rate" value="2">
+                        <label for="two"></label>
+                        <input type="radio" id="one" name="rate" value="1">
+                        <label for="one"></label>
+                        <span class="result"></span>
+                    </div>   
+                </div>
             <button type="submit" class="Button">Submit</button>
         </form>
     </div>
     
 </body>
 </html>
- 

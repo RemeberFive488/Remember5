@@ -5,6 +5,11 @@
     text-decoration: none;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+}
+
 .inner_header {
     display:black;
     margin: 0 auto;
@@ -144,7 +149,7 @@
 
 
 .container {
-    display: flex;
+    /*display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -152,7 +157,8 @@
     flex-direction: column;
     height: auto;
     width: auto;
-    position: relative;
+    position: relative;*/
+    width: 70em;
     transform: scale(0.6);
 }
 
@@ -303,13 +309,20 @@
         padding: 0.3em;
         font-size: 1.4em;
     }
+
+    .container {
+        margin-top: 3.5em;
+        transform: scale(0.7);
+    }
 }
 
 @media (min-height: 668px) {
 
     .container {
-        top: 91px;
-        transform: scale(0.8);
+        /*top: 91px;
+        transform: scale(0.8);*/
+        margin-top: 5em;
+        transform: scale(0.7);
     }
 
 }

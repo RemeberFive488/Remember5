@@ -42,7 +42,7 @@
 }
 
 #map {
-    height: 400px;
+    height: 350px;
     width: 70%;
 }
 
@@ -58,17 +58,17 @@ form {
     font-size: 20px;
     padding: 20px;
 }
-
+/*
 input, button {
     font-size: 1em;
 }
-
+*/
 .map-button-container {
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .map-button-container button {
-    padding: 10px 20px;
+    padding: 7px;
     cursor: pointer;
 }
 
@@ -88,13 +88,15 @@ input, button {
 
 h2 {
     text-align: center;
-    font-size: 1.3em;
+    padding: 0.6em;
+    /*padding-bottom: 0.4em;*/
 }
 
 #usernames {
     text-align: center;
     color:green;
     width: 2em;
+    margin: 0.4em;
 }
 
 select {
@@ -102,8 +104,8 @@ select {
     background-color: #fff;
     border: 1px solid #ccc;
     height: 2.6em;
-    font-size: 1em;
-    width: 12em;
+    /*font-size: 1em;*/
+    width: 10em;
     border-radius: 2px;
     margin: 0 0.6em; 
 }
@@ -111,12 +113,12 @@ select {
 select option {
     font-size: 1em;
 }
-
+/*
 h1 {
     font-size: 2em;
     text-align: center;    
 }
-
+*/
 p {
     position: fixed; 
     margin-bottom: 1%
@@ -291,22 +293,26 @@ button, #usernamesDropdown {
 
 @media (min-height: 770px) {
 
-    h1 {
-        font-size: 2.7em;
-        text-align: center;   
-        padding: 1em;  
+    h2 {
+        /*font-size: 2.7em;*/
+        text-align: center;    
+        padding-bottom: 1em;
     }
 
     button, input, #usernamesDropdown {
-        font-size: 1.4em;
+        font-size: 1.1em;
     }
 
     select option  {
         font-size: 0.6em;
     }
     
-    h2 {
-        font-size: 1.6em;
+    h3 {
+        font-size: 1.3em;
+    }
+
+    .form-map {
+        margin-top: 8em;
     }
 }
 
@@ -332,8 +338,8 @@ button, #usernamesDropdown {
     #map {
         height: 30em;
     }
-
-    h1 {
+/*
+    h2 {
         font-size: 1.7em;
-    }
+    }*/
 }
