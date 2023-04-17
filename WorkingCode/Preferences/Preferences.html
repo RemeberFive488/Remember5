@@ -1,78 +1,70 @@
-<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">-->
-  <html>
-    <head>
-      <title>Remember5</title>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width">
-      <link rel="stylesheet" type="text/css" href="Preferences.css" media="screen" />
-    </head>
-    <body>
-      <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-    
-    <div class="header">
-      <title>Remember5</title>
-      <div class="inner_header">
-    
-          <div class="logo">
-              
-              <img class="MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
-          </div>
-    
-          <img class = "Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
-    
-          <ul class="navigation">
-            <a href ="\WorkingCode\Homepage\ActuallyHomePage.html"><li><button class="btn btn-home"> Home</button></li></a>
-            <a href ="\WorkingCode\About\About.html"><li><button class="btn btn-about"> About</button></li></a>
-            <a href="\WorkingCode\Contact\Contact.html"><li><button class="btn btn-contact"> Contact</button></li></a>
-        
-          </ul>
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Preferences</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="Preferences.css" media="screen" />
+</head>
+<body>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+<div class="header">
+  <title>Remember5</title>
+  <div class="inner_header">
+
+      <div class="logo">
+          
+          <img class="MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
       </div>
-    </div>
+
+      <img class = "Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
+
+      <ul class="navigation">
+        <a href ="\WorkingCode\Homepage\ActuallyHomePage.html"><li><button class="btn btn-home"> Home</button></li></a>
+        <a href ="\WorkingCode\About\About.html"><li><button class="btn btn-about"> About</button></li></a>
+        <a href="\WorkingCode\Contact\Contact.html"><li><button class="btn btn-contact"> Contact</button></li></a>
     
-    
-    <div class="whitebox">
-    <div>
-    <h1>Remember5 > Set Your Preferences:</h1>
-    </div>
-      <div id="centerColumn">
-        <div id="top">
-            <h1>Notification: </h1>
-            <div class="checkbox">
-                <input type="checkbox" id="click" onclick="Notification_on()">
-                <script src="Preferences.js"></script>
-                <!-- <script src="\WorkingCode\Prayer\TEMP_Prayertimes.js"></script> -->
-                <label for="click" class="text"></label>
-            </div>
+      </ul>
+
+  </div>
+</div>
+
+
+<div class="whitebox">
+
+<h1 class="pref">Remember5 > Set Your Preferences:</h1>
+
+  <div id="centerColumn">
+
+    <div id="top">
+
+        <h1>Notification: </h1>
+
+        <div class="checkbox">
+            <input type="checkbox" id="click" onclick="Notification_on()">
+            <script src="Preferences.js"></script>
+            <label for="click" class="text"></label>
         </div>
         
-        <div id="bottom">
-            <h1>Location:</h1>
-            <div class="checkbox2">
-                <input type="checkbox" id="click2" onclick="Location_on()">
-                <label for="click2" class="text"></label>
-            </div>
-            <!-- <div>
-                <ul><li><a href="#">Distance⬇️</a>
-                  <ul class="dropdown">
-                    <li><a herf="#"> Km</a></li>
-                    <li><a herf="#"> Ft</a></li>
-                    <li><a herf="#"> Mi</a></li>
-                  </ul>
-                </ul>  
-            </div> -->
-        </div>
-      </div>
-      <div id="Fix">
-        <button onclick="permission()"> Set</button>
-    </div>
     </div>
     
-       
-     
-    </body>
-    </html>
+    <div id="bottom">
+        <h1>Location:</h1>
+        <div class="checkbox2">
+            <input type="checkbox" id="click2" onclick="Location_on()">
+            <label for="click2" class="text"></label>
+        </div>
+    </div>
+  </div>
+
+    <button onclick="permission()"> Set</button>
+
+</div>
+
+ 
+</body>
+</html>

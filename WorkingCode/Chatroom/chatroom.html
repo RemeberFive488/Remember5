@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
   <title>Chatroom</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
   <link rel="stylesheet" type="text/css" href="chatroom.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+</head>
+
+<body> 
 
   <div class="header2">
     <div class = "inner_header">
+
         <div class = "logo">  
             <img class="MoonText" src="\WorkingCode\Images\MoonText.png" alt="moon">
             <img class="Moon" src="\WorkingCode\Images\Moon2.png" alt="moonTuring">
@@ -23,13 +31,8 @@
         </ul>
 
     </div>
-
 </div> 
 
-</head>
-
-
-<body> 
 
 <script src="chatroom.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
@@ -70,7 +73,7 @@
             </button>
             <input type="file" id="file-attach-input" style="display: none;">
             <a class="btn-floating btn-small waves-effect waves-light orange lighten-2 right" id="emoji-picker-button"><i class="material-icons">insert_emoticon</i></a>
-            <!-- <a class="btn-floating btn-small waves-effect waves-light green right" id="file-attach-button"><i class="material-icons">attach_file</i></a> -->
+           
           </div>
         </form>
       </div>
