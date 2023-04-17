@@ -191,6 +191,7 @@ input {
 	border: none;
 	outline: none;
 	border-radius: 5px;
+    font-size: 115%;
 }
 
 .login button {
@@ -238,8 +239,8 @@ input {
 
 @media (min-height: 668px) {
     .login {
-        width: 28em;
-        height: 35em;
+        width: 25em;
+        height: 33em;
     }
 }
 

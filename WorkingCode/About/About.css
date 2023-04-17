@@ -167,7 +167,7 @@ hr {
     margin-top: 2.5em;
     margin-bottom: 2em;
     border-radius: 10px;
-    box-shadow: 5px 20px 50px #5c4d8b;
+    /* box-shadow: 5px 20px 50px #5c4d8b; */
     border: 0.3em solid silver;
     background-color: #e0dfdf41;
 }
@@ -196,6 +196,7 @@ p {
 .descr {
     line-height: 2;
     margin: 1.3em 0;
+    font-size:130%;
 }
 
 #feature1 p, #feature2 p, #feature3 p,
@@ -213,7 +214,7 @@ p {
     margin:0 14px 2em 14px;
     
     border-radius: 10px;
-    box-shadow: 5px 20px 50px #5c4d8b;
+    /* box-shadow: 5px 20px 50px #5c4d8b; */
     border: 0.3em solid silver;
 }
 

@@ -500,6 +500,8 @@ function initial(city,country,state){
             }
             else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Maghrib && getTwentyFourHourTime(d.toLocaleTimeString()) < objectData.data.timings.Isha) {
                 time.innerHTML = "Isha"; 
+                
+
             }
             else if(getTwentyFourHourTime(d.toLocaleTimeString()) > objectData.data.timings.Isha) {
                 time.innerHTML = "Fajr";

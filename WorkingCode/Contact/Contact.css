@@ -189,7 +189,7 @@ body {
   }
   
   .about-section {
-    /*background-image: url("\\WorkingCode\\Images\\14.jpg");
+    background-image: url("\\WorkingCode\\Images\\14.jpg");
     background-size: cover;
     padding: 75px;
     text-align: center;
@@ -197,13 +197,17 @@ body {
     color: black;
     margin-top: 5.5em;
     background-color:rgba(253, 225, 171, 0.808);
-    margin-top: 7em;*/
+    margin-top: 7em;
 
-    padding: 1em;
+    /* padding: 1em;
     text-align: center;
-    line-height: 1.7;
+    line-height: 1.7; */
+
     /*border-radius: 3em;*/
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #efd284, rgba(255, 255, 255, 0));
+    /* background: linear-gradient(to right, rgba(255, 255, 255, 0), #efd284, rgba(255, 255, 255, 0)); */
+
+    /* background-color: white;
+    width: 50%; */
   }
   
   .container {

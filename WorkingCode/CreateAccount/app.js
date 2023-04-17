@@ -1,4 +1,7 @@
 let userID;
+let writeDoc=false;
+let error_nums=0;
+
 const firebaseConfig = {
   apiKey: "AIzaSyBxoV0Qji0j8GjG2N4jqYWWUtmUnN1Qyec",
   authDomain: "remember5-321e2.firebaseapp.com",
@@ -78,23 +81,8 @@ form.addEventListener("submit", e => {
 
     console.log("FORM SUBMITTED")
 
-    const user_name = form.nameid.value
-
-    db.collection("CreateAccount")
-    .doc(form.emailid.value)
-    .set({
-      nameid: form.nameid.value,
-      emailid: form.emailid.value,
-      passwordid: form.passwordid.value,
-    })
-    .then(() => {
-      console.log("Document successfully written!");
-    })
-    .catch((error) => {
-      console.error("Error writing document: ", error);
-    });
-
-  
+    writeDoc=true;
+    
   
     // sign up the user
   auth.createUserWithEmailAndPassword(form.emailid.value, form.passwordid.value).then(cred => {
@@ -129,20 +117,95 @@ form.addEventListener("submit", e => {
           console.log("User is not signed in again")
         }
 
+       
+
   }).catch(function(error) {
-    //Error could be something like EMAIL already in use
-    //TODO: add something for user to see the error message
-    console.log(error.message);
+
+
+    writeDoc=false;
+   if(error.message !== "user_name is not defined"){
+    
+    if(error_nums>0){
+      document.getElementById("error-message").innerHTML = "";
+      var errorMessageDiv = document.getElementById("error-message");
+      if (errorMessageDiv) {
+          errorMessageDiv.remove();
+      }
+
+    }
+
+    var newDiv = document.createElement("div");
+      newDiv.id = "error-message";
+
+      // Append the new div to an existing element
+      var parentElement = document.getElementById("parentError");
+      parentElement.appendChild(newDiv);
+
+        //console.log(error.message)
+        console.log("Error: "+error.message)
+        var errorMessage = "Error: " + error.message;
+        document.getElementById("error-message").innerHTML = errorMessage;
+        error_nums++;
+      }
+      else{
+
+        if(error_nums>0){
+          document.getElementById("error-message").innerHTML = "";
+          var errorMessageDiv = document.getElementById("error-message");
+          if (errorMessageDiv) {
+              errorMessageDiv.remove();
+          }
+    
+        }
+        var newDiv = document.createElement("div");
+        newDiv.id = "success-message";
+  
+        // Append the new div to an existing element
+        var parentElement = document.getElementById("parentError");
+        parentElement.appendChild(newDiv);
+  
+          //console.log(error.message)
+          console.log("Success:Your account has been created, please login!")
+          var errorMessage = "Success: Account created, please login!";
+          document.getElementById("success-message").innerHTML = errorMessage;
+
+      }
+    
   });
 
-//   const upuser = firebase.auth().currentUser;
+  (async () => {
+    console.log("Code before the delay.");
 
+    await new Promise(resolve => setTimeout(resolve, 10000)); // 10000 ms = 10 seconds
 
+    console.log("Code after the delay.");
+})();
 
+console.log("writeDoc: ",writeDoc)
 
-    // form.nameid.value = ''
-    // form.emailid.value = ''
-    // form.passwordid.value = ''
+  if(writeDoc==true){
+
+  
+  const user_name = form.nameid.value
+
+  db.collection("CreateAccount")
+  .doc(form.emailid.value)
+  .set({
+    nameid: form.nameid.value,
+    emailid: form.emailid.value,
+    passwordid: form.passwordid.value,
+  })
+  .then(() => {
+    console.log("Document successfully written!");
+    form.nameid.value="";
+    form.emailid.value="";
+    form.passwordid.value="";
+  })
+  .catch((error) => {
+    console.error("Error writing document: ", error);
+  });
+}
+  
 
 
    
@@ -158,3 +221,4 @@ logout.addEventListener('click',(e)=>{
         console.log("Signed Out")
     })
 })
+

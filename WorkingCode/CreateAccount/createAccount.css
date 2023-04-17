@@ -16,6 +16,37 @@
     text-align: center;
 }
 
+#parentError {
+    width: 95%;
+    padding-left: 2%;
+}
+
+#error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin: 10px 0;
+    margin-bottom: -10%;
+    opacity: 0.8;
+    border-radius: 10px;
+
+}
+
+#success-message {
+    background-color: #8be4b5;
+    color: #138928;
+    border: 1px solid #03490b;
+    padding: 10px;
+    margin: 10px 0;
+    margin-bottom: -10%;
+    opacity: 0.8;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+
 .header {
     justify-content: top;
     align-items: top;
@@ -160,7 +191,8 @@ body {
 h2 {
     text-align: center;
     color: white;
-    padding-top: 1em;
+    padding-top: 2em;
+    font-size: 188%;
 }
 
 .createAccount {
@@ -225,24 +257,24 @@ input {
 	background: #492b81;
 }
 
-.signup button:hover {
+.createAccount button:hover {
 	background: #492b81;
 }
 
-.login label {
+.createAccount label {
     color: black;
 	transform: scale(.9);
 }
 
-#chk:checked ~ .login {
+#chk:checked ~ .createAccount {
 	transform: translateY(-500px);
 }
 
-#chk:checked ~ .login label {
+#chk:checked ~ .createAccount label {
 	transform: scale(1);	
 }
 
-#chk:checked ~ .signup label {
+#chk:checked ~ .createAccount label {
 	transform: scale(.6);
 }
 
@@ -324,6 +356,6 @@ input {
     .createAccount {
         width: 26em;
         height: 32em;
-        transform: scale(0.8);
+        transform: scale(0.9);
     }
 }
