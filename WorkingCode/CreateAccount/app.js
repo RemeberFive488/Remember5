@@ -25,7 +25,7 @@ const form = document.getElementById('add_landmark_form')
 auth.onAuthStateChanged(user => {
     if (user) {
       userID=user.uid;
-      console.log(userID);
+      //console.log(userID);
 
       db.collection("CreateAccount")
       .doc(form.emailid.value)
@@ -51,30 +51,30 @@ const renderLandmark = (doc) => {
     //console.log("we made it")
 }
 
-db.collection("CreateAccount").onSnapshot(
-    snapshot => {
-         //console.log(snapshot)
-        let changes = snapshot.docChanges()
-         //console.log(changes)
-        changes.forEach(
-            change => {
-                //console.log(change.type)
-                //console.log(change.doc.data())
-                switch (change.type) {
-                    case "added":
-                        renderLandmark(change.doc)
-                        break;
-                    case "removed":
-                        let li = document.querySelector(`[data-id=${change.doc.id}]`)
-                        ul.removeChild(li)
-                        break;
-                    default:
-                        console.log("unsupported event", change.type)
-                }
-            }
-        )
-    }
-)
+// db.collection("CreateAccount").onSnapshot(
+//     snapshot => {
+//          //console.log(snapshot)
+//         let changes = snapshot.docChanges()
+//          //console.log(changes)
+//         changes.forEach(
+//             change => {
+//                 //console.log(change.type)
+//                 //console.log(change.doc.data())
+//                 switch (change.type) {
+//                     case "added":
+//                         renderLandmark(change.doc)
+//                         break;
+//                     case "removed":
+//                         let li = document.querySelector(`[data-id=${change.doc.id}]`)
+//                         ul.removeChild(li)
+//                         break;
+//                     default:
+//                         console.log("unsupported event", change.type)
+//                 }
+//             }
+//         )
+//     }
+// )
 
 form.addEventListener("submit", e => {
     e.preventDefault();
@@ -86,7 +86,8 @@ form.addEventListener("submit", e => {
   
     // sign up the user
   auth.createUserWithEmailAndPassword(form.emailid.value, form.passwordid.value).then(cred => {
-   
+    const user_name = form.nameid.value
+
     var userc = firebase.auth().currentUser;
     if (userc) {
         userc.updateProfile({
@@ -117,11 +118,29 @@ form.addEventListener("submit", e => {
           console.log("User is not signed in again")
         }
 
-       
+        // Check if the error-message element exists
+        var errorMessageDiv2 = document.getElementById("error-message");
+        if (errorMessageDiv2) {
+            errorMessageDiv2.remove();
+        }
+  
+
+        var newDiv = document.createElement("div");
+        newDiv.id = "success-message";
+  
+        // Append the new div to an existing element
+        var parentElement = document.getElementById("parentError");
+        parentElement.appendChild(newDiv);
+  
+          //console.log(error.message)
+          console.log("Success:Your account has been created, please login!")
+          var errorMessage = "Success: Account created, please login!";
+          document.getElementById("success-message").innerHTML = errorMessage;
+   
 
   }).catch(function(error) {
 
-
+    //console.log("I AM HERERE")
     writeDoc=false;
    if(error.message !== "user_name is not defined"){
     
@@ -157,17 +176,17 @@ form.addEventListener("submit", e => {
           }
     
         }
-        var newDiv = document.createElement("div");
-        newDiv.id = "success-message";
+        // var newDiv = document.createElement("div");
+        // newDiv.id = "success-message";
   
-        // Append the new div to an existing element
-        var parentElement = document.getElementById("parentError");
-        parentElement.appendChild(newDiv);
+        // // Append the new div to an existing element
+        // var parentElement = document.getElementById("parentError");
+        // parentElement.appendChild(newDiv);
   
-          //console.log(error.message)
-          console.log("Success:Your account has been created, please login!")
-          var errorMessage = "Success: Account created, please login!";
-          document.getElementById("success-message").innerHTML = errorMessage;
+        //   //console.log(error.message)
+        //   console.log("Success:Your account has been created, please login!")
+        //   var errorMessage = "Success: Account created, please login!";
+        //   document.getElementById("success-message").innerHTML = errorMessage;
 
       }
     
@@ -178,7 +197,7 @@ form.addEventListener("submit", e => {
 
     await new Promise(resolve => setTimeout(resolve, 10000)); // 10000 ms = 10 seconds
 
-    console.log("Code after the delay.");
+    //console.log("Code after the delay.");
 })();
 
 console.log("writeDoc: ",writeDoc)
@@ -197,7 +216,7 @@ console.log("writeDoc: ",writeDoc)
   })
   .then(() => {
     console.log("Document successfully written!");
-    form.nameid.value="";
+    // form.nameid.value="";
     form.emailid.value="";
     form.passwordid.value="";
   })
@@ -208,7 +227,6 @@ console.log("writeDoc: ",writeDoc)
   
 
 
-   
   
 
 })
@@ -221,4 +239,3 @@ logout.addEventListener('click',(e)=>{
         console.log("Signed Out")
     })
 })
-
