@@ -321,14 +321,8 @@ function ShowNotification(Fajr,Sunrise,Dhuhr,Asr,Maghrib,Isha) {
    
 
     setInterval(() =>{ 
-
-
-   
-    
     const d = new Date();
         
-        
-
         if (getTwentyFourHourTime(d.toLocaleTimeString()) > Fajr && getTwentyFourHourTime(d.toLocaleTimeString()) < Sunrise ) {
             Notification.requestPermission().then(perm =>{
                 if(perm === "granted"){
@@ -408,7 +402,7 @@ function ShowNotification(Fajr,Sunrise,Dhuhr,Asr,Maghrib,Isha) {
            
         }
         
-    },30 * 1000);
+    },60 * 1000);
 }
 
 function Twelve_hour_format(time){
