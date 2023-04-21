@@ -25,6 +25,7 @@
   top:0;
   left:0;
   right:0;
+  z-index: 999;
 }
 
 .logo {
@@ -154,9 +155,8 @@ body {
   }
   */
   body {
-    display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+   /* align-items: flex-end;*/
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("\\WorkingCode\\Images\\14.jpg");
@@ -171,11 +171,7 @@ body {
     box-sizing: border-box;
     
   }
-  /*
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  */
+
   .column {
     float: left;
     width: 33.3%;
@@ -198,16 +194,6 @@ body {
     margin-top: 5.5em;
     background-color:rgba(253, 225, 171, 0.808);
     margin-top: 7em;
-
-    /* padding: 1em;
-    text-align: center;
-    line-height: 1.7; */
-
-    /*border-radius: 3em;*/
-    /* background: linear-gradient(to right, rgba(255, 255, 255, 0), #efd284, rgba(255, 255, 255, 0)); */
-
-    /* background-color: white;
-    width: 50%; */
   }
   
   .container {
@@ -268,7 +254,7 @@ h2 {
     }
   }
 
-  img{
+  img {
     background-size: cover;
   }
 
@@ -278,10 +264,6 @@ h2 {
       width: 100%;
       display: block;
     }
-  }
-
-  img{
-    background-size: cover;
   }
 
 
@@ -330,4 +312,29 @@ h2 {
       padding: 1rem 0;
       font-size: 0.6em;     
   }
+
+  .row {
+    flex-direction: column;
+  }
+
+}
+
+@media (min-height: 1000px) {  
+  body {
+    justify-content: center;
+  }
+
+ 
+}
+
+@media (min-width: 990px) {  
+
+  .about-section {
+    padding: 60px;
+  }
+  
+  .row {
+    transform: scale(0.65);
+  }
+
 }

@@ -183,11 +183,10 @@ body {
   color: #2692df;
 }
 
-div.content {
+.content {
   margin-left: 13em;
   margin-top: 7em;
   padding: 1px 16px;
-  /*height: 800px;*/
 }
 
 .content h1 {
@@ -206,18 +205,13 @@ div.content {
 
 hr {
     width: auto; 
-    background: #1e5799; 
     height: 4px; 
     background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);
     margin: 1.4em 0 1.4em 0;
-
-   /* width:75%;
-    margin-top:10px;
-    margin-bottom:10px;*/
   }
 
   .book {
-    max-width: 60%;
+    max-width: 40%;
     height: auto;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -226,6 +220,13 @@ hr {
   }
 
 /*Phone mode content and side menue*********************************/
+
+@media (max-width:985px) {
+    .book {
+        max-width: 60%;
+    }
+}
+
 @media (max-width:750px) {
 
     .sidemenu {
@@ -239,7 +240,7 @@ hr {
         font-size: 1.4em;
       }
 
-      div.content {
+      .content {
         margin-left: 8em;
         margin-top: 96px;
         padding: 1px 16px;
@@ -315,12 +316,13 @@ hr {
 }
 
 @media (min-height: 668px) and (min-width: 751px) {
+
     .book {
-        max-width: 70%;
+        max-width: 60%;
     }
 
     .sidemenu {
-        font-size: 1.7em;
+        font-size: 1.6em;
     }
   
     .content h1 {

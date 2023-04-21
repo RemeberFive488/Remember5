@@ -33,6 +33,7 @@ body {
     top:0;
     left:0;
     right:0;
+    z-index: 999;
 }
 
 .logo {
@@ -163,11 +164,13 @@ hr {
 }
 
 #top {
-    height: 10em;
-    margin-top: 2.5em;
-    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     border-radius: 10px;
-    /* box-shadow: 5px 20px 50px #5c4d8b; */
     border: 0.3em solid silver;
     background-color: #e0dfdf41;
 }
@@ -180,13 +183,16 @@ hr {
 }
 
 #top h1 {
-    padding-top: 56px;
     color:#000000;
-    font-size:2.2em;
+    font-size: 1.9em;
     font-family:'Jost', sans-serif;
     font-weight: bold;
     font-weight:lighter;
     letter-spacing:.15em; 
+}
+
+#top h2 {
+    font-size: 1.4em;
 }
 
 p {
@@ -194,9 +200,9 @@ p {
 }
 
 .descr {
-    line-height: 2;
-    margin: 1.3em 0;
-    font-size:130%;
+    line-height: 1.8;
+    margin: 1em 0;
+    font-size:100%;
 }
 
 #feature1 p, #feature2 p, #feature3 p,
@@ -211,7 +217,7 @@ p {
     background-color:#e0dfdf41;
     padding:8px;
     float:left;
-    margin:0 14px 2em 14px;
+    margin:0 14px 1.4em 14px;
     
     border-radius: 10px;
     /* box-shadow: 5px 20px 50px #5c4d8b; */
@@ -231,8 +237,9 @@ p {
 }
 
 #centerColumn {
-   /* margin-top: 9em;*/
-    transform: scale(0.8);
+   /* margin-top: 9em;
+    transform: scale(0.8);*/
+    padding: 0 6em;
 }
 
 
@@ -287,10 +294,39 @@ p {
     }
 
     #centerColumn {
-        transform: scale(0.8);
+        transform: scale(1);
+        padding: 0 1.5em;
     }
 
-    h1 {
-        font-size: 1.9em;
+    #top h1 {
+        font-size: 2em;
     }
+
 }
+
+    @media (min-height: 668px) and (min-width: 751px) {
+        #top {
+            height: 10em;
+            margin-top: 2.5em;
+            margin-bottom: 2em;
+        }
+
+        .descr {
+            font-size: 130%;
+            margin: 1.3em 0;
+            line-height: 2;
+        }
+
+        #top h1 {
+            font-size: 2.2em;
+        }
+
+        #top h2 {
+            font-size: 1.5em;
+        }
+
+        #feature1, #feature2, #feature3,
+        #feature4, #feature5, #feature6 {
+            margin: 0 14px 2em 14px;
+        }
+    }

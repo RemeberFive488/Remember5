@@ -283,7 +283,6 @@ padding: 0;
   align-items: center;
   justify-content: right;
   vertical-align: middle;
-  /*padding-top: 25px;*/
   padding-top: 0.7em;
 
 }
@@ -312,7 +311,6 @@ padding: 0;
   background:black;
   color: #fff;
   width: 110%;
- /*margin-bottom: 2rem;*/
   padding: 1rem 0;
   border:none;
   outline:none;
@@ -370,17 +368,8 @@ padding: 0;
   transform: scale(1,1);
 }
 
-/* .container{
-  transform: scale(0.6) !important;
-} */
 
 @media (max-width: 750px){
-  
-  /*.container {
-    transform: scale(0.8);
-   
-    width: 100% !important;
-  }*/
 
   .newMsg {
         max-width: 100%;
@@ -404,15 +393,15 @@ padding: 0;
   }
 }
 
-
-/* @media only screen and (min-height: 668px) and (min-width: 751px){
-  .container {
-    margin: 6em auto !important;
-    transform: scale(0.8);
-  }
-} */
-
-
 .container {
   padding-top: 120px;
+}
+
+
+
+@media (min-width: 985px) {  
+  .container {
+    padding-top: 5em !important;
+    transform: scale(0.7) !important;
+  }
 }

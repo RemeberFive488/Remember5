@@ -14,15 +14,16 @@
 
     <style>
 
-      p {
-        font-size: 1.37em;
+      .content p {
+        font-size: 1.1em;
         line-height: 1.6;
         text-indent: 7%;
         margin-bottom: 30px;
+        color: black;
       }
 
        ul li {
-        font-size: 1.37em;
+        font-size: 1.1em;
         line-height: 1.6 !important;
         list-style-type: disc;
         margin-left: 45px;
@@ -30,7 +31,7 @@
        }
 
        ol li {
-        font-size: 1.37em;
+        font-size: 1.1em;
         line-height: 1.6 !important;
         margin-left: 55px;
         margin-bottom: 30px;
@@ -59,7 +60,6 @@
       
       h2 {
         color: coral;
-        font-size: 1.7em;
       }  
 
       h1 {
@@ -75,7 +75,7 @@
       }
 
       .sidemenu {
-        font-size: 22px;
+        font-size: 1.1em;
       }
 
       #L22,#L32,#L42,#L52,#L62,#L72 {
@@ -84,7 +84,7 @@
 
       blockquote {
         line-height: 1.6;
-        font-size: 1.37em;
+        font-size: 1.1em;
         font-weight: bold; 
         margin: 30px auto 30px auto; 
         width: 30em; 
@@ -163,8 +163,56 @@
       }
 
       .side_info a {
-        padding: 15px;
+        padding: 10px 15px;
       }
+
+      .content h1 {
+        font-size: 1.7em;
+      }
+
+      .sidemenu a {
+          padding: 10px 20px;
+        }
+
+
+        .searchContend_h {
+          transform: scale(0.87);
+        }
+
+      @media (min-height: 668px) and (min-width: 751px) {
+        .content p {
+          font-size: 1.37em;
+        }
+
+        blockquote {
+          font-size: 1.37em;
+        }
+
+        .sidemenu {
+          font-size: 1.37em;
+        }
+
+        .side_info a {
+          padding: 15px;
+        }
+
+        .sidemenu a {
+          padding: 17px 20px;
+        } 
+      }
+
+      @media (max-width: 750px) {
+      .sidemenu {
+        width: 10em;
+      }
+      html {
+        width: 50em;
+      }
+
+      .content {
+        font-size: 1.2em;
+      }
+    }
 
     </style>
 
@@ -339,7 +387,7 @@ $(document).on('click', '.clear_h', function (event) {
             let modInfo = document.createElement('div');
             modInfo.className = 'module_info';
             modInfo.innerHTML = 
-                '<h1 style="margin: 20px 0 20px 0;">' + "Module " + obj.mod_id + " - " + obj.mod_header + '</h1>' + '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">'
+                '<h1>' + "Module " + obj.mod_id + " - " + obj.mod_header + '</h1>' + '<hr style="width: auto; background: #1e5799; height: 3px; background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);">'
             
             document.getElementById('form').appendChild(modInfo); 
             

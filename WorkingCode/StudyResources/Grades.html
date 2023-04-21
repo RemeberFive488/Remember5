@@ -13,33 +13,127 @@
 
   <style>
 
-    .big_hr {
-      width: auto;
-      background: #1e5799;
-      height: 4px;
-      background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);
-      margin: 40px 0 40px 0;
-    }
-/*
-    .sidemenu {
-      font-size: 22px;
-    }   
-*/
-    p {
-      font-size: 1.7em;
-      line-height: 1.7;
+    .content p {
+      font-size: 1.3em;
+      line-height: 1;
       text-indent: 7%;  
       font-family: Calibri;
-      color:rgb(85, 2, 85);
+      /*color:rgb(85, 2, 85);*/
     }
     
 
     .style-one {
-      height: 12px;
+      width:70%;
+      height: 3px;
       border: 0;
       box-shadow: inset 0 12px 12px -12px rgb(138, 137, 137);
-}
+    }
 
+    .style-two {
+        width:70%;
+          height: 5px;
+          border: 0;
+          background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);
+        /*box-shadow: inset 0 12px 12px -12px rgb(138, 137, 137);*/
+    }
+
+    .gr {
+      padding-left: 12em;
+    }
+
+    #Grade-letter {
+      padding-left: 12.5em;
+    }
+
+    #finalgrade-value {
+      padding-left: 10em;
+    }
+
+    #finalpercentage-value {
+      padding-left: 8em;
+    }
+
+    @media (max-width: 375px) {
+      .content p {
+        font-size: 1.2em !important;
+      }
+
+      .sidemenu {
+        font-size: 1.2em;
+      }
+
+      .style-one {
+        width:100%;
+      }
+      
+      .style-two {
+        width:100%;
+      }
+    }
+
+
+    @media (max-width: 750px) {
+
+      .content p {
+          font-size: 1.5em;
+      }
+
+      .gr {
+        padding-left: 5em;
+      }
+
+      #Grade-letter {
+        padding-left: 5.5em;
+      }
+
+      #finalgrade-value {
+        padding-left: 2.5em;
+      }
+
+      #finalpercentage-value {
+        padding-left: 0.5em;
+      }
+
+      .style-one {
+        width:100%;
+      }
+
+      .style-two {
+        width:100%;
+      }
+    }
+
+    @media (min-height: 668px) and (min-width: 751px) {
+      .content p {
+          font-size: 1.8em;
+      }
+
+      .finalgrade {
+        margin-top: 10px;
+      }
+    }
+
+    @media (min-height: 1000px) {
+      .style-one, .style-two {
+        width:100%;
+    }
+
+    .gr {
+        padding-left: 10em;
+      }
+
+      #Grade-letter {
+        padding-left: 10.5em;
+      }
+
+      #finalgrade-value {
+        padding-left: 7.5em;
+      }
+
+      #finalpercentage-value {
+        padding-left: 6em;
+      }
+  }
   </style>
 </head>
 
@@ -74,23 +168,23 @@
 
   <div class="content">
     <h1>Remember5: Grades</h1>
-    <hr class="big_hr">
+    <hr>
     <div id="gradelist"></div>
 
     <div id="finalgrade">
-      <p style="margin-top: 60px;">Final Grade: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; <span id="finalgrade-value"></span> / 63</p>
-      <hr class="style-one">
+      <p style="padding-top: 0.5em;">Final Grade:<span id="finalgrade-value"></span> / 63</p>
+      <hr class="style-two">
     </div>
 
     <div id="finalpercentage">
-      <p>Final Grade Percentage: &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; <span id="finalpercentage-value"></span>%</p>
-      <hr class="style-one">
+      <p>Final Grade %: <span id="finalpercentage-value"></span> %</p>
+      <hr class="style-two">
     </div>
 
 
     <div id="letterGrade">
-      <p  style="word-spacing: 350px;">Grade: <span id="Grade-letter"></span></p>
-      <hr class="style-one">
+      <p>Grade: <span id="Grade-letter"></span></p>
+      <hr class="style-two">
     </div>
 
   </div>
@@ -132,7 +226,7 @@ auth.onAuthStateChanged(user => {
         let final_percentage =0.0;
         // Iterate over each grade and add it to the HTML string
         for (const [key, value] of Object.entries(data)) {
-          gradeHTML += `<p style=" word-spacing: 340px;">${key}: ${value}</p><hr>`;
+          gradeHTML += `<p>${key}: <span class="gr">${value}</span></p><hr class="style-one">`;
           final_grade +=value;
         }
         // final_grade=57.9;
