@@ -23,11 +23,23 @@
         display: inline-block;
         text-align: center;
         margin: 15px;
-        width: 350px;
-        height: 400px;
+        width: 15em;
+        height: 18em;
         border: 7px solid #1d7d74;
         border-radius: 8px;
         background: #ffebee;
+      }
+
+      .badge h1 {
+        font-size: 1.4em;
+      }
+
+      .badge h2 {
+        font-size: 1.2em;
+      }
+
+      .badge hr {
+        margin: 1em 0 1em 0;
       }
 
     .badge:hover {
@@ -45,9 +57,8 @@
     }
 
     .badge img {
-      width: 170px;
-      height: 170px;
-      /*border-radius: 25px;*/
+      width: 9em;
+      height: 8.5em;
       margin-top:6px;  
     }
 
@@ -58,6 +69,28 @@
       margin: 40px 0 40px 0;
     }
    
+
+    @media (max-width:750px) {
+      .badge img {
+        width: 8.3em;
+        height: 7.6em;
+      }
+    }
+
+    @media (min-height: 668px) and (min-width: 751px) {
+      .badge {
+        width: 19em;
+        height: 22em;
+      }
+
+      .badge h1 {
+        font-size: 1.9em;
+      }
+
+      .badge h2 {
+        font-size: 1.8em;
+        padding: 0 2px;
+      }
    </style>
 
 </head>
@@ -83,7 +116,7 @@
       </div>
     
     
-    <div class="sidemenu" style="font-size: 22px;">
+    <div class="sidemenu">
       <a href="\WorkingCode\StudyResources\StudyResources.html">Homepage</a>
       <a href="\WorkingCode\StudyResources\Modules.html">Modules</a>
       <a href="\WorkingCode\StudyResources\Quizzes.html">Quizzes</a>
@@ -92,7 +125,7 @@
     
     
     <div class="content">
-      <h1 style="color: darkcyan; font-size: 2.5em;">Remember5: Modules</h1>
+      <h1>Remember5: Modules</h1>
 
       <hr>
  

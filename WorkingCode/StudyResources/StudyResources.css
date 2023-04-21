@@ -1,64 +1,58 @@
-
 body {
   margin: 0;
   font-family: "Georgia", serif;
 }
 
-.inner_header{
-    
-    width: 100%;
-    height: 100%;
-    display:black;
-   
-   
-}
-*{
+* {
     margin: 0;
 	padding: 0;
     list-style: none;
     text-decoration: none;
 }
 
-.header{
+.inner_header {
+    display:black;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 300%;
+    width: inherit;
+    text-align: center;
+}
+
+.header {
     justify-content: top;
     align-items: top;
     margin:0;
     padding:0;
     list-style: none;
     text-decoration: none;
-    width: 100%;
-	height: 112px;
+    height: 5.5em;
     display: rgb(0, 0, 0);
     background-color: rgb(0, 0, 0);
     position: fixed;
     top:0;
     left:0;
     right:0;
-
 }
 
-
-
-.logo{
+.logo {
     height: 100%;
     display: table;
     float: left;
 }
 
-
-
-.MoonText{
-
-    width: 355px;
+.MoonText {
+    width: 17em;
     display: table-cell;
     vertical-align: middle;
     left: 0;
-
 }
 
-.Moon{
-    width: 150px;
-    height:130px;
+.Moon {
+    width: 125px;
+    height:105px;
     position:absolute;
     top:50%;
     left:50%;
@@ -68,36 +62,32 @@ body {
 
 
 @keyframes myfirst {
-    0%{
+    0% {
         transform: translate(-50%,-50%) rotate(0deg);
     }
-    100%{
+    100% {
         transform: translate(-50%,-50%) rotate(360deg);
     }
 }
 
 
-.navigation{
+.navigation {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: right;
     vertical-align: middle;
-    padding-top: 25px;
-
+    padding: 23px 0;
 }
 
-.navigation a{
+.navigation a {
     height: 100%;
     display: table;
     float: left;
     padding: 0px 20px;
-    
-
 }
 
-.navigation a li
-{
+.navigation a li {
     display: table-cell;
     vertical-align: middle;
     height:100%;
@@ -105,24 +95,20 @@ body {
     font-size:20px;
 }
 
-.btn
-{
+.btn {
     position: relative;
     background:black;
     color: #fff;
     width: 110%;
-   margin-bottom: 2rem;
-    padding: 1rem 0;
+    padding: 0.7rem 0;
     border:none;
     outline:none;
-	font-size: 1em;
+	font-size: 0.9rem;
 	font-weight: bold;
     cursor: pointer;
-	
 }
 
-.btn::after
-{
+.btn::after {
     content:'';
     position: absolute;
     width:100%;
@@ -132,48 +118,32 @@ body {
     background-color: red;
 }
 
-.btn-home::after
-{
+.btn-home::after {
     transform: scale(0,1);
-    transition: transform 0.3s ease;
-    
+    transition: transform 0.3s ease;  
 }
 
-.btn-home:hover::after
-{
+.btn-home:hover::after {
     transform: scale(1,1);
 }
 
-.btn-about::after
-{
+.btn-about::after {
     transform: scale(0,1);
     transition: transform 0.3s ease;
-    
 }
 
-.btn-about:hover::after
-{
+.btn-about:hover::after {
     transform: scale(1,1);
 }
 
-
-.btn-contact::after
-{
+.btn-contact::after {
     transform: scale(0,1);
-    transition: transform 0.3s ease;
-    
+    transition: transform 0.3s ease;   
 }
 
-.btn-contact:hover::after
-{
+.btn-contact:hover::after {
     transform: scale(1,1);
 }
-
-
-
-
-
-
 
 
 
@@ -187,6 +157,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
   height: 100%;
   overflow: auto;
+  font-size: 1.3em;
 }
 
 .sidemenu a {
@@ -213,227 +184,150 @@ body {
 }
 
 div.content {
-  margin-left: 186px;
-  margin-top: 133px;
+  margin-left: 13em;
+  margin-top: 7em;
   padding: 1px 16px;
-  height: 800px;
+  /*height: 800px;*/
+}
+
+.content h1 {
+    font-size: 1.9em;
+    font-family: 'Georgia'; 
+    padding-top: 0.4em; 
+    color: darkcyan
+}
+
+.content p {
+    font-size: 2em; 
+    font-family: 'Georgia', Courier, monospace;
+    color: coral;
 }
 
 
-hr{
-    width:75%;
+hr {
+    width: auto; 
+    background: #1e5799; 
+    height: 4px; 
+    background: linear-gradient(to right, #1e5799 50%, #7db9e8 50%);
+    margin: 1.4em 0 1.4em 0;
+
+   /* width:75%;
     margin-top:10px;
-    margin-bottom:10px;
-}
+    margin-bottom:10px;*/
+  }
 
-
-
-
+  .book {
+    max-width: 60%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 1.5em;
+  }
 
 /*Phone mode content and side menue*********************************/
-@media (max-width:750px){
+@media (max-width:750px) {
 
     .sidemenu {
         margin-top: 7px;
-        width: 96px;
+        width: 5.5em;
         background-color: #ffffff;
         position: fixed;
         font-family: 'Times New Roman', Times, serif;
         height: 100%;
         overflow: auto;
+        font-size: 1.4em;
       }
+
       div.content {
-        margin-left: 104px;
+        margin-left: 8em;
         margin-top: 96px;
         padding: 1px 16px;
-        height: 800px;
-        font-size: 10px;
+       /* height: 800px;*/
+        font-size: 0.9em;
       }
+      
+      .book {
+        max-width: 90%;
+    }
+
+    .content p {
+        font-size: 1.7em;
+    }
+
+    .content h1 {
+        font-size: 1.8em;
+    }
 }
 
 
-/*Moon*********************************/
-@media (max-width:750px){
+/**************  MOON RESPONSIVE***************/
 
-   
-    *{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        text-decoration: none;
-    }
-    
-    .header{
-        justify-content: top;
-        align-items: top;
-        margin:0;
-        padding:0;
-        list-style: none;
-        text-decoration: none;
+@media (max-width: 750px) {
+
+    .header {
         width: 100%;
         height: 70px;
-        display: rgb(0, 0, 0);
-        background-color: rgb(0, 0, 0);
-        position: fixed;
-        top:0;
-        left:0;
-        right:0;
-    
     }
-   
-body {
-    margin: 0;
-    font-family: "Georgia", serif;
-  }
-    
-    
-    .logo{
+
+    .logo {
         size: 100%;
-        display: table;
         vertical-align: middle;
         margin-top: 2%;
-        height:100%;
-        float: left;
     }
-    
-    
-    
-    .MoonText{
-    
+
+    .MoonText {
         width: 155px;
-        display: table-cell;
-        vertical-align: middle;
-        left: 0;
-    
     }
-    
-    .Moon{
+
+    .Moon {
         width: 75px;
         height:60px;
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform: translate(50%,-50%); 
-        animation: myfirst 15s infinite linear;
     }
-    
-    
-    @keyframes myfirst {
-        0%{
-            transform: translate(-50%,-50%) rotate(0deg);
-        }
-        100%{
-            transform: translate(-50%,-50%) rotate(360deg);
-        }
+
+    .navigation {
+        padding-top: 11px;
     }
-    
-    
-    .navigation{
-        
-        display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: right;
-    vertical-align: middle;
-    padding-top: 11px;
-        
-    
-    }
-    
-    .navigation a{
-        height: 0%;
-        display: table;
-        
+
+    .navigation a {
+        height: 0%;   
         padding: 0px 5px;
-        
-        
-    
     }
-    
-    .navigation a li
-    {
-        display: table-cell;
-        vertical-align: middle;
+
+    .navigation a li {
         height:0%;
-        color: white;
-        font-size:20px;
         margin-right: 9rem;
     }
-    
-    .btn
-    {
-        
+
+    .btn {
         align-items: left;
         justify-content: left;
         vertical-align: middle;
-        position: relative;
-        background:black;
-        color: #fff;
-        width: 110%;
-        margin-bottom: 4.3rem;
         padding: 1rem 0;
-        border:none;
-        outline:none;
-        font-size: 0.6em;
-        font-weight: bold;
-        cursor: pointer;
+        font-size: 0.6em;    
         
-    }
-    
-    .btn::after
-    {
-        content:'';
-        position: absolute;
-        width:100%;
-        height:0.175rem;
-        left:0;
-        bottom:0;
-        background-color: red;
-    }
-    
-    .btn-home::after
-    {
-        transform: scale(0,1);
-        transition: transform 0.3s ease;
-        
-    }
-    
-    .btn-home:hover::after
-    {
-        transform: scale(1,1);
-    }
-    
-    .btn-about::after
-    {
-        transform: scale(0,1);
-        transition: transform 0.3s ease;
-        
-    }
-    
-    .btn-about:hover::after
-    {
-        transform: scale(1,1);
-    }
-    
-    
-    .btn-contact::after
-    {
-        transform: scale(0,1);
-        transition: transform 0.3s ease;
-        
-    }
-    
-    .btn-contact:hover::after
-    {
-        transform: scale(1,1);
     }
 
-
-    #L22,#L32,#L42,#L52 
-    {
+    #L22,#L32,#L42,#L52 {
         display:none;
     }
- 
+
 }
 
+@media (min-height: 668px) and (min-width: 751px) {
+    .book {
+        max-width: 70%;
+    }
 
+    .sidemenu {
+        font-size: 1.7em;
+    }
+  
+    .content h1 {
+        font-size: 2.3em;
+    }
+
+    .content p {
+        font-size: 2.4em;
+    }
+  }

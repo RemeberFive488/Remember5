@@ -20,37 +20,8 @@
       }
 
       .sidemenu {
-        font-size: 1.4em;
+        font-size: 1.3em;
       }
-/*
-      #quiz {
-        font-size: 1.37em;
-      }
-
-      .question{
-        font-weight: 600;
-      }
-      
-      .answers {
-        margin-bottom: 20px;
-      }
-
-      #submit{
-        font-family: sans-serif;
-        font-size: 20px;
-        background-color: #297;
-        color: #fff;
-        border: 0px;
-        border-radius: 3px;
-        padding: 20px;
-        cursor: pointer;
-        margin-bottom: 20px;
-      }
-
-      #submit:hover{
-        background-color: #3a8;
-      }
-*/
 
 
       #form {
@@ -60,29 +31,76 @@
 
       .topic  {
         font-family: Garamond, serif;
-        font-size: 1.37em;
+        /*font-size: 1em;*/
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         margin: 15px;
-        width: 700px;
-        height: 100px;
+        width: 60%;
+        height: 5.5em;
         border: 7px solid #1d7d74;
         border-radius: 8px;
         background: #ffebee;
       }
 
+     
+      
+     
     .topic:hover {
       border: 7px solid #f01919e5;
       border-radius: 8px;
       cursor: pointer;
     }
 
-    .h2 {
-      font-size: 1.5em;
+    .topic h2 {
+      font-size: 1.4em;
     }
 
+    
+    .content h1 {
+      color: darkcyan; 
+      font-size: 2em;
+    }
+    
+
+
+    @media (min-height: 668px) and (min-width: 751px)  {
+      .topic h2 {
+          font-size: 1.85em;
+      }
+
+      .topic {
+        height: 6em;
+        width: 70%;
+      }
+
+      .sidemenu {
+        font-size: 1.7em;
+      }
+
+      .content h1 {
+        font-size: 2.3em;
+      }
+  }
+
+  @media(max-width: 750px) {
+    .topic {
+        height: 6em;
+        width: 70%;
+      }
+    .topic h2 {
+        font-size: 1.2em;
+      }
+
+      .content h1 {
+        font-size: 1.6em;
+      }
+
+      .sidemenu {
+        font-size: 1.4em;
+      }
+}
 
     </style>
 
@@ -109,7 +127,7 @@
       </div>
     
     
-      <div class="sidemenu" style="font-size: 22px;">
+      <div class="sidemenu">
         <a href="\WorkingCode\StudyResources\StudyResources.html">Homepage</a>
         <a href="\WorkingCode\StudyResources\Modules.html">Modules</a>
         <a href="\WorkingCode\StudyResources\Grades.html">Grades</a>   
@@ -117,7 +135,7 @@
     
     
     <div class="content">
-      <h1 style="color: darkcyan; font-size: 2.5em;">Remember5: Quizzes</h1>
+      <h1>Remember5: Quizzes</h1>
 
       <hr>
  
