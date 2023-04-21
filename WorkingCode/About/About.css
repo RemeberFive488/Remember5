@@ -239,7 +239,7 @@ p {
 #centerColumn {
    /* margin-top: 9em;
     transform: scale(0.8);*/
-    padding: 0 6em;
+    padding: 6em;
 }
 
 
@@ -295,7 +295,7 @@ p {
 
     #centerColumn {
         transform: scale(1);
-        padding: 0 1.5em;
+        padding: 5em 1.5em;
     }
 
     #top h1 {
