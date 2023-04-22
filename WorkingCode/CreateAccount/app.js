@@ -217,8 +217,8 @@ console.log("writeDoc: ",writeDoc)
   .then(() => {
     console.log("Document successfully written!");
     // form.nameid.value="";
-    form.emailid.value="";
-    form.passwordid.value="";
+    //form.emailid.value="";
+    //form.passwordid.value="";
   })
   .catch((error) => {
     console.error("Error writing document: ", error);
